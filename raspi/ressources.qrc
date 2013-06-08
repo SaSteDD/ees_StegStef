@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/go-down.svg</file>
+        <file>icons/go-up.svg</file>
+        <file>icons/list-add.svg</file>
+        <file>icons/list-remove.svg</file>
+        <file>icons/media-playback-start.svg</file>
+        <file>icons/media-playback-stop.svg</file>
+        <file>icons/nxt.png</file>
+        <file>streckenPics/fahrplan_nxt_bs0.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs01.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs1.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs2.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs3.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs3home.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs12.svg</file>
+        <file>streckenPics/fahrplan_nxt_bs23.svg</file>
+        <file>streckenPics/fahrplan_nxt_homebs0.svg</file>
+        <file>streckenPics/fahrplan_nxt_homePark.svg</file>
+        <file>streckenPics/fahrplan_nxt_homeTCrossing.svg</file>
+        <file>streckenPics/fahrplan_nxt.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark0.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark1.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark2.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark3.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark4.svg</file>
+        <file>streckenPics/fahrplan_nxt_mark5.svg</file>
+        <file>icons/bluetoothActive.png</file>
+        <file>icons/bluetoothInactive.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,74 @@
+From 1b585ca5dd121cfa075b736f3901275739397628 Mon Sep 17 00:00:00 2001
+Message-Id: <1b585ca5dd121cfa075b736f3901275739397628.1369318460.git.steffensascha@gmail.com>
+From: Sascha Steffen <steffensascha@gmail.com>
+Date: Thu, 23 May 2013 16:14:08 +0200
+Subject: [PATCH] Fixed Namespace problems with connect
+
+---
+ bluetoothdiscovery.cpp | 3 +--
+ bluetoothdiscovery.h   | 1 +
+ btwahldialog.cpp       | 7 +++----
+ 3 files changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/bluetoothdiscovery.cpp b/bluetoothdiscovery.cpp
+index 6e30d9a..557a820 100644
+--- a/bluetoothdiscovery.cpp
++++ b/bluetoothdiscovery.cpp
+@@ -9,7 +9,6 @@
+ #include <bluetooth/hci.h>
+ #include <bluetooth/hci_lib.h>
+ 
+-using Types::BtDevice;
+ 
+ /*
+  *Small reminder for later:
+@@ -25,7 +24,7 @@ void BluetoothDiscovery::run()
+ {
+     qDebug() << "Start Discovery";
+     //discovered devices
+-    QList<BtDevice> devices;
++    QList<Types::BtDevice> devices;
+ 
+     inquiry_info *ii = NULL;
+     int max_rsp, num_rsp;
+diff --git a/bluetoothdiscovery.h b/bluetoothdiscovery.h
+index 39191af..50d90ef 100644
+--- a/bluetoothdiscovery.h
++++ b/bluetoothdiscovery.h
+@@ -5,6 +5,7 @@
+ #include <QList>
+ #include <types.h>
+ 
++using Types::BtDevice;
+ 
+ /*
+  *We cant have all of the required C-Headers for Bt-Discovery in the btwahldialog.h
+diff --git a/btwahldialog.cpp b/btwahldialog.cpp
+index 5c3d1ce..10f7063 100644
+--- a/btwahldialog.cpp
++++ b/btwahldialog.cpp
+@@ -3,10 +3,9 @@
+ #include <QDebug>
+ #include "bluetoothdiscovery.h"
+ 
+-using Types::BtDevice;
+ 
+-Q_DECLARE_METATYPE(BtDevice)
+-Q_DECLARE_METATYPE(QList<BtDevice>)
++Q_DECLARE_METATYPE(Types::BtDevice)
++Q_DECLARE_METATYPE(QList<Types::BtDevice>)
+ 
+ //Q_DECLARE_METATYPE(QList<BtDevice>)
+ 
+@@ -17,7 +16,7 @@ BtWahlDialog::BtWahlDialog(QWidget *parent) :
+     qRegisterMetaType<QList<BtDevice> >();
+     ui->setupUi(this);
+     discover=new BluetoothDiscovery(this);
+-    connect(discover,SIGNAL(discoveryfinished(QList<BtDevice>)),this,SLOT(btDiscoveryFinished(QList<BtDevice>)));
++    connect(discover,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
+     discoverBtDevices();
+ }
+ 
+-- 
+1.8.1.2
+
