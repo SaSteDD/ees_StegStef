@@ -35,24 +35,24 @@ namespace Types{
      *The same goes for the the TrackPostions
      */
     typedef enum {
-        parkingSpace,
-        mark6,
-        parkingSpaceTSection,
-        longLane,
-        mark1,
-        station1,
-        station1to2,
-        mark2,
-        station2,
-        station2to3,
-        mark3,
-        station3,
-        station3to4,
-        mark4,
-        station4,
-        station4ToParkingSpace,
-        mark5,
-        unknown
+        parkingSpace =0,
+        mark6 =1,
+        parkingSpaceTSection=2,
+        longLane=3,
+        mark1=4,
+        station1=5,
+        station1to2=6,
+        mark2=7,
+        station2=8,
+        station2to3=9,
+        mark3=10,
+        station3=11,
+        station3to4=13,
+        mark4=14,
+        station4=15,
+        station4ToParkingSpace=16,
+        mark5=17,
+        unknown=18
     } TrackSection;
 
     typedef struct {
