@@ -51,8 +51,7 @@ namespace Types{
         mark4=14,
         station4=15,
         station4ToParkingSpace=16,
-        mark5=17,
-        unknown=18
+        unknown=17
     } TrackSection;
 
     typedef struct {

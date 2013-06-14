@@ -68,9 +68,6 @@ void TrackView::setActivePic()
     case(Types::mark4):
         activePic=QPixmap(":/streckenPics/fahrplan_nxt_mark3.svg");
         break;
-    case(Types::mark5):
-        activePic=QPixmap(":/streckenPics/fahrplan_nxt_mark4.svg");
-        break;
     case(Types::mark6):
         activePic=QPixmap(":/streckenPics/fahrplan_nxt_mark5.svg");
         break;
