@@ -6,7 +6,6 @@ public class followLine {
 	private int Kp = 100;			//mal 1000
 	private int Ki = 0;			//mal 1000
 	private int Kd = 0;			//mal 1000
-	private int Tp = 50;			//mal 1000
 	
 	private int offset = 50;        //offset um den Geregelt wird
 	
@@ -25,13 +24,19 @@ public class followLine {
 		//mhh, hier werde ich wohl noch nen bissel was machen
 	}
 	
-	public int getFollowLine(int linkerSensor, int rechterSensor) {
-		if( rechterSensor > 20 )
-			result = FollowEdgeMiss(rechterSensor);
-		else
-			result = -175;
+	public int getFollowLine(int rechterSensor) {
+		error = rechterSensor - offset;
+		integral = integral + error;
 		
-		return result;
+		if (Math.abs(integral) > 30)
+			integral = (int) (30 * Math.signum(integral));
+		
+		derivative = derivative - lastError;
+		turn = Kp*error + Ki*integral + Kd*derivative;
+		turn = turn/100;
+		lastError = error;
+		
+		return turn;
 	}
 	
 	/**
@@ -44,15 +49,16 @@ public class followLine {
 		
 		error = LightValue - offset;
 		integral = integral + error;
+		
+		if (Math.abs(integral) > 30)
+			integral = (int) (30 * Math.signum(integral));
+		
 		derivative = derivative - lastError;
 		turn = Kp*error + Ki*integral + Kd*derivative;
 		turn = turn/100;
 		lastError = error;
 		
-		if(turn > max)
-			return 80;
-		else
-			return turn;
+		return turn;
 		
 	}
 	

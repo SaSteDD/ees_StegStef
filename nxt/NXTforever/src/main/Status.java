@@ -1,5 +1,6 @@
 package main;
 
+import support.Task;
 import behavior.*;
 
 import lejos.robotics.subsumption.Behavior;
@@ -8,12 +9,14 @@ public class Status {
 	
 	//alle Behaviors anlegen :D
 	public Behavior Initialisierung = new Initialisierung(this);
-	public Behavior Parken = new Parken(this);
-	public Behavior Follow = new behavior.Follow(this);
+	public Behavior Parking = new Parking(this);
+	public Behavior Follow = new Follow(this);
+	public Behavior Connection = new Connection(this);
 	
 	private Behavior behaviorStatus;
 	private Behavior lastBehaviorStatus;
-
+	
+	private Task mTask;
 	public Behavior getBehaviorStatus() {
 		return behaviorStatus;
 	}
@@ -27,10 +30,15 @@ public class Status {
 		
 		Behavior[] bArray = {
 				Initialisierung,
-				Parken,
-				Follow
+				Parking,
+				Follow,
+				Connection
 		};
 		
 		return bArray;		
+	}
+
+	public void setTask(Task newTask) {
+		this.mTask = newTask;		
 	}
 }

@@ -39,4 +39,19 @@ public class MyDifferentialPilot {
 		
 	}
 
+	public void do90GradTurn() {
+		pilot.stop();
+		pilot.rotate(-90);
+		while(pilot.isMoving()){
+			Thread.yield();
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
 }

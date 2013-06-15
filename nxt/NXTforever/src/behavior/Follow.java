@@ -46,7 +46,7 @@ public class Follow implements Behavior {
  				linkerSensor = mLightSensors.getSensorLeft();
 				rechterSensor = mLightSensors.getSensorRight();
 				
-				turn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);
+				turn = mfollowLine.getFollowLine(rechterSensor);
 				
 				LCD.drawString("Li: " + linkerSensor + " : " + mLightSensors.getSensorLeftRaw(), 0, 1);
 				LCD.drawString("Re: " + rechterSensor + " : " + mLightSensors.getSensorRightRaw(), 0, 2);
