@@ -18,11 +18,13 @@ public slots:
     void addRaspiMessage(QString msg);
     void addAppMessage(QString msg);
 private:
+    void contextMenuEvent(QContextMenuEvent *e);
     const static QBrush nxtCol, raspiCol, appCol;
     const static int logTextPointSize;
     void printColoredMessage(QString msg, QBrush col);
     QTextCursor cursor;
     QTextBlockFormat bf;
+    QAction* clearAllAction;
 
 };
 

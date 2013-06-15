@@ -1,9 +1,12 @@
 #include "loggerwidget.h"
 #include <QTime>
 #include <QDebug>
+#include <QContextMenuEvent>
+#include <QMenu>
 
 LoggerWidget::LoggerWidget(QWidget *parent) :
-    QTextEdit(parent)
+    QTextEdit(parent),
+    clearAllAction(new QAction(trUtf8("Log löschen"),this))
 {
     cursor=QTextCursor(document());
     bf=cursor.blockFormat();
@@ -14,6 +17,7 @@ LoggerWidget::LoggerWidget(QWidget *parent) :
     f.setPointSize(logTextPointSize);
     setFont(f);
 
+    connect(clearAllAction,SIGNAL(triggered()),this,SLOT(clear()));
 }
 
 void LoggerWidget::addAppMessage(QString msg)
@@ -41,6 +45,14 @@ void LoggerWidget::printColoredMessage(QString msg, QBrush col)
     cursor.insertText(msg);
     textCursor().movePosition(QTextCursor::End);
     ensureCursorVisible();
+}
+
+void LoggerWidget::contextMenuEvent(QContextMenuEvent *e)
+{
+    QMenu* menu=createStandardContextMenu(e->pos());
+    menu->addAction(clearAllAction);
+    menu->popup(mapToGlobal(e->pos()));
+
 }
 
 const QBrush LoggerWidget::appCol=QBrush(QColor("#FCFCA8"));
