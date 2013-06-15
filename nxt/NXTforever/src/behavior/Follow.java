@@ -53,6 +53,10 @@ public class Follow implements Behavior {
 				
 				LCD.drawString("Pos: " + turn,0,3 );
 				
+				if(!(rechterSensor > 20))
+					turn = -175;
+				
+				
 				mDifferentialPilot.Turn(turn);
 				
 				try {

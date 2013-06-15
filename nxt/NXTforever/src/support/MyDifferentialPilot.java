@@ -54,4 +54,12 @@ public class MyDifferentialPilot {
 		
 	}
 
+	public void toggleStartStop() {
+		if(isStop)
+			forward();
+		else
+			stop();
+		
+	}
+
 }

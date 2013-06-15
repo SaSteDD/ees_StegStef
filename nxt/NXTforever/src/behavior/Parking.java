@@ -10,6 +10,7 @@ import support.MyLightSensors;
 import support.Task;
 import support.followLine;
 import lejos.nxt.LCD;
+import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
 
@@ -24,10 +25,11 @@ public class Parking implements Behavior {
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 	
 	//interne Variable, legt fest ob Parkplatz verlassen werden darf
-	private boolean leaveParkingPosition = true;
+	private boolean leaveParkingPosition = false;
 	
 	//iV, hält Wert für den rechten Sensor
 	private int rechterSensor;
+	private int linkerSensor;
 	
 	public Parking(Status status){
 		this.mStatus = status;
@@ -65,15 +67,16 @@ public class Parking implements Behavior {
 				
 				LCD.clear();
 				
-				
-				mDifferentialPilot.forward();
-				
 				//Eingänge lesen
 				rechterSensor = mLightSensors.getSensorRight();
+				linkerSensor = mLightSensors.getSensorLeft();
 				
-				turn = mfollowLine.FollowEdgeMiss(rechterSensor);
+				turn = mfollowLine.FollowEdgeMiss(linkerSensor);
 				
-				LCD.drawString("Se: " + turn, 0, 2);
+				turn = turn*-1;
+								
+				LCD.drawString("Left: " + rechterSensor, 0, 1);
+				LCD.drawString("Turn: " + turn, 0, 2);
 				
 //				if( rechterSensor > 70 ) {
 //					turn = mfollowLine.FollowEdgeMiss(rechterSensor);
@@ -81,7 +84,19 @@ public class Parking implements Behavior {
 //				else {
 //					turn = -175;			
 //				}
-					
+				
+				if(turn > 80)
+					turn = (int) (80*Math.signum(turn));
+				
+//				if((rechterSensor > 1)){
+//					Sound.beep();
+//					turn = -175;
+//				}
+				
+				//Kommunikation
+				if(mBTconnection.checkConnection())
+					readConnection();
+				
 				mDifferentialPilot.Turn(turn);
 				
 			}
@@ -99,6 +114,17 @@ public class Parking implements Behavior {
 
 	}
 
+	private void readConnection() {
+		
+		List<Byte> temp;
+		Sound.beep();
+		temp = mBTconnection.readConnection();
+		
+		if(temp.get(0) == 97)
+			mDifferentialPilot.toggleStartStop();
+		
+	}
+
 	private void askforTask() {
 		List<Byte> temp;
 		Task newTask;
@@ -109,8 +135,8 @@ public class Parking implements Behavior {
 
 			
 		if(temp.get(0) == 116){							// wenn 1. Byte = T -> Auftrag
-			countSteps = temp.get(1);					// 2. Byte: Anzahl der Schritte
-			newTask = new Task(temp.get(5));			// neuen Auftrag anlegen
+			countSteps = temp.get(5);					// 2. Byte: Anzahl der Schritte
+			newTask = new Task(temp.get(1));			// neuen Auftrag anlegen
 			
 			//alle Schritte nacheinander Ablegen
 			for (int i = 0;i<countSteps;i++) {
@@ -121,6 +147,7 @@ public class Parking implements Behavior {
 			mStatus.setTask(newTask);
 			
 			leaveParkingPosition = true;
+			mDifferentialPilot.forward();
 		}
 		else {
 			System.out.print("Fehler!!!!");

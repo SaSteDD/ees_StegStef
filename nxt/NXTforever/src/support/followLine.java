@@ -3,7 +3,7 @@ package support;
 public class followLine {
 	
 	//PID Regler Parameter
-	private int Kp = 100;			//mal 1000
+	private int Kp = 180;			//mal 1000
 	private int Ki = 0;			//mal 1000
 	private int Kd = 0;			//mal 1000
 	
