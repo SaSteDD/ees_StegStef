@@ -316,16 +316,17 @@ void NxtCommunicator::writeTaskData()
         char taskData[6+3*task.steps.size()];
 
         taskData[0]=taskChar.first;
-        taskData[1]=stepNum.byte0;
-        taskData[2]=stepNum.byte1;
-        taskData[3]=stepNum.byte2;
-        taskData[4]=stepNum.byte3;
-        taskData[5]=static_cast<u_int8_t>(task.taskNumber);
+        taskData[1]=static_cast<u_int8_t>(task.taskNumber);
+        taskData[2]=stepNum.byte0;
+        taskData[3]=stepNum.byte1;
+        taskData[4]=stepNum.byte2;
+        taskData[5]=stepNum.byte3;
 
         QString logMessage= taskData[0]  + chToHexString(taskData[1])
                                + chToHexString(taskData[2])
                                + chToHexString(taskData[3])
-                               + chToHexString(taskData[4]);
+                               + chToHexString(taskData[4])
+                               + chToHexString(taskData[5]);
 
 
         taskData[sizeof(taskData)-1]='T';
