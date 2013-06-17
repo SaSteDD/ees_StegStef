@@ -3,8 +3,6 @@
 
 #include <QLabel>
 #include "types.h"
-// TODO Schrittnummernanzeige
-// TODO vernünftige Anzeige bei inaktivem Zustand
 class TrackView : public QLabel
 {
     Q_OBJECT
