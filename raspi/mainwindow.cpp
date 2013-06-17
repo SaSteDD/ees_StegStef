@@ -93,7 +93,7 @@ MainWindow::MainWindow(QWidget *parent) :
         btDevice.name=setting.value("DeviceName","").toString();
         btDevice.mac=setting.value("DeviceMac","").toString();
      }
-    btDialog=new BtWahlDialog(btDevice,this);
+    btDialog=new BtDeviceDialog(btDevice,this);
     setting.endGroup();
 
     /*
