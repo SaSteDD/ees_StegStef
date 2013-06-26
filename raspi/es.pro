@@ -42,7 +42,6 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui\
 	    btwahl.ui\
-	    stationqualitywidget.ui\
 	    stepdialog.ui\
 	    taskdialog.ui
 

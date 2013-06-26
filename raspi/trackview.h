@@ -15,7 +15,6 @@ private:
     int currentSection;
     QPixmap activePic, inActivePic;
     void setActivePic();
-    
 };
 
 #endif // TRACKVIEW_H

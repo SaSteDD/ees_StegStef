@@ -87,7 +87,7 @@ namespace Types{
     } BtDevice;
 
     /*
-     *A Station uis characteried by its type and its quality
+     *A Station is characteried by its type and its quality
      */
     typedef struct{
         StationType type;
