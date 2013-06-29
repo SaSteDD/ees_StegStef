@@ -108,7 +108,7 @@ private:
     void sendStationData();
 
     QProcess rfCommProcess;
-    bool isRunning, abort, writeTask;
+    bool isRunning, sendNxtPauseChar, writeTask;
     QTimer timer;
 
     const static int waitTimeMs;

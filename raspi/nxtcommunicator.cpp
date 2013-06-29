@@ -16,7 +16,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
     QObject(parent),
     rfCommProcess(this),
     isRunning(false),
-    abort(false),
+    sendNxtPauseChar(false),
     writeTask(false),
     timer(),
     task(),
@@ -159,9 +159,9 @@ void NxtCommunicator::mainCommunicationLoop()
             /*
              *Do we want to abort?
              */
-            if(abort)
+            if(sendNxtPauseChar)
             {
-                abort=!sendChar(stopPauseChar);
+                sendNxtPauseChar=!sendChar(stopPauseChar);
             }
 
             if(writeTask)
@@ -286,7 +286,7 @@ bool NxtCommunicator::sendChar(QPair<char, QString> ch)
     int res=btCom::btWriteBytes(&ch.first,1);
     if(res == 1) {
         emit raspiLogMessage(QString(ch.first)  + " (" + ch.second + ")");
-        abort=false;
+        sendNxtPauseChar=false;
         return true;
     } else if( res < 0) {
         closeConnection();
@@ -351,7 +351,7 @@ void NxtCommunicator::sendAbort()
 {
     if(isRunning)
     {
-        abort=true;
+        sendNxtPauseChar=true;
     }
 }
 
