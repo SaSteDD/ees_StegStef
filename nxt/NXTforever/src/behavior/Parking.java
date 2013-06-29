@@ -146,6 +146,9 @@ public class Parking implements Behavior {
 			// Auftrag an die Statusklasse übergeben
 			mStatus.setTask(newTask);
 			
+			mBTconnection.sendConnection((byte)'f');
+			
+			
 			leaveParkingPosition = true;
 			mDifferentialPilot.forward();
 		}
