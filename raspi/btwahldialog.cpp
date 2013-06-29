@@ -10,8 +10,8 @@ BtDeviceDialog::BtDeviceDialog(Types::BtDevice defaultDevice, QWidget *parent) :
     qRegisterMetaType<QList<BtDevice> >();
     ui->setupUi(this);
 
-    discover=new BluetoothDiscovery(this);
-    connect(discover,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
+    discoveryThread=new BluetoothDiscovery(this);
+    connect(discoveryThread,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
     discoverBtDevices();
 
     if(! defaultDevice.mac.isEmpty()){
@@ -25,9 +25,9 @@ BtDeviceDialog::~BtDeviceDialog()
 {
     delete ui;
     qDebug() << "Warte noch auf Ende des Bt-Discovery Threads...." ;
-    discover->wait();
+    discoveryThread->wait();
     qDebug() << "..fertig";
-    discover->deleteLater();
+    discoveryThread->deleteLater();
 
 }
 
@@ -37,7 +37,7 @@ void BtDeviceDialog::discoverBtDevices()
     ui->progressBar->setDisabled(false);
     ui->btSearchButton->setDisabled(true);
     ui->progressBar->setMaximum(0);
-    discover->start();
+    discoveryThread->start();
 }
 
 

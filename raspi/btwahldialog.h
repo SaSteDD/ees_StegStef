@@ -25,7 +25,7 @@ private slots:
     
 private:
     Ui::BtDeviceDialog *ui;
-    BluetoothDiscovery* discover;
+    BluetoothDiscovery* discoveryThread;
 
 };
 
