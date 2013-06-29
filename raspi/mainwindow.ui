@@ -404,6 +404,9 @@
                <height>32</height>
               </size>
              </property>
+             <property name="statusTip">
+              <string>den spezifizierten Auftrag an das Fahrzeug senden</string>
+             </property>
              <property name="text">
               <string>Auftrag senden</string>
              </property>
