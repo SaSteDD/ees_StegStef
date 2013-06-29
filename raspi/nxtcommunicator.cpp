@@ -156,8 +156,6 @@ void NxtCommunicator::mainCommunicationLoop()
 {
     if(isRunning)
     {
-
-
             /*
              *Do we want to abort?
              */

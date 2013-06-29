@@ -9,7 +9,7 @@ class TrackView : public QLabel
 public:
     explicit TrackView(QWidget *parent = 0);
     
-public slots:
+public:
     void setTrackPosition(Types::TrackSection section);
 private:
     int currentSection;
