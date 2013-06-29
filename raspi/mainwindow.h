@@ -36,7 +36,6 @@ private:
     Types::Task task;
     Types::BtDevice btDevice;
     NxtCommunicator nxtCom;
-    QTimer tim;
     BtDeviceDialog* btDialog;
     TaskDialog* taskDialog;
     QLabel* statusBarConnectionStateLabel;

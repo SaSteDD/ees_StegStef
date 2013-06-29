@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     nxtCom(this),
-    tim(),
     taskDialog(new TaskDialog(this)),
     statusBarConnectionStateLabel(new QLabel())
 {
@@ -95,12 +94,6 @@ MainWindow::MainWindow(QWidget *parent) :
      }
     btDialog=new BtDeviceDialog(btDevice,this);
     setting.endGroup();
-
-    /*
-     *Setup Timer
-     */
-    tim.setInterval(500);
-    tim.setSingleShot(false);
 }
 
 MainWindow::~MainWindow()
