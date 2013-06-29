@@ -107,7 +107,7 @@ private:
      */
     void sendStationData();
 
-    QProcess rfCommProc;
+    QProcess rfCommProcess;
     bool isRunning, abort, writeTask;
     QTimer timer;
 
