@@ -43,7 +43,7 @@ public slots:
     /*
      *Sends Task Data
      */
-    void sendTaskData(const Types::Task& task, const Types::StationSetup& stations);
+    void sendTaskData(const Types::Task& task, const Types::StationSetup& stationSetup);
 
     void openConnection(Types::BtDevice device);
     void closeConnection();
@@ -132,7 +132,7 @@ private:
 
 
     Types::Task task;
-    Types::StationSetup stations;
+    Types::StationSetup stationSetup;
 };
 
 #endif // NXTCOMMUNICATOR_H

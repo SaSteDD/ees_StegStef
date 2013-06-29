@@ -20,7 +20,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
     writeTask(false),
     timer(),
     task(),
-    stations()
+    stationSetup()
 {
     connect(&rfCommProc,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
     connect(&rfCommProc,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
@@ -33,7 +33,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
-    this->stations=stations;
+    this->stationSetup=stationSetup;
 
     if(rfCommProc.state() == QProcess::Running)
     {
@@ -204,7 +204,7 @@ void NxtCommunicator::sendTaskData(const Types::Task &task, const Types::Station
 {
     this->task=task;
     writeTask=true;
-    this->stations=stations;
+    this->stationSetup=stations;
 }
 
 void NxtCommunicator::sendStationData()
@@ -218,20 +218,20 @@ void NxtCommunicator::sendStationData()
 
             switch (static_cast<int>(num)) {// we expect 1-4
             case 1:
-                stationQualityData[1]=stations.station1.type;
-                stationQualityData[2]=stations.station1.quality;
+                stationQualityData[1]=stationSetup.station1.type;
+                stationQualityData[2]=stationSetup.station1.quality;
                  break;
             case 2:
-                stationQualityData[1]=stations.station2.type;
-                stationQualityData[2]=stations.station2.quality;
+                stationQualityData[1]=stationSetup.station2.type;
+                stationQualityData[2]=stationSetup.station2.quality;
                  break;
             case 3:
-                stationQualityData[1]=stations.station3.type;
-                stationQualityData[2]=stations.station3.quality;
+                stationQualityData[1]=stationSetup.station3.type;
+                stationQualityData[2]=stationSetup.station3.quality;
                  break;
             case 4:
-                stationQualityData[1]=stations.station4.type;
-                stationQualityData[2]=stations.station4.quality;
+                stationQualityData[1]=stationSetup.station4.type;
+                stationQualityData[2]=stationSetup.station4.quality;
                  break;
             default:
                 return;
