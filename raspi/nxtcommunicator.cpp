@@ -347,7 +347,7 @@ void NxtCommunicator::writeTaskData()
     }
 }
 
-void NxtCommunicator::sendAbort()
+void NxtCommunicator::sendNxtPauseResume()
 {
     if(isRunning)
     {

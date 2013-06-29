@@ -80,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent) :
      *Only activate NXTStopButton after RFCOMM-connection is established
      */
     connect(&nxtCom,SIGNAL(connectionStateChanged(bool)),ui->nxtStopButton,SLOT(setEnabled(bool)));
-    connect(ui->nxtStopButton,SIGNAL(clicked()),&nxtCom,SLOT(sendAbort()));
+    connect(ui->nxtStopButton,SIGNAL(clicked()),&nxtCom,SLOT(sendNxtPauseResume()));
 
     /*
      *Read Settings for Bluetooth-Selection

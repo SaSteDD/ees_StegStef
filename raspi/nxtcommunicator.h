@@ -38,7 +38,7 @@ public slots:
     /*
      *The abort-character will be sent the next the main Communication loop is executed
      */
-    void sendAbort();
+    void sendNxtPauseResume();
 
     /*
      *Sends Task Data
