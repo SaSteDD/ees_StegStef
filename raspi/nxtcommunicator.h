@@ -12,7 +12,7 @@ class NxtCommunicator : public QObject
     Q_OBJECT
 public:
      explicit NxtCommunicator(QObject *parent = 0);
-     bool getState();
+
 signals:
     void appLogMessage(QString);
     void nxtLogMessage(QString);

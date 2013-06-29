@@ -103,11 +103,6 @@ void NxtCommunicator::closeConnection()
     emit connectionStateChanged(false);
 }
 
-bool NxtCommunicator::getState()
-{
-    return isRunning;
-}
-
 QString NxtCommunicator::getGraphicalSudoCommand()
 {
     QString cmd("");
