@@ -25,7 +25,6 @@ private:
     QTextCursor cursor;
     QTextBlockFormat bf;
     QAction* clearAllAction;
-
 };
 
 #endif // LOGGERWIDGET_H
