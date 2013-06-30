@@ -13,6 +13,9 @@ private static MyLightSensors instance = new MyLightSensors();
 	private LightSensor SensorLeft = new LightSensor(SensorPort.S1);
 	private LightSensor SensorRight = new LightSensor(SensorPort.S2);
 
+	//Variablen
+	private int GrauLinks = 0;
+	private int GrauRechts = 0;
 	
 	public static MyLightSensors getInstance() {
         return instance;
@@ -42,6 +45,20 @@ private static MyLightSensors instance = new MyLightSensors();
 	
 	public int getSensorRightRaw(){
 		return SensorRight.getNormalizedLightValue();
+	}
+
+	public void setGrau() {
+		GrauLinks = SensorLeft.getLightValue();
+		GrauRechts = SensorRight.getLightValue();;
+		
+	}
+	
+	public int getGrauLinks(){
+		return GrauLinks;
+	}
+	
+	public int getGrauRechts(){
+		return GrauRechts;
 	}
 	
 }

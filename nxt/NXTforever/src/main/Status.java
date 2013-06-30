@@ -16,7 +16,13 @@ public class Status {
 	private Behavior behaviorStatus;
 	private Behavior lastBehaviorStatus;
 	
+	//Auftrag
 	private Task mTask;
+	
+	//Position
+	private int PositionMark = -1;
+	private int Position;
+	
 	public Behavior getBehaviorStatus() {
 		return behaviorStatus;
 	}
@@ -40,5 +46,21 @@ public class Status {
 
 	public void setTask(Task newTask) {
 		this.mTask = newTask;		
+	}
+
+	public int getPosition() {
+		return Position;
+	}
+
+	public void setPosition(int position) {
+		Position = position;
+	}
+
+	public int getPositionMark() {
+		return PositionMark;
+	}
+
+	public void setPositionMark(int positionMark) {
+		PositionMark = positionMark;
 	}
 }

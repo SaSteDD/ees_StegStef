@@ -1,9 +1,15 @@
 package behavior;
 
+import java.util.List;
+
+import support.MyBTSend;
+import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
+import support.Turn;
 import support.followLine;
 import lejos.nxt.LCD;
+import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
 
@@ -13,15 +19,24 @@ public class Follow implements Behavior {
 		private Status mStatus;
 		private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 		private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
+		private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 		
 		//Klassen
 		private followLine  mfollowLine;
+		private Turn mturn = new Turn();
+		private MyBTSend mBTSend;
 		
+		// Behavior
 		private boolean suppressed = false;
 		
+		// Senosren
 		private int linkerSensor;
 		private int rechterSensor;
-		private int turn = 0;
+		
+		// 
+		
+		
+
 		
 		public Follow(Status status){
 			this.mStatus = status;
@@ -36,9 +51,13 @@ public class Follow implements Behavior {
 		public void action() {
 			suppressed = false;
 			
-			mfollowLine = new followLine();
+			mfollowLine = new followLine(mLightSensors.getGrauLinks(), mLightSensors.getGrauRechts());
 			
 			mDifferentialPilot.forward();
+			Sound.beep();
+			
+			mBTSend = new MyBTSend( new byte[] {(byte)'s',1,0,0,0,1 } );
+			mBTSend.run();
 			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
@@ -46,18 +65,31 @@ public class Follow implements Behavior {
  				linkerSensor = mLightSensors.getSensorLeft();
 				rechterSensor = mLightSensors.getSensorRight();
 				
-				turn = mfollowLine.getFollowLine(rechterSensor);
+				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);
 				
 				LCD.drawString("Li: " + linkerSensor + " : " + mLightSensors.getSensorLeftRaw(), 0, 1);
 				LCD.drawString("Re: " + rechterSensor + " : " + mLightSensors.getSensorRightRaw(), 0, 2);
 				
-				LCD.drawString("Pos: " + turn,0,3 );
+				if(mturn.getisgrau() && mturn.getGrauallowed()){
+					mStatus.setPositionMark(mStatus.getPositionMark() + 1);
+					
+					new MyBTSend( new byte[] {(byte)'s',(byte) (4 + mStatus.getPositionMark() * 3) ,0,0,0,1 } ).run();
+					
+					Sound.beep();
+					
+					mturn.setGrauallowed(false);
+				}
 				
-				if(!(rechterSensor > 20))
-					turn = -175;
+				if(mturn.getiscurve()) {
+					mDifferentialPilot.rotate(90);
+					mturn.setiscurve(false);
+				}
 				
+				//Kommunikation
+				if(mBTconnection.checkConnection())
+					readConnection();
 				
-				mDifferentialPilot.Turn(turn);
+				mDifferentialPilot.Turn(mturn.getTurn());
 				
 				try {
 					Thread.yield();
@@ -77,6 +109,17 @@ public class Follow implements Behavior {
 		@Override
 		public void suppress() {
 			suppressed = true;
+		}
+		
+		private void readConnection() {
+			
+			List<Byte> temp;
+			Sound.beep();
+			temp = mBTconnection.readConnection();
+			
+			if(temp.get(0) == 97)
+				mDifferentialPilot.toggleStartStop();
+			
 		}
 
 }

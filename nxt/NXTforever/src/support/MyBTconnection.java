@@ -65,4 +65,9 @@ public class MyBTconnection {
 		return temp;
 	
 	}
+	
+	public DataOutputStream getOutputStream(){
+		return dataOut;
+		
+	}
 }

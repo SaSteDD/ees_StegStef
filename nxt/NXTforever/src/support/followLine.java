@@ -3,13 +3,13 @@ package support;
 public class followLine {
 	
 	//PID Regler Parameter
-	private int Kp = 180;			//mal 1000
-	private int Ki = 0;			//mal 1000
-	private int Kd = 0;			//mal 1000
+	private int Kp = 1;	
 	
-	private int offset = 50;        //offset um den Geregelt wird
+	private int offset = 10;
 	
 	//Temporäre Variablen
+	private Turn mturn = new Turn();
+	
 	private int error = 0;
 	private int turn = 0;
 	private int integral = 0;
@@ -20,23 +20,37 @@ public class followLine {
 	private int lastRightValue = 0;
 	private int result = 0;
 	
-	public followLine(){
-		//mhh, hier werde ich wohl noch nen bissel was machen
+	//Farben
+	private int grauLeft;
+	private int grauRight;
+	
+	public followLine(int graulinks, int graurechts){
+		this.grauLeft = graulinks;
+		this.grauRight = graurechts;
+		
 	}
 	
-	public int getFollowLine(int rechterSensor) {
-		error = rechterSensor - offset;
-		integral = integral + error;
+	public Turn getFollowLine(int rechterSensor, int linkerSensor) {
 		
-		if (Math.abs(integral) > 30)
-			integral = (int) (30 * Math.signum(integral));
+		if(linkerSensor < 10 && rechterSensor > 10)
+			mturn.setTurn(-10);
 		
-		derivative = derivative - lastError;
-		turn = Kp*error + Ki*integral + Kd*derivative;
-		turn = turn/100;
-		lastError = error;
+		if(linkerSensor > 10 && rechterSensor < 10 )
+			mturn.setTurn(10);
 		
-		return turn;
+		if(linkerSensor < 10 && rechterSensor < 10 ) {
+			mturn.setTurn(0);
+			if(!mturn.getGrauallowed())
+				mturn.setGrauallowed(true);
+		}
+		
+		if( ( (linkerSensor > (grauLeft-offset)) && (linkerSensor < (grauLeft+offset)) ) && ( (rechterSensor > (grauRight -offset)) && (rechterSensor < (grauRight + offset)) ) )
+			mturn.setisgrau(true);
+		
+		if( (linkerSensor > grauLeft+offset) && (rechterSensor > (grauRight + offset) ))
+			mturn.setiscurve(true);	
+		
+		return mturn;
 	}
 	
 	/**
@@ -45,21 +59,6 @@ public class followLine {
 	 * @param LightValue - Lichtwert (1 ... 100)
 	 * @return
 	 */
-	public int FollowEdgeMiss(int LightValue){
-		
-		error = LightValue - offset;
-		integral = integral + error;
-		
-		if (Math.abs(integral) > 30)
-			integral = (int) (30 * Math.signum(integral));
-		
-		derivative = derivative - lastError;
-		turn = Kp*error + Ki*integral + Kd*derivative;
-		turn = turn/100;
-		lastError = error;
-		
-		return turn;
-		
-	}
+
 	
 }

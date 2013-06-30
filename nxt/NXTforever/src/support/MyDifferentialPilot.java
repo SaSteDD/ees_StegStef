@@ -61,5 +61,12 @@ public class MyDifferentialPilot {
 			stop();
 		
 	}
+	
+	public void rotate(int winkel){
+		pilot.setTravelSpeed(speed/2);
+		pilot.rotate(winkel);
+		pilot.setTravelSpeed(speed);
+		
+	}
 
 }

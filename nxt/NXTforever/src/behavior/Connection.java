@@ -41,7 +41,7 @@ public class Connection implements Behavior {
 			e.printStackTrace();
 		}
 		
-		mStatus.setBehaviorStatus(mStatus.Initialisierung);
+		mStatus.setBehaviorStatus(mStatus.Parking);
 		
 	}
 
