@@ -12,6 +12,8 @@ class NxtCommunicator : public QObject
     Q_OBJECT
 public:
      explicit NxtCommunicator(QObject *parent = 0);
+    void openConnection(Types::BtDevice device);
+
 
 signals:
     void appLogMessage(QString);
@@ -45,7 +47,6 @@ public slots:
      */
     void sendTaskData(const Types::Task& task, const Types::StationSetup& stationSetup);
 
-    void openConnection(Types::BtDevice device);
     void closeConnection();
 private slots:
     void rfcommDeviceClosed(int,QProcess::ExitStatus);
