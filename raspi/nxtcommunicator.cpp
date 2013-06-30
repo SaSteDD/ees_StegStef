@@ -173,7 +173,7 @@ void NxtCommunicator::mainCommunicationLoop()
             /*
              *the first char we read will tell us what we need to do
              */
-            char b;
+            char b=0;
             if(readChar(&b))
             {
                 if(b==stateChar.first){
@@ -275,7 +275,7 @@ void NxtCommunicator::readStateData()
       emit nxtStateChanged(state);
           emit nxtLogMessage(stateChar.first + "( " + stateChar.second + "): " + chToHexString(st[0])
               + chToHexString(st[1])
-              +  chToHexString(st[2])
+              + chToHexString(st[2])
               + chToHexString(st[3])
               + chToHexString(st[4])
               + " (" + QString::number(state.stepNum.num) + ")");
