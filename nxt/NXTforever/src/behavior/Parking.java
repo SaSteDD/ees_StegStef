@@ -3,15 +3,18 @@ package behavior;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
 
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
 import support.Task;
+import support.Turn;
 import support.followLine;
 import lejos.nxt.LCD;
 import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
+import lejos.util.TimerListener;
 import main.Status;
 
 public class Parking implements Behavior {
@@ -19,6 +22,9 @@ public class Parking implements Behavior {
 	private Status mStatus;
 	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
+	
+	private Turn mturn = new Turn();
+	private Timer timer = new Timer();
 	
 	private boolean suppressed = false;
 	
@@ -53,7 +59,9 @@ public class Parking implements Behavior {
 		// Variablen, zählt die Kurven
 		int curve = 0;
 		// PID-Regler, zum folgen der Linie
-		followLine mfollowLine = new followLine();
+		followLine mfollowLine = new followLine(mLightSensors.getGrauLinks(),mLightSensors.getGrauRechts());
+		
+		mDifferentialPilot.forward();
 	
 		
 		while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
@@ -71,27 +79,24 @@ public class Parking implements Behavior {
 				rechterSensor = mLightSensors.getSensorRight();
 				linkerSensor = mLightSensors.getSensorLeft();
 				
-				turn = mfollowLine.FollowEdgeMiss(linkerSensor);
+				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);
 				
-				turn = turn*-1;
+				if(mturn.getisgrau()){
+					Sound.beep();
+					mturn.setisgrau(false);
+				}
+				
+				if(mturn.getiscurve()) {
+					mDifferentialPilot.rotate(90);
+					mturn.setiscurve(false);
+					mStatus.setBehaviorStatus(mStatus.Follow);
+				}
+				
+				
+				turn = mturn.getTurn();
 								
-				LCD.drawString("Left: " + rechterSensor, 0, 1);
-				LCD.drawString("Turn: " + turn, 0, 2);
-				
-//				if( rechterSensor > 70 ) {
-//					turn = mfollowLine.FollowEdgeMiss(rechterSensor);
-//				}
-//				else {
-//					turn = -175;			
-//				}
-				
-				if(turn > 80)
-					turn = (int) (80*Math.signum(turn));
-				
-//				if((rechterSensor > 1)){
-//					Sound.beep();
-//					turn = -175;
-//				}
+				LCD.drawString("Links: " + linkerSensor, 0, 1);
+				LCD.drawString("Rechts: " + rechterSensor, 0, 2);
 				
 				//Kommunikation
 				if(mBTconnection.checkConnection())
@@ -146,7 +151,7 @@ public class Parking implements Behavior {
 			// Auftrag an die Statusklasse übergeben
 			mStatus.setTask(newTask);
 			
-			mBTconnection.sendConnection((byte)'f');
+			//mBTconnection.sendConnection((byte)'f');
 			
 			
 			leaveParkingPosition = true;

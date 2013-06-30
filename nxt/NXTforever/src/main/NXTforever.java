@@ -36,7 +36,7 @@ public class NXTforever {
 		LCD.drawString("Los gehts", 1, 2);
 		
 		Arbitrator arby = new Arbitrator(mStatus.getAllBeBehavior());
-		mStatus.setBehaviorStatus(mStatus.Connection);
+		mStatus.setBehaviorStatus(mStatus.Initialisierung);
 	    arby.start();
 
 	}
