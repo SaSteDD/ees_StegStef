@@ -21,9 +21,9 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
     timer(),
     task(),
     stationSetup()
-{//TODO mal sehen ob wir das hier wiede rrein kriegen können....
-   // connect(&rfCommProcess,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
-    //connect(&rfCommProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
+{
+    connect(&rfCommProcess,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
+    connect(&rfCommProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
     connect(&rfCommProcess,SIGNAL(finished(int,QProcess::ExitStatus)),this,SLOT(rfcommDeviceClosed(int,QProcess::ExitStatus)));
 
     timer.setInterval(waitTimeMs);
@@ -33,6 +33,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
+    qDebug() << "Drin in open connection";
     this->stationSetup=stationSetup;
 
     if(rfCommProcess.state() == QProcess::Running)
