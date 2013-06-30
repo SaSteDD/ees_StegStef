@@ -14,17 +14,17 @@ const QStringList NxtCommunicator::graphicalSudoCommands({"/usr/bin/kdesudo", "/
 
 NxtCommunicator::NxtCommunicator(QObject *parent) :
     QObject(parent),
-    rfCommProc(this),
+    rfCommProcess(this),
     isRunning(false),
-    abort(false),
+    sendNxtPauseChar(false),
     writeTask(false),
     timer(),
     task(),
-    stations()
+    stationSetup()
 {
-    connect(&rfCommProc,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
-    connect(&rfCommProc,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
-    connect(&rfCommProc,SIGNAL(finished(int,QProcess::ExitStatus)),this,SLOT(rfcommDeviceClosed(int,QProcess::ExitStatus)));
+    connect(&rfCommProcess,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
+    connect(&rfCommProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
+    connect(&rfCommProcess,SIGNAL(finished(int,QProcess::ExitStatus)),this,SLOT(rfcommDeviceClosed(int,QProcess::ExitStatus)));
 
     timer.setInterval(waitTimeMs);
     timer.setSingleShot(true);
@@ -33,9 +33,9 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
-    this->stations=stations;
+    this->stationSetup=stationSetup;
 
-    if(rfCommProc.state() == QProcess::Running)
+    if(rfCommProcess.state() == QProcess::Running)
     {
         emit appLogMessage(trUtf8("Kann keine neue rfcomm-Verbindung aufbauen, da alte noch läuft."));
         return;
@@ -50,7 +50,7 @@ void NxtCommunicator::openConnection(Types::BtDevice device)
 
     QStringList args;
     args <<  "/usr/bin/rfcomm" << "connect" <<  "rfcomm0" << device.mac << "1";
-    rfCommProc.start(suCmd, args);
+    rfCommProcess.start(suCmd, args);
     isRunning=true;
     emit appLogMessage(trUtf8("rfcomm-Befehl gestartet für Gerät: ")  + device.name + " (" + device.mac + ")");
 
@@ -67,16 +67,16 @@ void NxtCommunicator::rfcommDeviceClosed(int,QProcess::ExitStatus)
 QString NxtCommunicator::readDataFromProc()
 {
     QString data;
-    while(rfCommProc.canReadLine())
+    while(rfCommProcess.canReadLine())
     {
-        data.append(QString::fromUtf8(rfCommProc.readLine()));
+        data.append(QString::fromUtf8(rfCommProcess.readLine()));
     }
     return data;
 }
 
 void NxtCommunicator::rfcommProcReadStdOut()
 {
-    rfCommProc.setReadChannel(QProcess::StandardOutput);
+    rfCommProcess.setReadChannel(QProcess::StandardOutput);
     QString read=readDataFromProc();
     if(read.isEmpty()) return;
     emit appLogMessage("rfcomm-Befehl: " + read);
@@ -84,7 +84,7 @@ void NxtCommunicator::rfcommProcReadStdOut()
 
 void NxtCommunicator::rfcommProcReadStdErr()
 {
-    rfCommProc.setReadChannel(QProcess::StandardError);
+    rfCommProcess.setReadChannel(QProcess::StandardError);
     QString read=readDataFromProc();
     if(read.isEmpty()) return;
     emit appLogMessage("rfcomm-Befehl Fehler: " + read);
@@ -97,15 +97,10 @@ void NxtCommunicator::closeConnection()
     btCom::btDisconnect();
     rfcommProcReadStdOut();
     rfcommProcReadStdErr();
-    rfCommProc.close();
+    rfCommProcess.close();
     emit appLogMessage("rfcomm Prozess geschlossen.");
     emit connectionClosed();
     emit connectionStateChanged(false);
-}
-
-bool NxtCommunicator::getState()
-{
-    return isRunning;
 }
 
 QString NxtCommunicator::getGraphicalSudoCommand()
@@ -126,10 +121,10 @@ void NxtCommunicator::tryBtConnect()
 {
     bool erg= btCom::btConnect();
     qDebug() << erg;
-    if(!erg && rfCommProc.state() != QProcess::NotRunning)
+    if(!erg && rfCommProcess.state() != QProcess::NotRunning)
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
-    } else if (rfCommProc.state() == QProcess::NotRunning){
+    } else if (rfCommProcess.state() == QProcess::NotRunning){
         qDebug() << "Test";
         closeConnection();
     } else {
@@ -161,14 +156,12 @@ void NxtCommunicator::mainCommunicationLoop()
 {
     if(isRunning)
     {
-
-
             /*
              *Do we want to abort?
              */
-            if(abort)
+            if(sendNxtPauseChar)
             {
-                abort=!sendChar(stopPauseChar);
+                sendNxtPauseChar=!sendChar(stopPauseChar);
             }
 
             if(writeTask)
@@ -204,7 +197,7 @@ void NxtCommunicator::sendTaskData(const Types::Task &task, const Types::Station
 {
     this->task=task;
     writeTask=true;
-    this->stations=stations;
+    this->stationSetup=stations;
 }
 
 void NxtCommunicator::sendStationData()
@@ -218,20 +211,20 @@ void NxtCommunicator::sendStationData()
 
             switch (static_cast<int>(num)) {// we expect 1-4
             case 1:
-                stationQualityData[1]=stations.station1.type;
-                stationQualityData[2]=stations.station1.quality;
+                stationQualityData[1]=stationSetup.station1.type;
+                stationQualityData[2]=stationSetup.station1.quality;
                  break;
             case 2:
-                stationQualityData[1]=stations.station2.type;
-                stationQualityData[2]=stations.station2.quality;
+                stationQualityData[1]=stationSetup.station2.type;
+                stationQualityData[2]=stationSetup.station2.quality;
                  break;
             case 3:
-                stationQualityData[1]=stations.station3.type;
-                stationQualityData[2]=stations.station3.quality;
+                stationQualityData[1]=stationSetup.station3.type;
+                stationQualityData[2]=stationSetup.station3.quality;
                  break;
             case 4:
-                stationQualityData[1]=stations.station4.type;
-                stationQualityData[2]=stations.station4.quality;
+                stationQualityData[1]=stationSetup.station4.type;
+                stationQualityData[2]=stationSetup.station4.quality;
                  break;
             default:
                 return;
@@ -293,7 +286,7 @@ bool NxtCommunicator::sendChar(QPair<char, QString> ch)
     int res=btCom::btWriteBytes(&ch.first,1);
     if(res == 1) {
         emit raspiLogMessage(QString(ch.first)  + " (" + ch.second + ")");
-        abort=false;
+        sendNxtPauseChar=false;
         return true;
     } else if( res < 0) {
         closeConnection();
@@ -354,11 +347,11 @@ void NxtCommunicator::writeTaskData()
     }
 }
 
-void NxtCommunicator::sendAbort()
+void NxtCommunicator::sendNxtPauseResume()
 {
     if(isRunning)
     {
-        abort=true;
+        sendNxtPauseChar=true;
     }
 }
 

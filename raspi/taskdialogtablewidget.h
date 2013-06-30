@@ -13,8 +13,6 @@ public:
     QList<Types::TaskStep> getSteps();
     void setTask(Types::Task task);
     
-signals:
-    
 private slots:
     void moveCurrentRowUp();
     void moveCurrentRowDown();

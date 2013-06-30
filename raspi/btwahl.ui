@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>btDeviceDialog</class>
- <widget class="QDialog" name="btDeviceDialog">
+ <class>BtDeviceDialog</class>
+ <widget class="QDialog" name="BtDeviceDialog">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -161,7 +161,7 @@
   <connection>
    <sender>btSearchButton</sender>
    <signal>clicked()</signal>
-   <receiver>btDeviceDialog</receiver>
+   <receiver>BtDeviceDialog</receiver>
    <slot>discoverBtDevices()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -177,7 +177,7 @@
   <connection>
    <sender>okButton</sender>
    <signal>clicked()</signal>
-   <receiver>btDeviceDialog</receiver>
+   <receiver>BtDeviceDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -193,7 +193,7 @@
   <connection>
    <sender>cancelButton</sender>
    <signal>clicked()</signal>
-   <receiver>btDeviceDialog</receiver>
+   <receiver>BtDeviceDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

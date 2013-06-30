@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     nxtCom(this),
-    tim(),
     taskDialog(new TaskDialog(this)),
     statusBarConnectionStateLabel(new QLabel())
 {
@@ -81,7 +80,7 @@ MainWindow::MainWindow(QWidget *parent) :
      *Only activate NXTStopButton after RFCOMM-connection is established
      */
     connect(&nxtCom,SIGNAL(connectionStateChanged(bool)),ui->nxtStopButton,SLOT(setEnabled(bool)));
-    connect(ui->nxtStopButton,SIGNAL(clicked()),&nxtCom,SLOT(sendAbort()));
+    connect(ui->nxtStopButton,SIGNAL(clicked()),&nxtCom,SLOT(sendNxtPauseResume()));
 
     /*
      *Read Settings for Bluetooth-Selection
@@ -93,14 +92,8 @@ MainWindow::MainWindow(QWidget *parent) :
         btDevice.name=setting.value("DeviceName","").toString();
         btDevice.mac=setting.value("DeviceMac","").toString();
      }
-    btDialog=new BtWahlDialog(btDevice,this);
+    btDialog=new BtDeviceDialog(btDevice,this);
     setting.endGroup();
-
-    /*
-     *Setup Timer
-     */
-    tim.setInterval(500);
-    tim.setSingleShot(false);
 }
 
 MainWindow::~MainWindow()

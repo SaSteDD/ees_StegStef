@@ -3,15 +3,15 @@
 #include <QDebug>
 #include "bluetoothdiscovery.h"
 
-BtWahlDialog::BtWahlDialog(Types::BtDevice defaultDevice, QWidget *parent) :
+BtDeviceDialog::BtDeviceDialog(Types::BtDevice defaultDevice, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::btDeviceDialog)
+    ui(new Ui::BtDeviceDialog)
 {
     qRegisterMetaType<QList<BtDevice> >();
     ui->setupUi(this);
 
-    discover=new BluetoothDiscovery(this);
-    connect(discover,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
+    discoveryThread=new BluetoothDiscovery(this);
+    connect(discoveryThread,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
     discoverBtDevices();
 
     if(! defaultDevice.mac.isEmpty()){
@@ -21,27 +21,27 @@ BtWahlDialog::BtWahlDialog(Types::BtDevice defaultDevice, QWidget *parent) :
     }
 }
 
-BtWahlDialog::~BtWahlDialog()
+BtDeviceDialog::~BtDeviceDialog()
 {
     delete ui;
     qDebug() << "Warte noch auf Ende des Bt-Discovery Threads...." ;
-    discover->wait();
+    discoveryThread->wait();
     qDebug() << "..fertig";
-    discover->deleteLater();
+    discoveryThread->deleteLater();
 
 }
 
-void BtWahlDialog::discoverBtDevices()
+void BtDeviceDialog::discoverBtDevices()
 {
     ui->btDeviceSelector->setDisabled(true);
     ui->progressBar->setDisabled(false);
     ui->btSearchButton->setDisabled(true);
     ui->progressBar->setMaximum(0);
-    discover->start();
+    discoveryThread->start();
 }
 
 
-void BtWahlDialog::btDiscoveryFinished(QList<BtDevice> devs)
+void BtDeviceDialog::btDiscoveryFinished(QList<BtDevice> devs)
 {
     ui->btDeviceSelector->clear();
     for(int i=0; i<devs.size(); i++)
@@ -57,7 +57,7 @@ void BtWahlDialog::btDiscoveryFinished(QList<BtDevice> devs)
     ui->btDeviceSelector->setDisabled(false);
 }
 
-BtDevice BtWahlDialog::getSelectedDevice()
+BtDevice BtDeviceDialog::getSelectedDevice()
 {
     return ui->btDeviceSelector->itemData(ui->btDeviceSelector->currentIndex()).value<BtDevice>();
 }

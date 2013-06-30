@@ -47,11 +47,11 @@ namespace Types{
         station2to3=9,
         mark3=10,
         station3=11,
-        station3to4=13,
-        mark4=14,
-        station4=15,
-        station4ToParkingSpace=16,
-        unknown=17
+        station3to4=12,
+        mark4=13,
+        station4=14,
+        station4ToParkingSpace=15,
+        unknown=16
     } TrackSection;
 
     typedef struct {
@@ -87,7 +87,7 @@ namespace Types{
     } BtDevice;
 
     /*
-     *A Station uis characteried by its type and its quality
+     *A Station is characteried by its type and its quality
      */
     typedef struct{
         StationType type;

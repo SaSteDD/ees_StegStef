@@ -12,7 +12,7 @@ class NxtCommunicator : public QObject
     Q_OBJECT
 public:
      explicit NxtCommunicator(QObject *parent = 0);
-     bool getState();
+
 signals:
     void appLogMessage(QString);
     void nxtLogMessage(QString);
@@ -38,12 +38,12 @@ public slots:
     /*
      *The abort-character will be sent the next the main Communication loop is executed
      */
-    void sendAbort();
+    void sendNxtPauseResume();
 
     /*
      *Sends Task Data
      */
-    void sendTaskData(const Types::Task& task, const Types::StationSetup& stations);
+    void sendTaskData(const Types::Task& task, const Types::StationSetup& stationSetup);
 
     void openConnection(Types::BtDevice device);
     void closeConnection();
@@ -107,8 +107,8 @@ private:
      */
     void sendStationData();
 
-    QProcess rfCommProc;
-    bool isRunning, abort, writeTask;
+    QProcess rfCommProcess;
+    bool isRunning, sendNxtPauseChar, writeTask;
     QTimer timer;
 
     const static int waitTimeMs;
@@ -132,7 +132,7 @@ private:
 
 
     Types::Task task;
-    Types::StationSetup stations;
+    Types::StationSetup stationSetup;
 };
 
 #endif // NXTCOMMUNICATOR_H

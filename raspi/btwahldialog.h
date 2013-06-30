@@ -7,25 +7,25 @@
 #include "bluetoothdiscovery.h"
 
 namespace Ui {
-class btDeviceDialog;
+class BtDeviceDialog;
 }
 
-class BtWahlDialog : public QDialog
+class BtDeviceDialog : public QDialog
 {
     Q_OBJECT
       
 public:
-    explicit BtWahlDialog(Types::BtDevice defaultDevice, QWidget *parent = 0);
+    explicit BtDeviceDialog(Types::BtDevice defaultDevice, QWidget *parent = 0);
     Types::BtDevice getSelectedDevice();
-    ~BtWahlDialog();
+    ~BtDeviceDialog();
 
 private slots:
     void discoverBtDevices();
     void btDiscoveryFinished(QList<Types::BtDevice> devs);
     
 private:
-    Ui::btDeviceDialog *ui;
-    BluetoothDiscovery* discover;
+    Ui::BtDeviceDialog *ui;
+    BluetoothDiscovery* discoveryThread;
 
 };
 

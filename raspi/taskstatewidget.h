@@ -12,8 +12,6 @@ class TaskStateWidget : public QWidget
 public:
     explicit TaskStateWidget(QWidget *parent = 0);
     
-signals:
-    
 public slots:
     void setTaskState(Types::NxtState state);
 
