@@ -36,7 +36,7 @@ namespace Types{
      */
     typedef enum {
         parkingSpace =0,
-        mark6 =1,
+        mark5 =1,
         parkingSpaceTSection=2,
         longLane=3,
         mark1=4,
