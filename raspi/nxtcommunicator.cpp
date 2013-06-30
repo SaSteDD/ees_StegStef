@@ -22,8 +22,6 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
     task(),
     stationSetup()
 {
-    connect(&rfCommProcess,SIGNAL(readyReadStandardError()),this,SLOT(rfcommProcReadStdErr()));
-    connect(&rfCommProcess,SIGNAL(readyReadStandardOutput()),this,SLOT(rfcommProcReadStdOut()));
     connect(&rfCommProcess,SIGNAL(finished(int,QProcess::ExitStatus)),this,SLOT(rfcommDeviceClosed(int,QProcess::ExitStatus)));
 
     timer.setInterval(waitTimeMs);
@@ -125,7 +123,6 @@ void NxtCommunicator::tryBtConnect()
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
     } else if (rfCommProcess.state() == QProcess::NotRunning){
-        qDebug() << "Test";
         closeConnection();
     } else {
         emit connectionStateChanged(true);
