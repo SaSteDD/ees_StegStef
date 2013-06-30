@@ -185,7 +185,7 @@ void NxtCommunicator::mainCommunicationLoop()
                 } else if(b==taskEndSuccessChar.first) {
                     runTaskFinished(true);
                 } else {
-                    emit nxtLogMessage(QString(b) + "(Fehler. Zeichen kann an dieser Stelle im Programmablauf nicht ausgewertet werden)");
+                    emit nxtLogMessage(chToHexString(b) + " (Fehler. Zeichen kann an dieser Stelle im Programmablauf nicht ausgewertet werden)");
                 }
             }
 
