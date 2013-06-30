@@ -264,7 +264,7 @@ void NxtCommunicator::readStateData()
 
   if(readChars((st),5))
   {
-      if(st[0] >= 0 && st[0]<= Types::unknown){
+      if(st[0]<= Types::unknown){
           state.section=static_cast<Types::TrackSection>(st[0]);
 
           state.stepNum.byte0=st[1];
