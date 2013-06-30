@@ -33,7 +33,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
-    qDebug() << "Drin in open connection";
+   //qDebug() << "Drin in open connection";
     this->stationSetup=stationSetup;
 
     if(rfCommProcess.state() == QProcess::Running)
@@ -121,7 +121,7 @@ QString NxtCommunicator::getGraphicalSudoCommand()
 void NxtCommunicator::tryBtConnect()
 {
     bool erg= btCom::btConnect();
-    qDebug() << erg;
+    //qDebug() << erg;
     if(!erg && rfCommProcess.state() != QProcess::NotRunning)
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
@@ -173,7 +173,7 @@ void NxtCommunicator::mainCommunicationLoop()
             /*
              *the first char we read will tell us what we need to do
              */
-            char b;
+            char b=0;
             if(readChar(&b))
             {
                 if(b==stateChar.first){
@@ -264,7 +264,9 @@ void NxtCommunicator::readStateData()
 
   if(readChars((st),5))
   {
+      if(st[0]<= Types::unknown){
           state.section=static_cast<Types::TrackSection>(st[0]);
+
           state.stepNum.byte0=st[1];
           state.stepNum.byte1=st[2];
           state.stepNum.byte2=st[3];
@@ -273,10 +275,18 @@ void NxtCommunicator::readStateData()
       emit nxtStateChanged(state);
           emit nxtLogMessage(stateChar.first + "( " + stateChar.second + "): " + chToHexString(st[0])
               + chToHexString(st[1])
-              +  chToHexString(st[2])
+              + chToHexString(st[2])
               + chToHexString(st[3])
               + chToHexString(st[4])
               + " (" + QString::number(state.stepNum.num) + ")");
+      } else {
+          nxtLogMessage(trUtf8("Statuswert für NXT ist falsch: ") + chToHexString(st[0]));
+          state.section=Types::unknown;
+          state.stepNum.num=0;
+          emit nxtStateChanged(state);
+      }
+  } else {
+      emit nxtLogMessage(trUtf8("Fehler beim lesen des NXT Status."));
   }
 
 }
