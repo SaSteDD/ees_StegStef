@@ -12,7 +12,7 @@ BtDeviceDialog::BtDeviceDialog(Types::BtDevice defaultDevice, QWidget *parent) :
 
     discoveryThread=new BluetoothDiscovery(this);
     connect(discoveryThread,SIGNAL(discoveryfinished(QList<Types::BtDevice>)),this,SLOT(btDiscoveryFinished(QList<Types::BtDevice>)));
-    discoverBtDevices();
+    //discoverBtDevices(); verhakt sich sonst mit verb. aufbauen
 
     if(! defaultDevice.mac.isEmpty()){
         ui->btDeviceSelector->addItem(defaultDevice.name + " (" + defaultDevice.mac + ")", QVariant::fromValue<BtDevice>(defaultDevice));
