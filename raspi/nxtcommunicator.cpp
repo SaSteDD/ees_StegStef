@@ -281,6 +281,9 @@ void NxtCommunicator::readStateData()
               + " (" + QString::number(state.stepNum.num) + ")");
       } else {
           nxtLogMessage(trUtf8("Statuswert für NXT ist falsch: ") + chToHexString(st[0]));
+          state.section=Types::unknown;
+          state.stepNum.num=0;
+          emit nxtStateChanged(state);
       }
   } else {
       emit nxtLogMessage(trUtf8("Fehler beim lesen des NXT Status."));
