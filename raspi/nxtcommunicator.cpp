@@ -33,7 +33,7 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
-    qDebug() << "Drin in open connection";
+   //qDebug() << "Drin in open connection";
     this->stationSetup=stationSetup;
 
     if(rfCommProcess.state() == QProcess::Running)
@@ -121,7 +121,7 @@ QString NxtCommunicator::getGraphicalSudoCommand()
 void NxtCommunicator::tryBtConnect()
 {
     bool erg= btCom::btConnect();
-    qDebug() << erg;
+    //qDebug() << erg;
     if(!erg && rfCommProcess.state() != QProcess::NotRunning)
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
