@@ -250,7 +250,7 @@ void NxtCommunicator::runTaskFinished(bool success)
         msgBox.setText( "Der Auftrag wurde erfolgreich bearbeitet.");
     } else {
         emit nxtLogMessage(taskEndErrorChar.first + "(" + taskEndErrorChar.second + ")");
-        msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen");
+        msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
     }
 
     msgBox.exec();
