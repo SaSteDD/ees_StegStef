@@ -75,30 +75,15 @@ public class Parking implements Behavior {
 				
 				LCD.clear();
 				
-				//Eingänge lesen
-				rechterSensor = mLightSensors.getSensorRight();
-				linkerSensor = mLightSensors.getSensorLeft();
-				
-				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);				
-				
-				if(mturn.isObjectal()) {
+				if(!mDifferentialPilot.followLine()) {
 					mDifferentialPilot.steer();
-					Sound.beep();
-					mturn.setObjectal(false);
 					mStatus.setBehaviorStatus(mStatus.Follow);
-				}
-				
-				
-				turn = mturn.getTurn();
-								
-				LCD.drawString("Links: " + linkerSensor, 0, 1);
-				LCD.drawString("Rechts: " + rechterSensor, 0, 2);
-				
-//				//Kommunikation
-//				if(mBTconnection.checkConnection())
-//					readConnection();
-				
-				mDifferentialPilot.Turn(turn);
+				}		
+//				
+////				//Kommunikation
+////				if(mBTconnection.checkConnection())
+////					readConnection();
+
 				
 			}
 			

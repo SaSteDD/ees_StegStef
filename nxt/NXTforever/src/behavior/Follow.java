@@ -63,45 +63,43 @@ public class Follow implements Behavior {
 			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
-				//Eingänge holen
- 				linkerSensor = mLightSensors.getSensorLeft();
-				rechterSensor = mLightSensors.getSensorRight();
+				LCD.clear();
 				
-				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);
-				
-				LCD.drawString("Li: " + linkerSensor + " : " + mLightSensors.getSensorLeftRaw(), 0, 1);
-				LCD.drawString("Re: " + rechterSensor + " : " + mLightSensors.getSensorRightRaw(), 0, 2);
-				
-				if(mturn.isObjectal() && mturn.isobjallowed()) {
-					mturn.setobjallowed(false);
-					mturn.setObjectal(false);
-					Sound.beep();
+				if(!mDifferentialPilot.followLine()) {
+					
+					LCD.drawString("Cureve: " + curve, 1, 2);
+					LCD.drawString("Mark: " + mark, 1, 3);
 					
 					if(curve<2) {
+						LCD.drawString("Fahre Kruve", 1, 1);
 						mDifferentialPilot.steer();
 						curve++;
 					}
 					else if (curve==2 && mark<4) {
+						LCD.drawString("Fahre gerade aus", 1, 1);
 						mDifferentialPilot.travel();
 						mark++;
 					}
-					else if (mark==3 && curve ==2) {
+					else if (mark==4 && curve ==2) {
+						LCD.drawString("Fahre Kruve", 1, 1);
 						mDifferentialPilot.steer();
 						curve++;
 					}
-					else if (curve==3 && curve ==2){
-						mDifferentialPilot.steer();
-						curve=0;
+					else if (mark==4 && curve ==3){
+						LCD.drawString("Fahre gerade aus", 1, 1);
+						mDifferentialPilot.travel();
+						curve=-1;
+						mark = 0;
 					}
-					
-//					
-				}
+				}	
+				
+				LCD.drawString("Folge Bahn", 1, 1);
+				LCD.drawString("Cureve: " + curve, 1, 2);
+				LCD.drawString("Mark: " + mark, 1, 3);
 				
 				//Kommunikation
 //				if(mBTconnection.checkConnection())
-//					readConnection();
-				
-				mDifferentialPilot.Turn(mturn.getTurn());
+//					readConnection();	
 				
 				try {
 					Thread.yield();

@@ -33,10 +33,10 @@ public class followLine {
 	public Turn getFollowLine(int rechterSensor, int linkerSensor) {
 		
 		if(linkerSensor < 10 && rechterSensor > 10)
-			mturn.setTurn(-rechterSensor/2);
+			mturn.setTurn(-rechterSensor);
 		
 		if(linkerSensor > 10 && rechterSensor < 10 )
-			mturn.setTurn(linkerSensor/2);
+			mturn.setTurn(linkerSensor);
 		
 		if(linkerSensor < 10 && rechterSensor < 10 ) {
 			mturn.setTurn(0);
