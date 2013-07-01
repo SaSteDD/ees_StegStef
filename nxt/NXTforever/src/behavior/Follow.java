@@ -14,40 +14,38 @@ import main.Status;
 
 public class Follow implements Behavior {
 
-	    //Globale Klassen
-		private Status mStatus;
-		private MyLightSensors mLightSensors = MyLightSensors.getInstance();
-		private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
-		private MyBTconnection mBTconnection = MyBTconnection.getInstance();
-		
-		//Klassen
-		private MyBTSend mBTSend;
-		
-		// Behavior
-		private boolean suppressed = false;
-		
-		// Senosren
-		private int linkerSensor;
-		private int rechterSensor;
-		
-		// Position
-		private int maxcureve = 0;
-		private int curve = 0;
-		private int mark = 0;
-		
-		
+	// Globale Klassen
+	private Status mStatus;
+	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
+	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot
+			.getInstance();
+	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
-		
-		public Follow(Status status){
-			this.mStatus = status;
-		}
-		
-		@Override
-		public boolean takeControl() {
-			return (mStatus.getBehaviorStatus() == this);
-		}
+	// Klassen
+	private MyBTSend mBTSend;
 
-		@Override
+	// Behavior
+	private boolean suppressed = false;
+
+	// Senosren
+	private int linkerSensor;
+	private int rechterSensor;
+
+	// Position
+	private int maxcureve = 0;
+	private int curve = 0;
+	private int mark = 0;
+
+	public Follow(Status status) {
+		this.mStatus = status;
+	}
+
+	@Override
+	public boolean takeControl() {
+		return (mStatus.getBehaviorStatus() == this);
+	}
+
+	@Override
 		public void action() {
 			suppressed = false;
 	
@@ -74,8 +72,26 @@ public class Follow implements Behavior {
 						if(curve < maxcureve) {
 							mDifferentialPilot.steer();
 							curve++;
-						}	
+						}
+						else
+						{
+							mStatus.setPosition(Position.mark1.ordinal());
+							mStatus.setBehaviorStatus(mStatus.AskParameter);
+						}
 					}
+					
+					if(mStatus.getPosition() == Position.station1to2.ordinal() || 
+					   mStatus.getPosition() == Position.station2to3.ordinal() || 
+					   mStatus.getPosition() == Position.station3to4.ordinal()  ) {
+						
+						mStatus.setPosition();
+						mStatus.setBehaviorStatus(mStatus.AskParameter);	
+					}
+					
+					if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
+						mDifferentialPilot.stop();
+					}
+						
 				}	
 				
 				LCD.drawString("Folge Bahn", 1, 1);
@@ -101,20 +117,20 @@ public class Follow implements Behavior {
 
 		}
 
-		@Override
-		public void suppress() {
-			suppressed = true;
-		}
-		
-		private void readConnection() {
-			
-			List<Byte> temp;
-			Sound.beep();
-			temp = mBTconnection.readConnection();
-			
-			if(temp.get(0) == 97)
-				mDifferentialPilot.toggleStartStop();
-			
-		}
+	@Override
+	public void suppress() {
+		suppressed = true;
+	}
+
+	private void readConnection() {
+
+		List<Byte> temp;
+		Sound.beep();
+		temp = mBTconnection.readConnection();
+
+		if (temp.get(0) == 97)
+			mDifferentialPilot.toggleStartStop();
+
+	}
 
 }

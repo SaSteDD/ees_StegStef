@@ -1,4 +1,5 @@
 package support;
+import lejos.nxt.LCD;
 import lejos.nxt.Motor;
 import lejos.robotics.navigation.DifferentialPilot;
 
@@ -17,8 +18,8 @@ public class MyDifferentialPilot {
 	private int speed = 200;
 	
 	private MyDifferentialPilot() {
-		Motor.A.setSpeed(200);// 2 RPM
-		Motor.B.setSpeed(200);
+		Motor.A.setSpeed(400);// 2 RPM
+		Motor.B.setSpeed(400);
 	}
 	
 	public static MyDifferentialPilot getInstance() {
@@ -46,11 +47,40 @@ public class MyDifferentialPilot {
 	}
 	
 	public void steer(){
-		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!followLine());
 		Motor.B.forward();
 		Motor.B.setSpeed(600);
+		
+		try {
+			Thread.yield();
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void steerRight(){
+		Motor.A.setSpeed(200);
+		Motor.B.setSpeed(200);
+		Motor.A.backward();
+		while(!followLine()) {
+			LCD.clear();
+			LCD.drawInt(mLightSensors.getSensorRight(), 1, 1);
+			LCD.drawInt(mLightSensors.getSensorLeft(), 1, 2);   
+			
+			try {
+				Thread.yield();
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		Motor.A.forward();
+		Motor.A.setSpeed(600);
+		
 		
 		try {
 			Thread.yield();

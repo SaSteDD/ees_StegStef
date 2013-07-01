@@ -14,6 +14,8 @@ public class Status {
 	public Behavior Follow = new Follow(this);
 	public Behavior Connection = new Connection(this);
 	public Behavior DEBUG = new behavior.DEBUG(this);
+	public Behavior AskParameter = new behavior.AskParameter(this);
+	public Behavior UseStation = new behavior.UseStation(this);
 	
 //	private int currentPosition;
 	
@@ -46,7 +48,9 @@ public class Status {
 				Parking,
 				Follow,
 				Connection,
-				DEBUG
+				DEBUG,
+				AskParameter,
+				UseStation
 		};
 		
 		return bArray;		
@@ -84,6 +88,10 @@ public class Status {
 	public void setPosition(int position) {
 		currentPosition = position;
 	}
+	
+	public void setPosition() {
+		currentPosition++;	
+	}
 
 	public int getPositionMark() {
 		return PositionMark;
@@ -92,4 +100,6 @@ public class Status {
 	public void setPositionMark(int positionMark) {
 		PositionMark = positionMark;
 	}
+
+	
 }
