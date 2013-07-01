@@ -6,6 +6,7 @@ import support.MyBTSend;
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
+import support.Position;
 import lejos.nxt.LCD;
 import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
@@ -30,6 +31,7 @@ public class Follow implements Behavior {
 		private int rechterSensor;
 		
 		// Position
+		private int maxcureve = 0;
 		private int curve = 0;
 		private int mark = 0;
 		
@@ -55,35 +57,24 @@ public class Follow implements Behavior {
 //			mBTSend = new MyBTSend( new byte[] {(byte)'s',1,0,0,0,1 } );
 //			mBTSend.run();
 			
+			//Anzahl der Kurven der LongLange setzen
+			if(mStatus.getlastPosition() == Position.parkingSpace.ordinal()) 
+				maxcureve=2;
+			else
+				maxcureve=3;
+			
+			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
 				LCD.clear();
 				
-				if(!mDifferentialPilot.followLine()) {
-					
-					LCD.drawString("Cureve: " + curve, 1, 2);
-					LCD.drawString("Mark: " + mark, 1, 3);
-					
-					if(curve<2) {
-						LCD.drawString("Fahre Kruve", 1, 1);
-						mDifferentialPilot.steer();
-						curve++;
-					}
-					else if (curve==2 && mark<4) {
-						LCD.drawString("Fahre gerade aus", 1, 1);
-						mDifferentialPilot.travel();
-						mark++;
-					}
-					else if (mark==4 && curve ==2) {
-						LCD.drawString("Fahre Kruve", 1, 1);
-						mDifferentialPilot.steer();
-						curve++;
-					}
-					else if (mark==4 && curve ==3){
-						LCD.drawString("Fahre gerade aus", 1, 1);
-						mDifferentialPilot.travel();
-						curve=-1;
-						mark = 0;
+				if(!mDifferentialPilot.followLine()) {					
+				
+					if(mStatus.getPosition() == Position.longLane.ordinal()) {
+						if(curve < maxcureve) {
+							mDifferentialPilot.steer();
+							curve++;
+						}	
 					}
 				}	
 				

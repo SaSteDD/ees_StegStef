@@ -8,6 +8,7 @@ import java.util.Timer;
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
+import support.Position;
 import support.Task;
 import lejos.nxt.LCD;
 import lejos.nxt.Sound;
@@ -69,9 +70,10 @@ public class Parking implements Behavior {
 				
 				if(!mDifferentialPilot.followLine()) {
 					mDifferentialPilot.steer();
+					mStatus.changePosition(Position.longLane.ordinal());
 					mStatus.setBehaviorStatus(mStatus.Follow);
 				}		
-//				
+			
 ////				//Kommunikation
 ////				if(mBTconnection.checkConnection())
 ////					readConnection();
