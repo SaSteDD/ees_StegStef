@@ -9,12 +9,9 @@ import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
 import support.Task;
-import support.Turn;
-import support.followLine;
 import lejos.nxt.LCD;
 import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
-import lejos.util.TimerListener;
 import main.Status;
 
 public class Parking implements Behavior {
@@ -22,10 +19,7 @@ public class Parking implements Behavior {
 	private Status mStatus;
 	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
-	
-	private Turn mturn = new Turn();
-	private Timer timer = new Timer();
-	
+
 	private boolean suppressed = false;
 	
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
@@ -58,8 +52,6 @@ public class Parking implements Behavior {
 		
 		// Variablen, zählt die Kurven
 		int curve = 0;
-		// PID-Regler, zum folgen der Linie
-		followLine mfollowLine = new followLine(mLightSensors.getGrauLinks(),mLightSensors.getGrauRechts());
 		
 		mDifferentialPilot.forward();
 	

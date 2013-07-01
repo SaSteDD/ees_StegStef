@@ -6,8 +6,6 @@ import support.MyBTSend;
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
-import support.Turn;
-import support.followLine;
 import lejos.nxt.LCD;
 import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
@@ -22,8 +20,6 @@ public class Follow implements Behavior {
 		private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 		
 		//Klassen
-		private followLine  mfollowLine;
-		private Turn mturn = new Turn();
 		private MyBTSend mBTSend;
 		
 		// Behavior
@@ -52,9 +48,7 @@ public class Follow implements Behavior {
 		@Override
 		public void action() {
 			suppressed = false;
-			
-			mfollowLine = new followLine(mLightSensors.getGrauLinks(), mLightSensors.getGrauRechts());
-			
+	
 			mDifferentialPilot.forward();
 			Sound.beep();
 			
