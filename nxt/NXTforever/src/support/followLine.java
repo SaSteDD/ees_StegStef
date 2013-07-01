@@ -33,32 +33,22 @@ public class followLine {
 	public Turn getFollowLine(int rechterSensor, int linkerSensor) {
 		
 		if(linkerSensor < 10 && rechterSensor > 10)
-			mturn.setTurn(-10);
+			mturn.setTurn(-rechterSensor/2);
 		
 		if(linkerSensor > 10 && rechterSensor < 10 )
-			mturn.setTurn(10);
+			mturn.setTurn(linkerSensor/2);
 		
 		if(linkerSensor < 10 && rechterSensor < 10 ) {
 			mturn.setTurn(0);
-			if(!mturn.getGrauallowed())
-				mturn.setGrauallowed(true);
+			mturn.setobjallowed(true);
 		}
 		
-		if( ( (linkerSensor > (grauLeft-offset)) && (linkerSensor < (grauLeft+offset)) ) && ( (rechterSensor > (grauRight -offset)) && (rechterSensor < (grauRight + offset)) ) )
-			mturn.setisgrau(true);
-		
-		if( (linkerSensor > grauLeft+offset) && (rechterSensor > (grauRight + offset) ))
-			mturn.setiscurve(true);	
+		if(linkerSensor > 30 && rechterSensor >30 ) 
+			mturn.setObjectal(true);
 		
 		return mturn;
 	}
-	
-	/**
-	 * PID Regler, gibt Sollwert zum Lenken zurück. Kalibriert um auf der Linie zu fahren.
-	 * 
-	 * @param LightValue - Lichtwert (1 ... 100)
-	 * @return
-	 */
+
 
 	
 }

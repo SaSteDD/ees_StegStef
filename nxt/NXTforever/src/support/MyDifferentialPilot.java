@@ -39,21 +39,6 @@ public class MyDifferentialPilot {
 		
 	}
 
-	public void do90GradTurn() {
-		pilot.stop();
-		pilot.rotate(-90);
-		while(pilot.isMoving()){
-			Thread.yield();
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-	}
-
 	public void toggleStartStop() {
 		if(isStop)
 			forward();
@@ -62,11 +47,14 @@ public class MyDifferentialPilot {
 		
 	}
 	
-	public void rotate(int winkel){
-		pilot.setTravelSpeed(speed/2);
-		pilot.rotate(winkel);
-		pilot.setTravelSpeed(speed);
+	public void steer(){
+		pilot.arc(0,90);
 		
+	}
+	
+	public void travel() {
+		pilot.travel(120);
+		pilot.steer(0);
 	}
 
 }

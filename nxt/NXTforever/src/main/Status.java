@@ -12,6 +12,7 @@ public class Status {
 	public Behavior Parking = new Parking(this);
 	public Behavior Follow = new Follow(this);
 	public Behavior Connection = new Connection(this);
+	public Behavior DEBUG = new behavior.DEBUG(this);
 	
 	private Behavior behaviorStatus;
 	private Behavior lastBehaviorStatus;
@@ -38,7 +39,8 @@ public class Status {
 				Initialisierung,
 				Parking,
 				Follow,
-				Connection
+				Connection,
+				DEBUG
 		};
 		
 		return bArray;		

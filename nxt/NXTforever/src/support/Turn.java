@@ -3,9 +3,8 @@ package support;
 public class Turn {
 	
 	private int turn = 0;
-	private boolean iscurve = false;
-	private boolean isgrau = false;
-	private boolean grauallowed = true;
+	private boolean objectal = false;
+	private boolean objallowed = false;
 	
 	public int getTurn() {
 		return turn;
@@ -15,28 +14,21 @@ public class Turn {
 		this.turn = turn;
 	}
 	
-	public boolean getiscurve() {
-		return iscurve;
+
+	public void setobjallowed(boolean obj) {
+		this.objallowed = obj;
 	}
 	
-	public void setiscurve(boolean iscurve) {
-		this.iscurve = iscurve;
+	public boolean isobjallowed() {
+		return this.objallowed;
 	}
 
-	public boolean getisgrau() {
-		return isgrau;
+	public boolean isObjectal() {
+		return objectal;
 	}
 
-	public void setisgrau(boolean isgrau) {
-		this.isgrau = isgrau;
-	}
-
-	public boolean getGrauallowed() {
-		return grauallowed;
-	}
-
-	public void setGrauallowed(boolean grauallowed) {
-		this.grauallowed = grauallowed;
+	public void setObjectal(boolean objectal) {
+		this.objectal = objectal;
 	}
 
 }

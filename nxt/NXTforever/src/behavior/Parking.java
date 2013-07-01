@@ -31,7 +31,7 @@ public class Parking implements Behavior {
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 	
 	//interne Variable, legt fest ob Parkplatz verlassen werden darf
-	private boolean leaveParkingPosition = false;
+	private boolean leaveParkingPosition = true;
 	
 	//iV, hält Wert für den rechten Sensor
 	private int rechterSensor;
@@ -79,16 +79,12 @@ public class Parking implements Behavior {
 				rechterSensor = mLightSensors.getSensorRight();
 				linkerSensor = mLightSensors.getSensorLeft();
 				
-				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);
+				mturn = mfollowLine.getFollowLine(linkerSensor, rechterSensor);				
 				
-				if(mturn.getisgrau()){
+				if(mturn.isObjectal()) {
+					mDifferentialPilot.steer();
 					Sound.beep();
-					mturn.setisgrau(false);
-				}
-				
-				if(mturn.getiscurve()) {
-					mDifferentialPilot.rotate(90);
-					mturn.setiscurve(false);
+					mturn.setObjectal(false);
 					mStatus.setBehaviorStatus(mStatus.Follow);
 				}
 				
@@ -98,9 +94,9 @@ public class Parking implements Behavior {
 				LCD.drawString("Links: " + linkerSensor, 0, 1);
 				LCD.drawString("Rechts: " + rechterSensor, 0, 2);
 				
-				//Kommunikation
-				if(mBTconnection.checkConnection())
-					readConnection();
+//				//Kommunikation
+//				if(mBTconnection.checkConnection())
+//					readConnection();
 				
 				mDifferentialPilot.Turn(turn);
 				

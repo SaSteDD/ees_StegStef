@@ -33,7 +33,9 @@ public class Follow implements Behavior {
 		private int linkerSensor;
 		private int rechterSensor;
 		
-		// 
+		// Position
+		private int curve = 0;
+		private int mark = 0;
 		
 		
 
@@ -56,8 +58,8 @@ public class Follow implements Behavior {
 			mDifferentialPilot.forward();
 			Sound.beep();
 			
-			mBTSend = new MyBTSend( new byte[] {(byte)'s',1,0,0,0,1 } );
-			mBTSend.run();
+//			mBTSend = new MyBTSend( new byte[] {(byte)'s',1,0,0,0,1 } );
+//			mBTSend.run();
 			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
@@ -70,24 +72,34 @@ public class Follow implements Behavior {
 				LCD.drawString("Li: " + linkerSensor + " : " + mLightSensors.getSensorLeftRaw(), 0, 1);
 				LCD.drawString("Re: " + rechterSensor + " : " + mLightSensors.getSensorRightRaw(), 0, 2);
 				
-				if(mturn.getisgrau() && mturn.getGrauallowed()){
-					mStatus.setPositionMark(mStatus.getPositionMark() + 1);
-					
-					new MyBTSend( new byte[] {(byte)'s',(byte) (4 + mStatus.getPositionMark() * 3) ,0,0,0,1 } ).run();
-					
+				if(mturn.isObjectal() && mturn.isobjallowed()) {
+					mturn.setobjallowed(false);
+					mturn.setObjectal(false);
 					Sound.beep();
 					
-					mturn.setGrauallowed(false);
-				}
-				
-				if(mturn.getiscurve()) {
-					mDifferentialPilot.rotate(90);
-					mturn.setiscurve(false);
+					if(curve<2) {
+						mDifferentialPilot.steer();
+						curve++;
+					}
+					else if (curve==2 && mark<4) {
+						mDifferentialPilot.travel();
+						mark++;
+					}
+					else if (mark==3 && curve ==2) {
+						mDifferentialPilot.steer();
+						curve++;
+					}
+					else if (curve==3 && curve ==2){
+						mDifferentialPilot.steer();
+						curve=0;
+					}
+					
+//					
 				}
 				
 				//Kommunikation
-				if(mBTconnection.checkConnection())
-					readConnection();
+//				if(mBTconnection.checkConnection())
+//					readConnection();
 				
 				mDifferentialPilot.Turn(mturn.getTurn());
 				

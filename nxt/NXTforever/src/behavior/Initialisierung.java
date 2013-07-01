@@ -81,33 +81,6 @@ public class Initialisierung implements Behavior {
 				e.printStackTrace();
 			}
 		
-		//Farbe Weiﬂ einlesen
-		while(true){
-			LCD.drawString("Grau setzen", 1, 1);
-			LCD.drawString("Li:  "  + mLightSensors.getSensorLeft(), 1, 2);
-			LCD.drawString("Re: "  + mLightSensors.getSensorRight(), 1, 3);
-							
-			if(Button.ENTER.isDown()){
-				mLightSensors.setGrau();	
-						break;
-					}
-					try {
-						Thread.sleep(10);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					LCD.clear();
-				}
-				
-				while(!Button.ENTER.isUp())
-					try {
-						Thread.sleep(10);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-		
 		while(!suppressed && (mStatus.getBehaviorStatus()==this)){		
 			int offset = 0;
 			
@@ -117,7 +90,7 @@ public class Initialisierung implements Behavior {
 			
 			
 			if(Button.ENTER.isDown()){
-				mStatus.setBehaviorStatus(mStatus.Connection);
+				mStatus.setBehaviorStatus(mStatus.Parking);
 			}
 				
 			try {

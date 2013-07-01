@@ -21,6 +21,13 @@ private static MyLightSensors instance = new MyLightSensors();
         return instance;
     }
 	
+	public void setColor(int wlLow, int wrLow, int wlHigh, int wrHigh) {
+		SensorLeft.setLow(wlLow);
+		SensorRight.setLow(wrLow);
+		SensorLeft.setHigh(wlHigh);
+		SensorRight.setHigh(wrHigh);
+	}
+	
 	public void setBlack(){
 		SensorLeft.setLow(SensorLeft.getNormalizedLightValue());
 		SensorRight.setLow(SensorRight.getNormalizedLightValue());
