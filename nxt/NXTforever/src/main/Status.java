@@ -1,5 +1,6 @@
 package main;
 
+import support.MyBTSend;
 import support.Task;
 import behavior.*;
 import support.*;
@@ -17,7 +18,10 @@ public class Status {
 	public Behavior AskParameter = new behavior.AskParameter(this);
 	public Behavior UseStation = new behavior.UseStation(this);
 	
-//	private int currentPosition;
+	//Kommunikation
+	private boolean commAllowed = true;
+	private MyBTSend mBTSend;
+
 	
 	private int currentPosition;
 	private int lastPosition;
@@ -68,11 +72,20 @@ public class Status {
 	public void changePosition() {
 		lastPosition = currentPosition;
 		currentPosition++;
+		commPosition();
 	}
 	
 	public void changePosition(int position) {
 		lastPosition = currentPosition;
 		currentPosition = position;
+		commPosition();
+	}
+	
+	private void commPosition(){
+		if(commAllowed) {
+			mBTSend = new MyBTSend( new byte[] {(byte)'s',(byte) currentPosition,1,0,0,0 } );
+			mBTSend.start();
+		}
 	}
 	
 	public int getlastPosition() {

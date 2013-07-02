@@ -90,7 +90,7 @@ public class Initialisierung implements Behavior {
 			
 			
 			if(Button.ENTER.isDown()){
-				mStatus.setBehaviorStatus(mStatus.Parking);
+				mStatus.setBehaviorStatus(mStatus.Connection);
 			}
 				
 			try {

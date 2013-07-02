@@ -74,7 +74,8 @@ public class MyDifferentialPilot {
 		while(!findLine());
 		Motor.B.forward();
 		Motor.B.setSpeed(600);
-
+		while(!findLine());
+		
 		try {
 		Thread.yield();
 		Thread.sleep(100);

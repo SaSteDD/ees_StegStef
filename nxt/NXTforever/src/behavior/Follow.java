@@ -52,9 +52,6 @@ public class Follow implements Behavior {
 			mDifferentialPilot.forward();
 			Sound.beep();
 			
-//			mBTSend = new MyBTSend( new byte[] {(byte)'s',1,0,0,0,1 } );
-//			mBTSend.run();
-			
 			//Anzahl der Kurven der LongLange setzen
 			if(mStatus.getlastPosition() == Position.parkingSpace.ordinal()) 
 				maxcureve=2;
