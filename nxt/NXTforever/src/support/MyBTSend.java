@@ -9,7 +9,7 @@ public class MyBTSend extends Thread {
 	
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 	
-	private DataOutputStream dataOut = mBTconnection.getOutputStream();;
+	private DataOutputStream dataOut = mBTconnection.getOutputStream();
 	private byte[] out;
 	
 	public MyBTSend(byte[] output) {

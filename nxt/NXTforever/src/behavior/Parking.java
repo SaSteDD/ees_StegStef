@@ -26,7 +26,7 @@ public class Parking implements Behavior {
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 	
 	//interne Variable, legt fest ob Parkplatz verlassen werden darf
-	private boolean leaveParkingPosition = true;
+	private boolean leaveParkingPosition = false;
 	
 	//iV, hält Wert für den rechten Sensor
 	private int rechterSensor;
@@ -53,8 +53,6 @@ public class Parking implements Behavior {
 		
 		// Variablen, zählt die Kurven
 		int curve = 0;
-		
-		mDifferentialPilot.forward();
 	
 		
 		while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
@@ -62,7 +60,7 @@ public class Parking implements Behavior {
 			if(leaveParkingPosition == false) {
 				// Abfragen ob Daten an der Verbindung anliegen
 				if(mBTconnection.checkConnection())				
-					askforTask();	
+					askforTask();
 			}
 			else {
 				

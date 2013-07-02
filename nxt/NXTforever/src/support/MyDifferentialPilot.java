@@ -70,19 +70,19 @@ public class MyDifferentialPilot {
 	}
 	
 	public void steer(int force){
+		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!findLine());
 		Motor.B.forward();
 		Motor.B.setSpeed(600);
-		while(!findLine());
 		
-		try {
-		Thread.yield();
-		Thread.sleep(100);
-		} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
+//		try {
+//		Thread.yield();
+//		Thread.sleep(500);
+//		} catch (InterruptedException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//		}
 	}
 	
 	public void steerRight(){

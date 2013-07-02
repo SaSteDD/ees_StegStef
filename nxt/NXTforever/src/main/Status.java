@@ -1,10 +1,15 @@
 package main;
 
+import java.io.DataOutputStream;
+import java.io.IOException;
+
 import support.MyBTSend;
+import support.MyBTconnection;
 import support.Task;
 import behavior.*;
 import support.*;
 
+import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 
 public class Status {
@@ -21,6 +26,7 @@ public class Status {
 	//Kommunikation
 	private boolean commAllowed = true;
 	private MyBTSend mBTSend;
+	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
 	
 	private int currentPosition;
@@ -83,8 +89,9 @@ public class Status {
 	
 	private void commPosition(){
 		if(commAllowed) {
-			mBTSend = new MyBTSend( new byte[] {(byte)'s',(byte) currentPosition,1,0,0,0 } );
-			mBTSend.start();
+			Sound.beep();
+			byte[] out = new byte[] {(byte)'s',(byte) currentPosition,1,0,0,0 } ;
+			mBTconnection.sendConnection(out);
 		}
 	}
 	
@@ -100,10 +107,12 @@ public class Status {
 	
 	public void setPosition(int position) {
 		currentPosition = position;
+		commPosition();
 	}
 	
 	public void setPosition() {
-		currentPosition++;	
+		currentPosition++;
+		commPosition();
 	}
 
 	public int getPositionMark() {
