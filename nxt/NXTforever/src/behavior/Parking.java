@@ -68,8 +68,8 @@ public class Parking implements Behavior {
 				
 				LCD.clear();
 				
-				if(!mDifferentialPilot.followLine()) {
-					mDifferentialPilot.steer();
+				if(!mDifferentialPilot.followLine(2)) {
+					mDifferentialPilot.steer(1);
 					mStatus.changePosition(Position.longLane.ordinal());
 					mStatus.setBehaviorStatus(mStatus.Follow);
 				}		

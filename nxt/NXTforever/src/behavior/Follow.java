@@ -66,11 +66,11 @@ public class Follow implements Behavior {
 				
 				LCD.clear();
 				
-				if(!mDifferentialPilot.followLine()) {					
+				if(!mDifferentialPilot.followLine(2)) {					
 				
 					if(mStatus.getPosition() == Position.longLane.ordinal()) {
 						if(curve < maxcureve) {
-							mDifferentialPilot.steer();
+							mDifferentialPilot.steer(1);
 							curve++;
 						}
 						else
