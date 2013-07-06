@@ -21,6 +21,8 @@ public class MyDifferentialPilot {
 	private MyDifferentialPilot() {
 		Motor.A.setSpeed(400);// 2 RPM
 		Motor.B.setSpeed(400);
+		Motor.A.setAcceleration(24000);
+		Motor.B.setAcceleration(24000);
 	}
 	
 	public static MyDifferentialPilot getInstance() {
@@ -35,8 +37,8 @@ public class MyDifferentialPilot {
 	
 	public void stop(){
 		isStop = true;
-		Motor.A.stop();
-		Motor.B.stop();
+		Motor.A.stop(true);
+	    Motor.B.stop();
 	}
 
 	public void toggleStartStop() {
@@ -45,6 +47,13 @@ public class MyDifferentialPilot {
 		else
 			stop();
 		
+	}
+	
+	public void goStraight(){
+		Motor.A.setSpeed(speed);
+		Motor.B.setSpeed(speed);
+		forward();
+		while(followGrau());
 	}
 	
 	public void turn(){
@@ -72,53 +81,60 @@ public class MyDifferentialPilot {
 	public void steer(int force){
 		Motor.B.setSpeed(300);
 		Motor.B.backward();
-		while(!findLine());
+		while(!findLineAfterCurve());
 		Motor.B.forward();
-		Motor.B.setSpeed(600);
 		
-//		try {
-//		Thread.yield();
-//		Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//		}
 	}
 	
 	public void steerRight(){
 		Motor.A.setSpeed(0);
 		Motor.B.setSpeed(speed);
-		Motor.A.backward();
-		Sound.beep();
-		while(!findLine()) {
-			
-			try {
-				Thread.yield();
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		Sound.beep();
-		Motor.A.forward();
+		while(!findLine()) {}
 		Motor.A.setSpeed(speed);
 		Motor.B.setSpeed(speed);
 		Motor.A.forward();
 		Motor.B.forward();
 	}
-
+	
+	public boolean followGrau() {
+		float rechterSensor = mLightSensors.getSensorRight();
+		float linkerSensor = mLightSensors.getSensorLeft();
+		
+		
+		float turn = 0;
+		
+		if(Math.abs(linkerSensor - rechterSensor) < 10)
+			turn = 0;
+		else
+			turn = (rechterSensor - linkerSensor) / 2;
+		
+		
+				
+		if(linkerSensor < 20 || rechterSensor < 20 ) 
+			return false;
+		
+	Turn(turn);
+		return true;
+		
+	}
+	
 	public boolean followLine(int force) {
 		float rechterSensor = mLightSensors.getSensorRight();
 		float linkerSensor = mLightSensors.getSensorLeft();
 		
 		float turn = 0;
 		
-		if(linkerSensor < 10 && rechterSensor > 10)
-			turn = (float) (rechterSensor * force);
+		if( rechterSensor > 10 )
+		    if(linkerSensor < 10)
+		    	turn = (float) (rechterSensor * 2);
+		    else
+		    	turn = (float) (rechterSensor * 2.5);
 		
-		if(linkerSensor > 10 && rechterSensor < 10 )
-			turn = (float) (-linkerSensor * force);
+		if(linkerSensor > 10)
+			if(rechterSensor < 10 )
+				turn = (float) -(linkerSensor * 2);
+			else
+				turn = (float) -(linkerSensor * 2.5 );
 		
 		if(linkerSensor < 10 && rechterSensor < 10 ) {
 			turn = 0;
@@ -130,6 +146,17 @@ public class MyDifferentialPilot {
 		Turn(turn);
 		return true;
 		
+	}
+	
+	public boolean findLineAfterCurve() {
+		
+		float rechterSensor = mLightSensors.getSensorRight();
+		
+		if(rechterSensor < 20 ) {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	public boolean findLine() {

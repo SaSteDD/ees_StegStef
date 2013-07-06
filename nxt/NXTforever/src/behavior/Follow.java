@@ -8,6 +8,7 @@ import support.MyDifferentialPilot;
 import support.MyLightSensors;
 import support.Position;
 import lejos.nxt.LCD;
+import lejos.nxt.Motor;
 import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
@@ -50,7 +51,6 @@ public class Follow implements Behavior {
 			suppressed = false;
 	
 			mDifferentialPilot.forward();
-			Sound.beep();
 			
 			//Anzahl der Kurven der LongLange setzen
 			if(mStatus.getlastPosition() == Position.parkingSpace.ordinal()) 
@@ -61,7 +61,6 @@ public class Follow implements Behavior {
 			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
-				LCD.clear();
 				
 				if(!mDifferentialPilot.followLine(2)) {					
 				
@@ -73,28 +72,48 @@ public class Follow implements Behavior {
 						else
 						{
 							mStatus.setPosition(Position.mark1.ordinal());
+							LCD.drawInt(1, 0, 4);
 							mStatus.setBehaviorStatus(mStatus.AskParameter);
+							LCD.drawInt(2, 0, 4);
+							break;
 						}
 					}
 					
-					if(mStatus.getPosition() == Position.station1to2.ordinal() || 
-					   mStatus.getPosition() == Position.station2to3.ordinal() || 
-					   mStatus.getPosition() == Position.station3to4.ordinal()  ) {
-						
+					else if(mStatus.getPosition() == Position.station1to2.ordinal() || 
+					    mStatus.getPosition() == Position.station2to3.ordinal() || 
+					    mStatus.getPosition() == Position.station3to4.ordinal()  ) {
 						mStatus.setPosition();
-						mStatus.setBehaviorStatus(mStatus.AskParameter);	
+						mStatus.setBehaviorStatus(mStatus.AskParameter);
+						break;
 					}
 					
-					if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
-						mDifferentialPilot.stop();
+					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
+						mDifferentialPilot.steer(1);
+						mStatus.setPosition(Position.longLane.ordinal());
+						maxcureve=2;
+						curve=0;
+					}
+					
+					else if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
+						if(curve==maxcureve) {
+							mDifferentialPilot.steer(1);						    
+						}
+						else {
+							mStatus.setPosition(Position.mark5.ordinal());
+							mDifferentialPilot.stop();
+							mDifferentialPilot.goStraight();
+							mStatus.setPosition(Position.parkingSpaceTSection.ordinal());
+							break;
+						}
+						 
+						curve++;
 					}
 						
+						
+					
+					
 				}	
-				
-				LCD.drawString("Folge Bahn", 1, 1);
-				LCD.drawString("Cureve: " + curve, 1, 2);
-				LCD.drawString("Mark: " + mark, 1, 3);
-				
+
 				//Kommunikation
 //				if(mBTconnection.checkConnection())
 //					readConnection();	
@@ -103,14 +122,14 @@ public class Follow implements Behavior {
 					Thread.yield();
 					Thread.sleep(10);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					LCD.clear();
+					LCD.drawString("Fehler hier", 0, 0);
+					LCD.drawString(e.getMessage(), 0,1);
 				}
 				
-				LCD.clear(); 
 			}
-			
-			mDifferentialPilot.stop();
+			LCD.drawInt(3, 0, 4);
+	//		mDifferentialPilot.stop();
 
 		}
 

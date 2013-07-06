@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import lejos.nxt.LCD;
 import lejos.nxt.comm.Bluetooth;
 import lejos.nxt.comm.NXTConnection;
 
@@ -22,16 +23,6 @@ public class MyBTconnection {
     }
 	
 	private NXTConnection connection;	
-	
-//	public void sendConnection(byte message){		
-//		try {
-//			dataOut.write(message);
-//			dataOut.flush();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
 	
 	public void openConnection()
 		{
@@ -59,7 +50,9 @@ public class MyBTconnection {
 			while(dataIn.available() > 0)
 				temp.add(dataIn.readByte());		
 		} catch (IOException e) {
-			e.printStackTrace();
+			LCD.clear();
+			LCD.drawString("Fehler", 0, 0);
+			LCD.drawString(e.getMessage(), 0, 1);
 		}
 		
 		return temp;
@@ -67,8 +60,7 @@ public class MyBTconnection {
 	}
 	
 	public DataOutputStream getOutputStream(){
-		return dataOut;
-		
+		return dataOut;		
 	}
 	
 	public void sendConnection(byte[] out) {
@@ -78,6 +70,6 @@ public class MyBTconnection {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		
 	}
+		
 }

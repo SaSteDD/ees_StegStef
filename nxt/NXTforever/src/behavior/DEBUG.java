@@ -30,7 +30,7 @@ public class DEBUG implements Behavior {
 		suppressed = false;
 		LCD.clear();
 		
-		mLightSensors.setColor(310, 336, 538, 581);
+		mLightSensors.setColor(310, 332, 527, 578);
 		
 		while(!suppressed && (mStatus.getBehaviorStatus()==this)){		
 			int offset = 0;
@@ -56,7 +56,7 @@ public class DEBUG implements Behavior {
 		mDifferentialPilot.forward();
 		
 		mStatus.setPosition(Position.parkingSpace.ordinal());
-		mStatus.setBehaviorStatus(mStatus.Parking);
+		mStatus.setBehaviorStatus(mStatus.Connection);
 			
 		LCD.clear();
 		LCD.drawString("Fahren", 0, 0);
