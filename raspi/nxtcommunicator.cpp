@@ -262,7 +262,7 @@ void NxtCommunicator::readStateData()
 
   char st[5]={};
 
-  if(readChars((st),5))
+  if(readChars(st,5))
   {
       if(st[0]<= Types::unknown){
           state.section=static_cast<Types::TrackSection>(st[0]);
@@ -273,7 +273,7 @@ void NxtCommunicator::readStateData()
           state.stepNum.byte3=st[4];
 
       emit nxtStateChanged(state);
-          emit nxtLogMessage(stateChar.first + "( " + stateChar.second + "): " + chToHexString(st[0])
+          emit nxtLogMessage("hello" + chToHexString(st[0])
               + chToHexString(st[1])
               + chToHexString(st[2])
               + chToHexString(st[3])
