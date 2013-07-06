@@ -47,6 +47,12 @@ public class MyDifferentialPilot {
 		
 	}
 	
+	public void goStraight(){
+		Motor.A.forward();
+		Motor.B.forward();
+		while(followGrau());
+	}
+	
 	public void turn(){
 		Motor.A.setSpeed(speed/2);
 		Motor.B.setSpeed(speed/2);
@@ -73,7 +79,6 @@ public class MyDifferentialPilot {
 		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!findLineAfterCurve());
-		Sound.beep();
 		Motor.B.forward();
 		Motor.B.setSpeed(600);
 		
@@ -82,26 +87,52 @@ public class MyDifferentialPilot {
 	public void steerRight(){
 		Motor.A.setSpeed(0);
 		Motor.B.setSpeed(speed);
-		Sound.beep();
 		while(!findLine()) {}
-		Sound.beep();
 		Motor.A.setSpeed(speed);
 		Motor.B.setSpeed(speed);
 		Motor.A.forward();
 		Motor.B.forward();
 	}
-
+	
+	public boolean followGrau() {
+		float rechterSensor = mLightSensors.getSensorRight();
+		float linkerSensor = mLightSensors.getSensorLeft();
+		
+		
+		float turn = 0;
+		
+		if(Math.abs(linkerSensor - rechterSensor) < 20)
+			turn = 0;
+		else
+			turn = (linkerSensor - rechterSensor) / 2;
+		
+		
+				
+		if(linkerSensor < 20 || rechterSensor < 20 ) 
+			return false;
+		
+		Turn(turn);
+		return true;
+		
+	}
+	
 	public boolean followLine(int force) {
 		float rechterSensor = mLightSensors.getSensorRight();
 		float linkerSensor = mLightSensors.getSensorLeft();
 		
 		float turn = 0;
 		
-		if(linkerSensor < 10 && rechterSensor > 10)
-			turn = (float) (rechterSensor * force);
+		if( rechterSensor > 10 )
+		    if(linkerSensor < 10)
+		    	turn = (float) (rechterSensor);
+		    else
+		    	turn = (float) (rechterSensor * 2);
 		
-		if(linkerSensor > 10 && rechterSensor < 10 )
-			turn = (float) (-linkerSensor * force);
+		if(linkerSensor > 10)
+			if(rechterSensor < 10 )
+				turn = (float) (-linkerSensor);
+			else
+				turn = (float) -(linkerSensor * 2 );
 		
 		if(linkerSensor < 10 && rechterSensor < 10 ) {
 			turn = 0;
@@ -119,7 +150,7 @@ public class MyDifferentialPilot {
 		
 		float rechterSensor = mLightSensors.getSensorRight();
 		
-		if(rechterSensor < 10 ) {
+		if(rechterSensor < 20 ) {
 			return true;
 		}
 		

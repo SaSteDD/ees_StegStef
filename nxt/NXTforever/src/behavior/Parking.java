@@ -112,23 +112,21 @@ public class Parking implements Behavior {
 		temp = mBTconnection.readConnection();
 
 			
-		if(temp.get(0) == 116){							// wenn 1. Byte = T -> Auftrag
-			countSteps = temp.get(5);					// 2. Byte: Anzahl der Schritte
+		if(temp.get(0) == 't'){							// wenn 1. Byte = T -> Auftrag
+			countSteps = (temp.get(5) << 24) + (temp.get(4) << 16) + (temp.get(3) << 8) + temp.get(2);
 			newTask = new Task(temp.get(1));			// neuen Auftrag anlegen
 			
 			//alle Schritte nacheinander Ablegen
 			for (int i = 0;i<countSteps;i++) {
 				newTask.addStep(temp.get(6 + i*3), temp.get(7 + i*3), temp.get(8 + i*3));
+				Sound.beep();
 			}
 			
 			// Auftrag an die Statusklasse übergeben
 			mStatus.setTask(newTask);
 			
-			//mBTconnection.sendConnection((byte)'f');
-			
-			
 			leaveParkingPosition = true;
-			mDifferentialPilot.forward();
+			//mDifferentialPilot.forward();
 		}
 		else {
 			System.out.print("Fehler!!!!");

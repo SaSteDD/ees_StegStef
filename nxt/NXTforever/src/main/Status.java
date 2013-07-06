@@ -1,8 +1,5 @@
 package main;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-
 import support.MyBTSend;
 import support.MyBTconnection;
 import support.Task;
@@ -102,7 +99,7 @@ public class Status {
 	public void steered() {
 		if(currentPosition == Position.parkingSpace.ordinal() )
 			currentPosition = Position.longLane.ordinal();
-			
+		
 	}
 	
 	public void setPosition(int position) {
@@ -115,13 +112,17 @@ public class Status {
 		commPosition();
 	}
 
-	public int getPositionMark() {
-		return PositionMark;
+//	public int getPositionMark() {
+//		return PositionMark;
+//	}
+//
+//	public void setPositionMark(int positionMark) {
+//		PositionMark = positionMark;
+//	}
+	
+	public Step getStep(){
+		return mTask.getStep();
+		
 	}
-
-	public void setPositionMark(int positionMark) {
-		PositionMark = positionMark;
-	}
-
 	
 }

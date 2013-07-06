@@ -23,16 +23,6 @@ public class MyBTconnection {
 	
 	private NXTConnection connection;	
 	
-//	public void sendConnection(byte message){		
-//		try {
-//			dataOut.write(message);
-//			dataOut.flush();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-	
 	public void openConnection()
 		{
 			connection = Bluetooth.waitForConnection();
@@ -67,8 +57,7 @@ public class MyBTconnection {
 	}
 	
 	public DataOutputStream getOutputStream(){
-		return dataOut;
-		
+		return dataOut;		
 	}
 	
 	public void sendConnection(byte[] out) {
