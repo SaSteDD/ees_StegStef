@@ -260,7 +260,7 @@ void NxtCommunicator::readStateData()
 {
   Types::NxtState state;
 
-  char st[5];
+  char st[5]={};
 
   if(readChars((st),5))
   {
