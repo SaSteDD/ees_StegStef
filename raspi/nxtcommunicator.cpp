@@ -273,7 +273,7 @@ void NxtCommunicator::readStateData()
           state.stepNum.byte3=st[4];
 
       emit nxtStateChanged(state);
-          emit nxtLogMessage(QString(stateChar.first + "( " + stateChar.second + "): " + chToHexString(st[0])
+          emit nxtLogMessage(QString(stateChar.first + "(NXT-Status): " + chToHexString(st[0])
               + chToHexString(st[1])
               + chToHexString(st[2])
               + chToHexString(st[3])
