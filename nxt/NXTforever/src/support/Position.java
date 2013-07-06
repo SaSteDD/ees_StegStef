@@ -5,7 +5,7 @@ public enum Position {
 	        mark5 ,						// 1
 	        parkingSpaceTSection,		// 2
 	        longLane,					// 3
-	        mark1,						// 4
+	      mark1,						// 4  
 	        station1,					// 5
 	        station1to2,				// 6
 	        mark2,						// 7

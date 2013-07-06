@@ -21,6 +21,8 @@ public class MyDifferentialPilot {
 	private MyDifferentialPilot() {
 		Motor.A.setSpeed(400);// 2 RPM
 		Motor.B.setSpeed(400);
+		Motor.A.setAcceleration(24000);
+		Motor.B.setAcceleration(24000);
 	}
 	
 	public static MyDifferentialPilot getInstance() {
@@ -35,8 +37,8 @@ public class MyDifferentialPilot {
 	
 	public void stop(){
 		isStop = true;
-		Motor.A.stop();
-		Motor.B.stop();
+		Motor.A.stop(true);
+	    Motor.B.stop();
 	}
 
 	public void toggleStartStop() {
@@ -48,8 +50,9 @@ public class MyDifferentialPilot {
 	}
 	
 	public void goStraight(){
-		Motor.A.forward();
-		Motor.B.forward();
+		Motor.A.setSpeed(speed);
+		Motor.B.setSpeed(speed);
+		forward();
 		while(followGrau());
 	}
 	
@@ -80,7 +83,6 @@ public class MyDifferentialPilot {
 		Motor.B.backward();
 		while(!findLineAfterCurve());
 		Motor.B.forward();
-		Motor.B.setSpeed(600);
 		
 	}
 	
@@ -101,17 +103,17 @@ public class MyDifferentialPilot {
 		
 		float turn = 0;
 		
-		if(Math.abs(linkerSensor - rechterSensor) < 20)
+		if(Math.abs(linkerSensor - rechterSensor) < 10)
 			turn = 0;
 		else
-			turn = (linkerSensor - rechterSensor) / 2;
+			turn = (rechterSensor - linkerSensor) / 2;
 		
 		
 				
 		if(linkerSensor < 20 || rechterSensor < 20 ) 
 			return false;
 		
-		Turn(turn);
+	Turn(turn);
 		return true;
 		
 	}
@@ -124,15 +126,15 @@ public class MyDifferentialPilot {
 		
 		if( rechterSensor > 10 )
 		    if(linkerSensor < 10)
-		    	turn = (float) (rechterSensor);
-		    else
 		    	turn = (float) (rechterSensor * 2);
+		    else
+		    	turn = (float) (rechterSensor * 2.5);
 		
 		if(linkerSensor > 10)
 			if(rechterSensor < 10 )
-				turn = (float) (-linkerSensor);
+				turn = (float) -(linkerSensor * 2);
 			else
-				turn = (float) -(linkerSensor * 2 );
+				turn = (float) -(linkerSensor * 2.5 );
 		
 		if(linkerSensor < 10 && rechterSensor < 10 ) {
 			turn = 0;

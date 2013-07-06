@@ -6,6 +6,7 @@ import lejos.robotics.subsumption.Behavior;
 import main.Status;
 import support.MyDifferentialPilot;
 import support.MyLightSensors;
+import support.Step;
 
 public class UseStation implements Behavior {
 	
@@ -14,6 +15,8 @@ public class UseStation implements Behavior {
 		
 		private Status mStatus;
 		private boolean suppressed = false;
+		
+		private Step mStep;
 		
 		public UseStation(Status status){
 			this.mStatus = status;
@@ -41,6 +44,9 @@ public class UseStation implements Behavior {
 			LCD.clear();
 			LCD.drawString("Gerade aus 1", 0, 0);
 			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2))
+		
+			
+			
 			
 			LCD.clear();
 			LCD.drawString("Umdrehen", 0, 0);

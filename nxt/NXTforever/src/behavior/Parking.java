@@ -126,7 +126,7 @@ public class Parking implements Behavior {
 			mStatus.setTask(newTask);
 			
 			leaveParkingPosition = true;
-			//mDifferentialPilot.forward();
+			mDifferentialPilot.forward();
 		}
 		else {
 			System.out.print("Fehler!!!!");

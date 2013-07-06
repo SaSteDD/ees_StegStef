@@ -16,7 +16,7 @@ public class Task {
 	}
 	
 	public void addStep(byte type, byte quality, byte time) {
-		Steps.add(new Step((byte)Steps.size(), type, quality, time));
+		Steps.add(new Step((byte)(Steps.size()+1), type, quality, time));
 	}
 	
 	public Step getStep(){
@@ -29,5 +29,13 @@ public class Task {
 	
 	public boolean hasSteps(){
 		return Steps.size() > 0;
+	}
+	
+	public boolean hasTrys(){
+		return Steps.get(0).getTrys() <4 ;
+	}
+	
+	public int getNumber(){
+		return Steps.get(0).getNumber();
 	}
 }
