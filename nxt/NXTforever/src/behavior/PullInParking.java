@@ -1,24 +1,26 @@
 package behavior;
 
-import lejos.nxt.Button;
+import support.MyBTconnection;
+import support.MyDifferentialPilot;
+import support.MyLightSensors;
+import support.Position;
+import support.Step;
 import lejos.nxt.LCD;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
-import support.MyDifferentialPilot;
-import support.MyLightSensors;
-import support.Step;
 
-public class UseStation implements Behavior {
-	
+public class PullInParking implements Behavior {
+
 	 private static MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	    private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
+	    private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 		
 		private Status mStatus;
 		private boolean suppressed = false;
 		
 		private Step mStep;
 		
-		public UseStation(Status status){
+		public PullInParking(Status status){
 			this.mStatus = status;
 		}
 		
@@ -32,33 +34,32 @@ public class UseStation implements Behavior {
 			suppressed = false;
 			LCD.clear();
 			
-			mDifferentialPilot.forward();
-			
 			mDifferentialPilot.steerRight();
 			
 			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2)) {}
+				
+			mDifferentialPilot.steer();
 			
 			mDifferentialPilot.stop();
+			
+			
+			byte[] out;
+			
+			if(mStatus.getTask().hasSteps())
+				out = new byte[] {'f'} ;
+			else
+				out = new byte[] {'F'} ;
+			
 			try {
-					Thread.yield();
-					Thread.sleep(1000 * mStatus.getTask().getStep().getTime());
-			} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+			mBTconnection.sendConnection(out);
 			}
-			mDifferentialPilot.forward();
-				
-			mDifferentialPilot.turn();
+			catch (Exception e) {
+				LCD.clear();
+				LCD.drawString("Fehler Send", 0, 0);
+				LCD.drawString(e.getMessage(), 0, 1);
+			}
 			
-			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2)) {}
-				
-			mDifferentialPilot.steerRight();
-			
-			mStatus.setPosition();
-			mStatus.setBehaviorStatus(mStatus.Follow);
-			
-			//Schritt aus der Kette löschen :D
-			mStatus.getTask().removeStep();
+			mStatus.setBehaviorStatus(mStatus.Parking);
 
 		}
 

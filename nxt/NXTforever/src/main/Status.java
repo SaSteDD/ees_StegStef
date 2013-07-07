@@ -18,9 +18,10 @@ public class Status {
 	public Behavior Parking = new Parking(this);
 	public Behavior Follow = new Follow(this);
 	public Behavior Connection = new Connection(this);
-	public Behavior DEBUG = new behavior.DEBUG(this);
-	public Behavior AskParameter = new behavior.AskParameter(this);
-	public Behavior UseStation = new behavior.UseStation(this);
+	public Behavior DEBUG = new DEBUG(this);
+	public Behavior AskParameter = new AskParameter(this);
+	public Behavior UseStation = new UseStation(this);
+	public Behavior PullInParking = new PullInParking(this);
 	
 	//Kommunikation
 	private boolean commAllowed = true;
@@ -59,7 +60,8 @@ public class Status {
 				Connection,
 				DEBUG,
 				AskParameter,
-				UseStation
+				UseStation,
+				PullInParking
 		};
 		
 		return bArray;		

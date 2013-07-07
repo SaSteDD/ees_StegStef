@@ -144,12 +144,8 @@ public class Follow implements Behavior {
 							else
 							{
 								mStatus.setPosition(Position.mark5.ordinal());
-								mDifferentialPilot.steerRight();
-								mStatus.setPosition(Position.parkingSpace.ordinal());
-								while(mDifferentialPilot.followLine(2)) {}
-								mDifferentialPilot.steer();
-								mDifferentialPilot.stop();
-								mStatus.setBehaviorStatus(mStatus.Parking);
+								//State wechseln, Parkstate
+								mStatus.setBehaviorStatus(mStatus.PullInParking);
 							}
 							break;
 						}
