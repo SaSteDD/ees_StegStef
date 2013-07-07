@@ -1,13 +1,9 @@
 package behavior;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
 
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
-import support.MyLightSensors;
 import support.Position;
 import support.Task;
 import lejos.nxt.LCD;
@@ -18,7 +14,6 @@ import main.Status;
 public class Parking implements Behavior {
 	
 	private Status mStatus;
-	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
 
 	private boolean suppressed = false;
@@ -27,10 +22,6 @@ public class Parking implements Behavior {
 	
 	//interne Variable, legt fest ob Parkplatz verlassen werden darf
 	private boolean leaveParkingPosition = false;
-	
-	//iV, hält Wert für den rechten Sensor
-	private int rechterSensor;
-	private int linkerSensor;
 	
 	public Parking(Status status){
 		this.mStatus = status;
@@ -61,9 +52,9 @@ public class Parking implements Behavior {
 				
 				LCD.clear();
 				
-				if(!mDifferentialPilot.followLine(2)) {
+				if(!mDifferentialPilot.followLine()) {
 					mDifferentialPilot.steer();
-					mStatus.changePosition(Position.longLane.ordinal());
+					mStatus.setPosition(Position.longLane.ordinal());
 					mStatus.setBehaviorStatus(mStatus.Follow);
 				}		
 			

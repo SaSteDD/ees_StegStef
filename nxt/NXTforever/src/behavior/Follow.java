@@ -2,14 +2,10 @@ package behavior;
 
 import java.util.List;
 
-import support.MyBTSend;
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
-import support.MyLightSensors;
 import support.Position;
 import lejos.nxt.LCD;
-import lejos.nxt.Motor;
-import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
 
@@ -17,25 +13,16 @@ public class Follow implements Behavior {
 
 	// Globale Klassen
 	private Status mStatus;
-	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot
 			.getInstance();
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
-	// Klassen
-	private MyBTSend mBTSend;
-
 	// Behavior
 	private boolean suppressed = false;
-
-	// Senosren
-	private int linkerSensor;
-	private int rechterSensor;
-
+	
 	// Position
 	private int maxcureve = 0;
 	private int curve = 0;
-	private int mark = 0;
 
 	public Follow(Status status) {
 		this.mStatus = status;
@@ -58,14 +45,13 @@ public class Follow implements Behavior {
 			else
 				maxcureve=3;
 			
-			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
 				/**
 				 * followLine gibt false zurück, wenn es auf ein Hinterniss trifft.
 				 * Es wird anhand der Position entschieden, was gemacht werden soll
 				 */
-				if(!mDifferentialPilot.followLine(2)) {					
+				if(!mDifferentialPilot.followLine()) {					
 					
 					//wenn der NXT sich auf der Gerade befindet, dann muss er entweder eine Kurve fahren oder die erste Station abfragen
 					if(mStatus.getPosition() == Position.longLane.ordinal()) {
@@ -118,14 +104,6 @@ public class Follow implements Behavior {
 						}
 						break;
 					}
-					//wenn der nxt sich auf dem T Stück befindet, dann beginnt die ganze Runde wieder von vorne
-					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
-						mDifferentialPilot.steer();
-						mStatus.setPosition(Position.longLane.ordinal());
-						//alle Warte wieder auf anfang setzen
-						maxcureve=2;
-						curve=0;
-					}
 					
 					//nach der letzen Station wird entschieden ob der NXT Praken soll
 					else if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
@@ -145,10 +123,20 @@ public class Follow implements Behavior {
 							{
 								mStatus.setPosition(Position.mark5.ordinal());
 								//State wechseln, Parkstate
+								curve=0;
 								mStatus.setBehaviorStatus(mStatus.PullInParking);
 							}
 							break;
 						}
+					}
+					
+					//wenn der nxt sich auf dem T Stück befindet, dann beginnt die ganze Runde wieder von vorne
+					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
+						mDifferentialPilot.steer();
+						mStatus.setPosition(Position.longLane.ordinal());
+						//alle Warte wieder auf anfang setzen
+						maxcureve=2;
+						curve=0;
 					}
 						
 						
@@ -180,6 +168,7 @@ public class Follow implements Behavior {
 		suppressed = true;
 	}
 
+	@SuppressWarnings("unused")
 	private void readConnection() {
 
 		List<Byte> temp;

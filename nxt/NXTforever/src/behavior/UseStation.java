@@ -36,7 +36,7 @@ public class UseStation implements Behavior {
 			
 			mDifferentialPilot.steerRight();
 			
-			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2)) {}
+			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine()) {}
 			
 			mDifferentialPilot.stop();
 			try {
@@ -50,7 +50,7 @@ public class UseStation implements Behavior {
 				
 			mDifferentialPilot.turn();
 			
-			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2)) {}
+			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine()) {}
 				
 			mDifferentialPilot.steerRight();
 			

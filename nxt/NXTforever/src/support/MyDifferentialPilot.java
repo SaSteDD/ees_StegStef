@@ -118,7 +118,7 @@ public class MyDifferentialPilot {
 		
 	}
 	
-	public boolean followLine(int force) {
+	public boolean followLine() {
 		float rechterSensor = mLightSensors.getSensorRight();
 		float linkerSensor = mLightSensors.getSensorLeft();
 		

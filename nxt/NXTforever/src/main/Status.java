@@ -76,17 +76,7 @@ public class Status {
 		return currentPosition;
 	}
 	
-	public void changePosition() {
-		lastPosition = currentPosition;
-		currentPosition++;
-		commPosition();
-	}
-	
-	public void changePosition(int position) {
-		lastPosition = currentPosition;
-		currentPosition = position;
-		commPosition();
-	}
+
 	
 	private void commPosition(){
 		if(commAllowed) {
@@ -113,11 +103,13 @@ public class Status {
 	}
 	
 	public void setPosition(int position) {
+		lastPosition = currentPosition;
 		currentPosition = position;
 		commPosition();
 	}
 	
 	public void setPosition() {
+		lastPosition = currentPosition;
 		currentPosition++;
 		commPosition();
 	}
