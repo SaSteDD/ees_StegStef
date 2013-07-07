@@ -48,12 +48,7 @@ public class Parking implements Behavior {
 		LCD.drawString("Warte auf",0 ,2 );
 		LCD.drawString("      Auftrag",0 ,3 );
 		
-		// Variablen, die zm Fahren benötigt wird
-		int turn = 0;
-		
-		// Variablen, zählt die Kurven
-		int curve = 0;
-	
+		leaveParkingPosition = false;
 		
 		while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 			
@@ -67,7 +62,7 @@ public class Parking implements Behavior {
 				LCD.clear();
 				
 				if(!mDifferentialPilot.followLine(2)) {
-					mDifferentialPilot.steer(1);
+					mDifferentialPilot.steer();
 					mStatus.changePosition(Position.longLane.ordinal());
 					mStatus.setBehaviorStatus(mStatus.Follow);
 				}		

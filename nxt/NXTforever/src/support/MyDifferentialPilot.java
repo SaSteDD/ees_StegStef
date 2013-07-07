@@ -78,7 +78,7 @@ public class MyDifferentialPilot {
 		Motor.B.forward();
 	}
 	
-	public void steer(int force){
+	public void steer(){
 		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!findLineAfterCurve());
