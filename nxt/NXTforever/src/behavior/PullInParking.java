@@ -38,7 +38,7 @@ public class PullInParking implements Behavior {
 			
 			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine()) {}
 				
-			mDifferentialPilot.steer();
+			mDifferentialPilot.turn();
 			
 			mDifferentialPilot.stop();
 			
