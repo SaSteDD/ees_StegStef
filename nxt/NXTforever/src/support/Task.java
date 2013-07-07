@@ -19,6 +19,10 @@ public class Task {
 		Steps.add(new Step((byte)(Steps.size()+1), type, quality, time));
 	}
 	
+	public List<Step> getSteps(){
+		return Steps;
+	}
+	
 	/**
 	 * Gibt den aktuellen Schritt zurück
 	 * 

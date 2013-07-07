@@ -21,7 +21,7 @@ public class Follow implements Behavior {
 	private boolean suppressed = false;
 	
 	// Position
-	private int maxcureve = 0;
+	private int maxcureve = 2;
 	private int curve = 0;
 
 	public Follow(Status status) {
@@ -38,12 +38,6 @@ public class Follow implements Behavior {
 			suppressed = false;
 	
 			mDifferentialPilot.forward();
-			
-			//Anzahl der Kurven der LongLange setzen
-			if(mStatus.getlastPosition() == Position.parkingSpace.ordinal()) 
-				maxcureve=2;
-			else
-				maxcureve=3;
 			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
@@ -124,6 +118,7 @@ public class Follow implements Behavior {
 								mStatus.setPosition(Position.mark5.ordinal());
 								//State wechseln, Parkstate
 								curve=0;
+							//	maxcureve=3;
 								mStatus.setBehaviorStatus(mStatus.PullInParking);
 							}
 							break;
@@ -135,7 +130,7 @@ public class Follow implements Behavior {
 						mDifferentialPilot.steer();
 						mStatus.setPosition(Position.longLane.ordinal());
 						//alle Warte wieder auf anfang setzen
-						maxcureve=2;
+				//		maxcureve=2;
 						curve=0;
 					}
 						
