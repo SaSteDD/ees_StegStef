@@ -62,15 +62,7 @@ public class MyDifferentialPilot {
 		Motor.B.backward();
 		while(!findLine());
 		Motor.B.forward();
-		Motor.B.setSpeed(speed*2);
-		
-		try {
-			Thread.yield();
-			Thread.sleep(100);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 		
 		Motor.A.setSpeed(speed);
 		Motor.B.setSpeed(speed);
@@ -78,11 +70,13 @@ public class MyDifferentialPilot {
 		Motor.B.forward();
 	}
 	
-	public void steer(int force){
+	public void steer(){
+		Motor.A.setSpeed(600);
 		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!findLineAfterCurve());
 		Motor.B.forward();
+		
 		
 	}
 	
@@ -113,12 +107,12 @@ public class MyDifferentialPilot {
 		if(linkerSensor < 20 || rechterSensor < 20 ) 
 			return false;
 		
-	Turn(turn);
+//	Turn(turn);
 		return true;
 		
 	}
 	
-	public boolean followLine(int force) {
+	public boolean followLine() {
 		float rechterSensor = mLightSensors.getSensorRight();
 		float linkerSensor = mLightSensors.getSensorLeft();
 		

@@ -1,14 +1,11 @@
 package main;
 
 import support.MyBTSend;
-import support.MyBTconnection;
 import support.Task;
 import behavior.*;
 import support.*;
 
 import lejos.nxt.LCD;
-import lejos.nxt.Sound;
-import lejos.nxt.comm.BTConnection;
 import lejos.robotics.subsumption.Behavior;
 
 public class Status {
@@ -18,35 +15,31 @@ public class Status {
 	public Behavior Parking = new Parking(this);
 	public Behavior Follow = new Follow(this);
 	public Behavior Connection = new Connection(this);
-	public Behavior DEBUG = new behavior.DEBUG(this);
-	public Behavior AskParameter = new behavior.AskParameter(this);
-	public Behavior UseStation = new behavior.UseStation(this);
+	public Behavior DEBUG = new DEBUG(this);
+	public Behavior AskParameter = new AskParameter(this);
+	public Behavior UseStation = new UseStation(this);
+	public Behavior PullInParking = new PullInParking(this);
 	
 	//Kommunikation
 	private boolean commAllowed = true;
 	private MyBTSend mBTSend;
-	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
 	
 	private int currentPosition;
 	private int lastPosition;
 	
 	private Behavior behaviorStatus;
-	private Behavior lastBehaviorStatus;
+	
+	Position test;
 	
 	//Auftrag
 	private Task mTask;
-	
-	//Position
-	private int PositionMark = -1;
-	private int Pos;
-	
+		
 	public Behavior getBehaviorStatus() {
 		return behaviorStatus;
 	}
 
 	public void setBehaviorStatus(Behavior behaviorStat) {
-		lastBehaviorStatus = this.behaviorStatus;
 		this.behaviorStatus = behaviorStat;
 	}
 	
@@ -59,7 +52,8 @@ public class Status {
 				Connection,
 				DEBUG,
 				AskParameter,
-				UseStation
+				UseStation,
+				PullInParking
 		};
 		
 		return bArray;		
@@ -74,17 +68,7 @@ public class Status {
 		return currentPosition;
 	}
 	
-	public void changePosition() {
-		lastPosition = currentPosition;
-		currentPosition++;
-		commPosition();
-	}
-	
-	public void changePosition(int position) {
-		lastPosition = currentPosition;
-		currentPosition = position;
-		commPosition();
-	}
+
 	
 	private void commPosition(){
 		if(commAllowed) {
@@ -111,21 +95,66 @@ public class Status {
 	}
 	
 	public void setPosition(int position) {
+		lastPosition = currentPosition;
 		currentPosition = position;
 		commPosition();
 	}
 	
 	public void setPosition() {
+		lastPosition = currentPosition;
 		currentPosition++;
 		commPosition();
 	}
 
 	public void drawLCD() {
+		int lv = 2;
 		LCD.clear();
 		LCD.drawString("Status", 0, 0);
-		LCD.drawString("Position: " + currentPosition, 0, 1);
+		LCD.drawString("Position: " + this.getNamePosition(this.getPosition()), 0, 1);
+		for(Step tm : mTask.getSteps()){
+			LCD.drawString("Nr : " + tm.getNumber() + "  " + getNameTyp(tm.getType()), 0, lv);
+			lv++;
+		}
 	}
 
+	private String getNamePosition(int i){
+		String temp = null;
+		
+		switch(i) {
+		case 0: temp="parkingSpace"; break;
+		case 1: temp="mark5"; break;
+		case 2: temp="parkingSpaceTSection"; break;
+		case 3: temp="longLane"; break;
+		case 4: temp="mark1"; break;
+		case 5: temp="station1"; break;
+		case 6: temp="station1to2"; break;
+		case 7: temp="mark2"; break;
+		case 8: temp="station2"; break;
+		case 9: temp="station2to3"; break;
+		case 10: temp="mark3"; break;
+		case 11: temp="station3"; break;
+		case 12: temp="station3to4"; break;
+		case 13: temp="mark4"; break;
+		case 14: temp="station4"; break;
+		case 15: temp="station4ToParkingSpace"; break;
+		}
+		
+		return temp;
+	}
+	
+	private String getNameTyp(int i){
+		String temp = null;
+		
+		switch(i) {
+		case 0: temp="mark5"; break;
+		case 1: temp="parkingSpaceTSection"; break;
+		case 2: temp="longLane"; break;
+		case 3: temp="mark1"; break;
+		}
+		
+		return temp;
+	}
+	
 	public Task getTask(){
 		return mTask;
 		

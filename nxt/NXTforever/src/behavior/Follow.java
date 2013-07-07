@@ -2,14 +2,10 @@ package behavior;
 
 import java.util.List;
 
-import support.MyBTSend;
 import support.MyBTconnection;
 import support.MyDifferentialPilot;
-import support.MyLightSensors;
 import support.Position;
 import lejos.nxt.LCD;
-import lejos.nxt.Motor;
-import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.Status;
 
@@ -17,25 +13,16 @@ public class Follow implements Behavior {
 
 	// Globale Klassen
 	private Status mStatus;
-	private MyLightSensors mLightSensors = MyLightSensors.getInstance();
 	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot
 			.getInstance();
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
-	// Klassen
-	private MyBTSend mBTSend;
-
 	// Behavior
 	private boolean suppressed = false;
-
-	// Senosren
-	private int linkerSensor;
-	private int rechterSensor;
-
+	
 	// Position
-	private int maxcureve = 0;
+	private int maxcureve = 2;
 	private int curve = 0;
-	private int mark = 0;
 
 	public Follow(Status status) {
 		this.mStatus = status;
@@ -52,69 +39,107 @@ public class Follow implements Behavior {
 	
 			mDifferentialPilot.forward();
 			
-			//Anzahl der Kurven der LongLange setzen
-			if(mStatus.getlastPosition() == Position.parkingSpace.ordinal()) 
-				maxcureve=2;
-			else
-				maxcureve=3;
-			
-			
 			while (!suppressed && (mStatus.getBehaviorStatus() == this)) {
 				
-				
-				if(!mDifferentialPilot.followLine(2)) {					
-				
+				/**
+				 * followLine gibt false zurück, wenn es auf ein Hinterniss trifft.
+				 * Es wird anhand der Position entschieden, was gemacht werden soll
+				 */
+				if(!mDifferentialPilot.followLine()) {					
+					
+					//wenn der NXT sich auf der Gerade befindet, dann muss er entweder eine Kurve fahren oder die erste Station abfragen
 					if(mStatus.getPosition() == Position.longLane.ordinal()) {
+						// sollte er noch nicht alle Kruven erreicht haben, denn fährt er die Kurve
 						if(curve < maxcureve) {
-							mDifferentialPilot.steer(1);
+							//Kurve fahren
+							mDifferentialPilot.steer();
+							//Anzahl der Kurven nach oben zählen
 							curve++;
+						}
+						//Wenn alle Kurven erreicht, dann befindet sich der nxt an der ersten Station
+						else
+						{
+							//Wenn noch Schritte zu bearbieten sind, dann Frag Parameter ab
+							if(mStatus.getTask().hasSteps() &&  mStatus.getTask().hasTrys()){
+								//wechselt Position, hier von longLane -> mark1
+								mStatus.setPosition();
+								//State wecheln
+								mStatus.setBehaviorStatus(mStatus.AskParameter);
+							}
+							else
+							{
+								//wenn die Station nicht mehr angefahren werden muss dann einfach gerade ausfahren
+								mDifferentialPilot.goStraight();
+								//wechselt Position, hier von longLane -> station1to2
+								mStatus.setPosition(mStatus.getPosition() + 3);
+							}
+							break;
+						}
+					}
+					
+					//wenn der NXT sich auf einem zwichenStück befindet, dann soll er die Station anfahren
+					else if(mStatus.getPosition() == Position.station1to2.ordinal() || 
+							mStatus.getPosition() == Position.station2to3.ordinal() || 
+							mStatus.getPosition() == Position.station3to4.ordinal()  ) {
+						
+						//Wenn noch Schritte zu bearbieten sind, dann Frag Parameter ab
+						if(mStatus.getTask().hasSteps() &&  mStatus.getTask().hasTrys()) {
+							//wechselt Position, hier von station?toX -> markX
+							mStatus.setPosition();
+							//State wecheln
+							mStatus.setBehaviorStatus(mStatus.AskParameter);
 						}
 						else
 						{
-							mStatus.setPosition(Position.mark1.ordinal());
-							LCD.drawInt(1, 0, 4);
-							mStatus.setBehaviorStatus(mStatus.AskParameter);
-							LCD.drawInt(2, 0, 4);
-							break;
+							//wenn die Station nicht mehr angefahren werden muss dann einfach gerade ausfahren
+							mDifferentialPilot.goStraight();
+							//wechselt Position, hier von station?toX -> stationXto?
+							mStatus.setPosition(mStatus.getPosition() + 3);
 						}
-					}
-					
-					else if(mStatus.getPosition() == Position.station1to2.ordinal() || 
-					    mStatus.getPosition() == Position.station2to3.ordinal() || 
-					    mStatus.getPosition() == Position.station3to4.ordinal()  ) {
-						mStatus.setPosition();
-						mStatus.setBehaviorStatus(mStatus.AskParameter);
 						break;
 					}
 					
-					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
-						mDifferentialPilot.steer(1);
-						mStatus.setPosition(Position.longLane.ordinal());
-						maxcureve=2;
-						curve=0;
-					}
-					
+					//nach der letzen Station wird entschieden ob der NXT Praken soll
 					else if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
+						// wenn er sich noch auf der Bahn befindet, dann muss zu erst noch mal Gelenkt werden
 						if(curve==maxcureve) {
-							mDifferentialPilot.steer(1);						    
+							mDifferentialPilot.steer();
+							curve++;
 						}
+						//Entscheidung on geparkt werden soll
 						else {
-							mStatus.setPosition(Position.mark5.ordinal());
-							mDifferentialPilot.stop();
-							mDifferentialPilot.goStraight();
-							mStatus.setPosition(Position.parkingSpaceTSection.ordinal());
+							if(mStatus.getTask().hasSteps() &&  mStatus.getTask().hasTrys()){
+								mStatus.setPosition(Position.mark5.ordinal());
+								mDifferentialPilot.goStraight();
+								mStatus.setPosition(Position.parkingSpaceTSection.ordinal());
+							}
+							else
+							{
+								mStatus.setPosition(Position.mark5.ordinal());
+								//State wechseln, Parkstate
+								curve=0;
+							//	maxcureve=3;
+								mStatus.setBehaviorStatus(mStatus.PullInParking);
+							}
 							break;
 						}
-						 
-						curve++;
+					}
+					
+					//wenn der nxt sich auf dem T Stück befindet, dann beginnt die ganze Runde wieder von vorne
+					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
+						mDifferentialPilot.steer();
+						mStatus.setPosition(Position.longLane.ordinal());
+						//alle Warte wieder auf anfang setzen
+				//		maxcureve=2;
+						curve=0;
 					}
 						
 						
 					
 					
 				}	
-
-				//Kommunikation
+//
+//				//Kommunikation
 //				if(mBTconnection.checkConnection())
 //					readConnection();	
 				
@@ -138,10 +163,10 @@ public class Follow implements Behavior {
 		suppressed = true;
 	}
 
+	@SuppressWarnings("unused")
 	private void readConnection() {
 
 		List<Byte> temp;
-		Sound.beep();
 		temp = mBTconnection.readConnection();
 
 		if (temp.get(0) == 97)
