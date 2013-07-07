@@ -71,19 +71,35 @@ public class Follow implements Behavior {
 						}
 						else
 						{
-							mStatus.setPosition(Position.mark1.ordinal());
-							LCD.drawInt(1, 0, 4);
-							mStatus.setBehaviorStatus(mStatus.AskParameter);
-							LCD.drawInt(2, 0, 4);
+							//Wenn noch Schritte zu bearbieten sind, dann Frag Parameter ab
+							if(mStatus.getTask().hasSteps() &&  mStatus.getTask().hasTrys()){
+								mStatus.setPosition();
+								mStatus.setBehaviorStatus(mStatus.AskParameter);
+							}
+							else
+							{
+								mDifferentialPilot.goStraight();
+								mStatus.setPosition(mStatus.getPosition() + 3);
+							}
 							break;
 						}
 					}
 					
 					else if(mStatus.getPosition() == Position.station1to2.ordinal() || 
-					    mStatus.getPosition() == Position.station2to3.ordinal() || 
-					    mStatus.getPosition() == Position.station3to4.ordinal()  ) {
-						mStatus.setPosition();
-						mStatus.setBehaviorStatus(mStatus.AskParameter);
+							mStatus.getPosition() == Position.station2to3.ordinal() || 
+							mStatus.getPosition() == Position.station3to4.ordinal()  ) {
+						
+						//Wenn noch Schritte zu bearbieten sind, dann Frag Parameter ab
+						if(mStatus.getTask().hasSteps() &&  mStatus.getTask().hasTrys()) {
+							mStatus.setPosition();
+							mStatus.setBehaviorStatus(mStatus.AskParameter);
+						}
+						else
+						{
+					//		mDifferentialPilot.stop();
+							mDifferentialPilot.goStraight();
+							mStatus.setPosition(mStatus.getPosition() + 3);
+						}
 						break;
 					}
 					
@@ -96,17 +112,16 @@ public class Follow implements Behavior {
 					
 					else if(mStatus.getPosition() == Position.station4ToParkingSpace.ordinal()) {
 						if(curve==maxcureve) {
-							mDifferentialPilot.steer(1);						    
+							mDifferentialPilot.steer(1);
+							curve++;
 						}
 						else {
 							mStatus.setPosition(Position.mark5.ordinal());
-							mDifferentialPilot.stop();
+						//	mDifferentialPilot.stop();
 							mDifferentialPilot.goStraight();
 							mStatus.setPosition(Position.parkingSpaceTSection.ordinal());
 							break;
 						}
-						 
-						curve++;
 					}
 						
 						

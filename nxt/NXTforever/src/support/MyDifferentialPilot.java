@@ -113,7 +113,7 @@ public class MyDifferentialPilot {
 		if(linkerSensor < 20 || rechterSensor < 20 ) 
 			return false;
 		
-	Turn(turn);
+//	Turn(turn);
 		return true;
 		
 	}

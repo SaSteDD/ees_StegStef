@@ -40,11 +40,13 @@ public class AskParameter implements Behavior {
 
 	@Override
 	public void action() {
-			
-			LCD.drawInt(4, 0, 4);
-			mDifferentialPilot.stop();
-			if(mStatus.getTask().hasSteps())
-			if(mStatus.getTask().hasTrys()){
+				
+				//Setzen von Parameter, da ich nicht weis was hier vorgeht
+				ParameterOK = false;
+				temp = null;
+		
+				LCD.drawInt(4, 0, 4);
+				mDifferentialPilot.stop();
 			   //nächsten Schritt holen
 			    mStep = mStatus.getTask().getStep();
 				
@@ -53,18 +55,11 @@ public class AskParameter implements Behavior {
 				 *Format for Message of nxt(Receive):
 				 *     [qualityChar]  [Station-Nr (1-4)]
 				 *BNr.      1                 2
-				 *
 				 *Example:  q                  1
-				 * 
 				 * Stationsnummer: mark1=4;mark2=7;mark3=10;mark4=13;
 				 * 
 				 */
-				switch(mStatus.getPosition()) {
-				case 4: Station=1; break;
-				case 7: Station=2; break;
-				case 10: Station=3; break;
-				case 13: Station=4; break;
-				}
+				switch(mStatus.getPosition()) { case 4: Station=1; break; case 7: Station=2; break; case 10: Station=3; break; case 13: Station=4; break; }
 				byte[] out = new byte[] {113,(byte) Station } ;
 				try {
 				mBTconnection.sendConnection(out);
@@ -80,7 +75,6 @@ public class AskParameter implements Behavior {
 				/*Mitteilung auswerten
 				 * *Format for Message of RasPi (send):
 				 *     [qualityChar] [StationType]  [Quality]
-				 *
 				 *BNr:           1           2              3
 				 *Example:       q           2              4
 				 */
@@ -98,11 +92,8 @@ public class AskParameter implements Behavior {
 					mStep.setTrys();
 					ParameterOK= false;
 				}
-			}
-			else{
-				ParameterOK= false;
-			}
-		    LCD.drawInt(9, 0, 4);
+			
+		LCD.drawInt(9, 0, 4);
 			
 		if(ParameterOK) {
 			

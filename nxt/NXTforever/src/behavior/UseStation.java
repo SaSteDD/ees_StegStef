@@ -46,8 +46,6 @@ public class UseStation implements Behavior {
 			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine(2))
 		
 			
-			
-			
 			LCD.clear();
 			LCD.drawString("Umdrehen", 0, 0);
 			mDifferentialPilot.turn();
@@ -63,7 +61,8 @@ public class UseStation implements Behavior {
 			mStatus.setPosition();
 			mStatus.setBehaviorStatus(mStatus.Follow);
 			
-			
+			//Schritt aus der Kette löschen :D
+			mStatus.getTask().removeStep();
 				
 			LCD.clear();
 		}
