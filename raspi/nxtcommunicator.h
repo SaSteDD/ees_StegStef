@@ -76,7 +76,7 @@ private:
 
     /*
      *Read State Data NXT sends
-     *Format fer NXT-Message:
+     *Format for NXT-Message:
      *      [StateChar]  [state (0-15)] [  StepNr   ]
      *Nr:        1              2          3 4 5 6
      */
