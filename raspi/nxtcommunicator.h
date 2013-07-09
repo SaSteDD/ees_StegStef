@@ -84,7 +84,7 @@ private:
 
     /*
      *Format: (we expect sizeof(int) to be 4 -> 32bit integers
-     *     t [Nr] [Steps n(int32_t lttle endian)] {[Type (0-2)][Quality (1-4)][time (3-20)]}*n
+     *     t [Nr] [Steps n(int32_t little endian)] {[Type (0-2)][Quality (1-4)][time (3-20)]}*n
      *BNr: 1  2      3 4 5 6                            i*3+7         i*3+8        i*3+9
      *Example:
      * t  0x02 0x0002 0x01 0x04 0xA0   0x00  0x03 0x09   T
