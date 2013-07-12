@@ -102,9 +102,11 @@ namespace Types{
     } StationSetup;
 }
 
+/*
+ *These are nedded because we want to send our type definitions in signals or
+ *usem them in QVariants
+ */
 Q_DECLARE_METATYPE(Types::StationType)
-
-
 Q_DECLARE_METATYPE(Types::BtDevice)
 Q_DECLARE_METATYPE(QList<Types::BtDevice>)
 

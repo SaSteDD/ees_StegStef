@@ -118,7 +118,6 @@ QString NxtCommunicator::getGraphicalSudoCommand()
 void NxtCommunicator::tryBtConnect()
 {
     bool erg= btCom::btConnect();
-    //qDebug() << erg;
     if(!erg && rfCommProcess.state() != QProcess::NotRunning)
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
