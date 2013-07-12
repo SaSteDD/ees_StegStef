@@ -23,9 +23,6 @@ public class MyBTconnection {
         return instance;
     }
 	
-	//Sendenthread
-	MyBTSend mSend = new MyBTSend();
-	
 	private NXTConnection connection;	
 	
 	public void openConnection()
@@ -71,8 +68,6 @@ public class MyBTconnection {
 	}
 	
 	public void sendConnection(byte[] out) {
-			
-		   mSend.send(out);
 			
 //			try {
 //				dataOut.write(out,0,out.length);

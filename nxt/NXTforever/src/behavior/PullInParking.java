@@ -36,31 +36,14 @@ public class PullInParking implements Behavior {
 			
 			mDifferentialPilot.steerRight();
 			
+			mStatus.setBehaviorStatus(mStatus.Parking);
+			
 			while(!suppressed && (mStatus.getBehaviorStatus() == this) && mDifferentialPilot.followLine()) {}
 				
 			mDifferentialPilot.turn();
 			
 			mDifferentialPilot.stop();
-			
-			
-			byte[] out;
-			
-			if(mStatus.getTask().hasSteps())
-				out = new byte[] {'f'} ;
-			else
-				out = new byte[] {'F'} ;
-			
-			try {
-			mBTconnection.sendConnection(out);
-			}
-			catch (Exception e) {
-				LCD.clear();
-				LCD.drawString("Fehler Send", 0, 0);
-				LCD.drawString(e.getMessage(), 0, 1);
-			}
-			
-			mStatus.setBehaviorStatus(mStatus.Parking);
-
+		
 		}
 
 		@Override

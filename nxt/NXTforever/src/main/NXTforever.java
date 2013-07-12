@@ -31,9 +31,7 @@ public class NXTforever {
 				
 			}
 		});
-		Sound.beep();
 		mStatus = new Status();
-		Sound.beep();
 		Arbitrator arby = new Arbitrator(mStatus.getAllBeBehavior());
 		mStatus.setBehaviorStatus(mStatus.Initialisierung);
 	    arby.start();

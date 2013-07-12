@@ -2,6 +2,7 @@ package behavior;
 
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
+import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Behavior;
 import main.*;
 import support.*;

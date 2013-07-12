@@ -71,7 +71,7 @@ public class MyDifferentialPilot {
 	}
 	
 	public void steer(){
-		Motor.A.setSpeed(600);
+		Motor.A.setSpeed(400);
 		Motor.B.setSpeed(300);
 		Motor.B.backward();
 		while(!findLineAfterCurve());
@@ -166,8 +166,10 @@ public class MyDifferentialPilot {
 	}
 	
 	public void Turn(float turn){
-		Motor.A.setSpeed(speed - turn);
-		Motor.B.setSpeed(speed + turn);	
+		if(!isStop) {
+			Motor.A.setSpeed(speed - turn);
+			Motor.B.setSpeed(speed + turn);	
+		}
 	}
 
 }
