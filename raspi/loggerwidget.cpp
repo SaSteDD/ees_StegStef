@@ -17,6 +17,8 @@ LoggerWidget::LoggerWidget(QWidget *parent) :
     f.setPointSize(logTextPointSize);
     setFont(f);
 
+    clearAllAction->setShortcut(QKeySequence("Ctrl+d"));
+
     connect(clearAllAction,SIGNAL(triggered()),this,SLOT(clear()));
 }
 
@@ -52,7 +54,8 @@ void LoggerWidget::contextMenuEvent(QContextMenuEvent *e)
     QMenu* menu=createStandardContextMenu(e->pos());
     menu->addAction(clearAllAction);
     menu->popup(mapToGlobal(e->pos()));
-
+    if(this->toPlainText().isEmpty()) clearAllAction->setDisabled(true);
+    else clearAllAction->setDisabled(false);
 }
 
 const QBrush LoggerWidget::appCol=QBrush(QColor("#FCFCA8"));

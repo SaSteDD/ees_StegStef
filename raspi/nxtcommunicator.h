@@ -7,19 +7,36 @@
 #include <QTimer>
 #include <QPair>
 
+/*
+ *-Send/Read Messages to/from  the NXT
+ *-Establish Bluetooth connection
+ */
 class NxtCommunicator : public QObject
 {
     Q_OBJECT
 public:
      explicit NxtCommunicator(QObject *parent = 0);
+
+    /*
+     *Try to connect to BT device
+     *
+     *this starts the rfcomm proccess with superuser rights
+     *
+     *device - device we want to connect to
+     */
     void openConnection(Types::BtDevice device);
 
-
 signals:
+    /*
+     *Messages we send, formatted in a human readable way
+     */
     void appLogMessage(QString);
     void nxtLogMessage(QString);
     void raspiLogMessage(QString);
 
+    /*
+     *This is for sending any new States we receive from the NXT (Mainwindow connects this to the Trackview widget)
+     */
     void nxtStateChanged(Types::NxtState);
 
     /*
@@ -28,6 +45,9 @@ signals:
      */
     void taskFinished(bool);
 
+    /*
+     *connection closed/opened
+     */
     void connectionClosed();
     void connectionOpened();
 
@@ -36,6 +56,7 @@ signals:
      *false on disconnect
      */
     void connectionStateChanged(bool);
+
 public slots:
     /*
      *The abort-character will be sent the next the main Communication loop is executed
@@ -47,25 +68,73 @@ public slots:
      */
     void sendTaskData(const Types::Task& task, const Types::StationSetup& stationSetup);
 
+    /*
+     *This imediately closes the Bluetooth connection by closing tho rfcomm proccess
+     */
     void closeConnection();
+
 private slots:
+    /*
+     *These slots are used for interacting with the rfcomm process
+     */
     void rfcommDeviceClosed(int,QProcess::ExitStatus);
     void rfcommProcReadStdErr();
     void rfcommProcReadStdOut();
+
+    /*
+     *Check if RFCOMM connection was established
+     *else we try again a little later automatically
+     *
+     *This could run in an endless loop as long as rfcomm process is running
+     *=>user can stop this by runnig disconnect action, which closes rfcomm proccess
+     */
     void tryBtConnect();
+
+    /*
+     *This is the main loop which gets called periodically as long as the connection is open
+     *
+     *we try to read one char from the rfcomm device, determine the message and then run
+     *the appropiate handler function
+     */
     void mainCommunicationLoop();
 
 private:
+    /*
+     *This is a helper function we use when constructing the log messages
+     */
     static inline QString chToHexString(const char ch);
+
+    /*
+     *
+     *Select a working command of the list of graphical sudo commands
+     */
     QString getGraphicalSudoCommand();
+
+    /*
+     *Read output from the rfcomm process
+     */
     QString readDataFromProc();
+
+    /*
+     *When a Task was finished we show a notification Dialog (with appropiate success/ error message)
+     *
+     *success = true on success
+     */
     void runTaskFinished(bool success);
 
     /*
      *returns true on success
      */
     bool readChar(char* ch);
-    //only returns true if exactly len chars could be read
+
+    /*
+     *only returns true if EXACTLY len chars could be read
+     *else we close the connection
+     *
+     *This works because massages are being sent complete at a time (with no pause between the chars).
+     *The rfcomm API is configured to use an inter character timer, which ensures we receive the wholo message and
+     *needn't worry about chunked messages
+    */
     bool readChars(char *ch, int len);
 
 
@@ -108,11 +177,12 @@ private:
      */
     void sendStationData();
 
-    QProcess rfCommProcess;
-    bool isRunning, sendNxtPauseChar, writeTask;
-    QTimer timer;
+    QProcess rfCommProcess;//process for opening the rfcomm connection
+    bool isRunning;//just to make sure we don't send anything until we connected to the rfcomm device
+    bool sendNxtPauseChar, writeTask;//when  a pause message or Task message was requested, we set these to true and send the messages at the appropriate time in the communcation loop
+    QTimer timer;//timer for the communication loop
 
-    const static int waitTimeMs;
+    const static int waitTimeMs;//timer interval for timer
     /*
      *rfcomm can only be executed by root.
      *This is is a list of graphical versions of "sudo"
@@ -121,7 +191,7 @@ private:
     const static QStringList graphicalSudoCommands;
 
     /*
-     *constants
+     *constants for chars in bt messages, and fitting explanations to for the log messages
      */
     static const QPair<char, QString>  stopPauseChar;
     static const QPair<char, QString> qualityChar;
@@ -130,10 +200,7 @@ private:
     static const QPair<char, QString> taskEndSuccessChar;
     static const QPair<char, QString> taskEndErrorChar;
 
-
-
-    Types::Task task;
-    Types::StationSetup stationSetup;
+    Types::Task task;//the Task to be sent
+    Types::StationSetup stationSetup;//the current stationsetup
 };
-
 #endif // NXTCOMMUNICATOR_H
