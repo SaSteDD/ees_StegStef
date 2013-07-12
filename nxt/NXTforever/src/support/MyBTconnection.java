@@ -18,9 +18,13 @@ public class MyBTconnection {
 	private DataOutputStream dataOut;
 	private DataInputStream dataIn;
 	
+	
 	public static MyBTconnection getInstance() {
         return instance;
     }
+	
+	//Sendenthread
+	MyBTSend mSend = new MyBTSend();
 	
 	private NXTConnection connection;	
 	
@@ -30,6 +34,9 @@ public class MyBTconnection {
 			connection.setIOMode(NXTConnection.RAW);
 			dataOut = connection.openDataOutputStream();
 		    dataIn = connection.openDataInputStream();
+		    
+		    //Sendenthread laufen lassen
+		//    mSend.start();
 		}
 	
 	public boolean checkConnection() {
@@ -64,12 +71,15 @@ public class MyBTconnection {
 	}
 	
 	public void sendConnection(byte[] out) {
-			try {
-				dataOut.write(out,0,out.length);
-				dataOut.flush();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			
+		   mSend.send(out);
+			
+//			try {
+//				dataOut.write(out,0,out.length);
+//				dataOut.flush();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
 	}
 		
 }

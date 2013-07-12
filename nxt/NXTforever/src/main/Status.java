@@ -1,6 +1,6 @@
 package main;
 
-import support.MyBTSend;
+
 import support.Task;
 import behavior.*;
 import support.*;
@@ -11,26 +11,22 @@ import lejos.robotics.subsumption.Behavior;
 public class Status {
 	
 	//alle Behaviors anlegen :D
-	public Behavior Initialisierung = new Initialisierung(this);
-	public Behavior Parking = new Parking(this);
-	public Behavior Follow = new Follow(this);
-	public Behavior Connection = new Connection(this);
-	public Behavior DEBUG = new DEBUG(this);
-	public Behavior AskParameter = new AskParameter(this);
-	public Behavior UseStation = new UseStation(this);
-	public Behavior PullInParking = new PullInParking(this);
+	public final Behavior Initialisierung = new Initialisierung(this);
+	public final Behavior Parking = new Parking(this);
+	public final Behavior Follow = new Follow(this);
+	public final Behavior Connection = new Connection(this);
+	public final Behavior DEBUG = new DEBUG(this);
+	public final Behavior AskParameter = new AskParameter(this);
+	public final Behavior UseStation = new UseStation(this);
+	public final Behavior PullInParking = new PullInParking(this);
 	
 	//Kommunikation
 	private boolean commAllowed = true;
-	private MyBTSend mBTSend;
-
 	
 	private int currentPosition;
 	private int lastPosition;
 	
 	private Behavior behaviorStatus;
-	
-	Position test;
 	
 	//Auftrag
 	private Task mTask;
@@ -78,9 +74,6 @@ public class Status {
 		    byte b3 = (byte) ((mTask.getNumber() >> 8) & 0xFF);
 		    byte b4 = (byte) ( mTask.getNumber()  & 0xFF);
 			byte[] out = new byte[] {(byte)'s',(byte) currentPosition,b4,b3,b2,b1} ;
-			//mBTconnection.sendConnection(out);
-			mBTSend = new MyBTSend(out);
-			mBTSend.run();
 		}
 	}
 	
@@ -121,16 +114,16 @@ public class Status {
 		String temp = null;
 		
 		switch(i) {
-		case 0: temp="parkingSpace"; break;
-		case 1: temp="mark5"; break;
-		case 2: temp="parkingSpaceTSection"; break;
-		case 3: temp="longLane"; break;
-		case 4: temp="mark1"; break;
-		case 5: temp="station1"; break;
-		case 6: temp="station1to2"; break;
-		case 7: temp="mark2"; break;
-		case 8: temp="station2"; break;
-		case 9: temp="station2to3"; break;
+		case 0:  temp="parkingSpace"; break;
+		case 1:  temp="mark5"; break;
+		case 2:  temp="parkingSpaceTSection"; break;
+		case 3:  temp="longLane"; break;
+		case 4:  temp="mark1"; break;
+		case 5:  temp="station1"; break;
+		case 6:  temp="station1to2"; break;
+		case 7:  temp="mark2"; break;
+		case 8:  temp="station2"; break;
+		case 9:  temp="station2to3"; break;
 		case 10: temp="mark3"; break;
 		case 11: temp="station3"; break;
 		case 12: temp="station3to4"; break;
