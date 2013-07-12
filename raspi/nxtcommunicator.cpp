@@ -33,9 +33,6 @@ NxtCommunicator::NxtCommunicator(QObject *parent) :
 
 void NxtCommunicator::openConnection(Types::BtDevice device)
 {
-   //qDebug() << "Drin in open connection";
-    this->stationSetup=stationSetup;
-
     if(rfCommProcess.state() == QProcess::Running)
     {
         emit appLogMessage(trUtf8("Kann keine neue rfcomm-Verbindung aufbauen, da alte noch läuft."));
@@ -121,7 +118,6 @@ QString NxtCommunicator::getGraphicalSudoCommand()
 void NxtCommunicator::tryBtConnect()
 {
     bool erg= btCom::btConnect();
-    //qDebug() << erg;
     if(!erg && rfCommProcess.state() != QProcess::NotRunning)
     {
         QTimer::singleShot(waitTimeMs,this,SLOT(tryBtConnect()));
@@ -196,8 +192,8 @@ void NxtCommunicator::mainCommunicationLoop()
 void NxtCommunicator::sendTaskData(const Types::Task &task, const Types::StationSetup &stations)
 {
     this->task=task;
-    writeTask=true;
     this->stationSetup=stations;
+    writeTask=true;
 }
 
 void NxtCommunicator::sendStationData()

@@ -10,10 +10,7 @@
 #include <bluetooth/hci_lib.h>
 
 
-/*
- Small reminder for later:
- http://blog.qt.digia.com/blog/2010/06/17/youre-doing-it-wrong/
- */
+
 BluetoothDiscovery::BluetoothDiscovery(QObject *parent) :
     QThread(parent)
 {

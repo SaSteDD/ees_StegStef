@@ -153,13 +153,13 @@ void MainWindow::startTask()
     stations.station1.type=ui->station1Type->itemData(ui->station1Type->currentIndex()).value<Types::StationType>();
 
     stations.station2.quality=ui->station2Quality->value();
-    stations.station2.type=ui->station1Type->itemData(ui->station2Type->currentIndex()).value<Types::StationType>();
+    stations.station2.type=ui->station2Type->itemData(ui->station2Type->currentIndex()).value<Types::StationType>();
 
     stations.station3.quality=ui->station3Quality->value();
-    stations.station3.type=ui->station1Type->itemData(ui->station3Type->currentIndex()).value<Types::StationType>();
+    stations.station3.type=ui->station3Type->itemData(ui->station3Type->currentIndex()).value<Types::StationType>();
 
     stations.station4.quality=ui->station4Quality->value();
-    stations.station4.type=ui->station1Type->itemData(ui->station4Type->currentIndex()).value<Types::StationType>();
+    stations.station4.type=ui->station4Type->itemData(ui->station4Type->currentIndex()).value<Types::StationType>();
 
     nxtCom.sendTaskData(task,stations);
 }
