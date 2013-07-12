@@ -1,6 +1,7 @@
 package main;
 
 
+import support.MyBTconnection;
 import support.Task;
 import behavior.*;
 import support.*;
@@ -22,6 +23,7 @@ public class Status {
 	
 	//Kommunikation
 	private boolean commAllowed = true;
+	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 	
 	private int currentPosition;
 	private int lastPosition;
@@ -74,6 +76,7 @@ public class Status {
 		    byte b3 = (byte) ((mTask.getNumber() >> 8) & 0xFF);
 		    byte b4 = (byte) ( mTask.getNumber()  & 0xFF);
 			byte[] out = new byte[] {(byte)'s',(byte) currentPosition,b4,b3,b2,b1} ;
+			mBTconnection.sendConnection(out);
 		}
 	}
 	

@@ -69,12 +69,12 @@ public class MyBTconnection {
 	
 	public void sendConnection(byte[] out) {
 			
-//			try {
-//				dataOut.write(out,0,out.length);
-//				dataOut.flush();
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
+			try {
+				dataOut.write(out,0,out.length);
+				dataOut.flush();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 	}
 		
 }

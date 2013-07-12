@@ -71,8 +71,8 @@ public class MyDifferentialPilot {
 	}
 	
 	public void steer(){
-		Motor.A.setSpeed(400);
-		Motor.B.setSpeed(300);
+		Motor.A.setSpeed(200);
+		Motor.B.setSpeed(400);
 		Motor.B.backward();
 		while(!findLineAfterCurve());
 		Motor.B.forward();
@@ -82,6 +82,8 @@ public class MyDifferentialPilot {
 	
 	public void steerRight(){
 		Motor.A.setSpeed(0);
+		Motor.A.backward();
+		Motor.A.setSpeed(50);
 		Motor.B.setSpeed(speed);
 		while(!findLine()) {}
 		Motor.A.setSpeed(speed);
@@ -145,8 +147,9 @@ public class MyDifferentialPilot {
 	public boolean findLineAfterCurve() {
 		
 		float rechterSensor = mLightSensors.getSensorRight();
+		float linkerSensor = mLightSensors.getSensorLeft();
 		
-		if(rechterSensor < 20 ) {
+		if(linkerSensor < 10 ) {
 			return true;
 		}
 		

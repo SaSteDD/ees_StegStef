@@ -13,8 +13,7 @@ public class Follow implements Behavior {
 
 	// Globale Klassen
 	private Status mStatus;
-	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot
-			.getInstance();
+	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
 	// Behavior
@@ -142,7 +141,7 @@ public class Follow implements Behavior {
 				if(!mStatus.getTask().hasSteps())
 					out = new byte[] {'F'} ;
 				
-				if(!mStatus.getTask().hasTrys())
+				else if(!mStatus.getTask().hasTrys())
 					out = new byte[] {'f'} ;
 				
 				
