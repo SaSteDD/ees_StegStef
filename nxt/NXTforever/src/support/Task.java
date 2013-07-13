@@ -53,7 +53,10 @@ public class Task {
 	 * @return 1..4 true, false
 	 */
 	public boolean hasTrys(){
-		return Steps.get(0).getTrys() < 4 ;
+		if(!Steps.isEmpty())
+			return Steps.get(0).getTrys() < 4 ;
+		
+		return false;
 	}
 	
 	/**

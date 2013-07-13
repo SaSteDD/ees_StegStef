@@ -142,10 +142,10 @@ public class Status {
 		String temp = null;
 		
 		switch(i) {
-		case 0: temp="mark5"; break;
-		case 1: temp="parkingSpaceTSection"; break;
-		case 2: temp="longLane"; break;
-		case 3: temp="mark1"; break;
+		case 0: temp="Bohren"; break;
+		case 1: temp="Drehen"; break;
+		case 2: temp="Fräsen"; break;
+		default: temp="Fehler";
 		}
 		
 		return temp;
