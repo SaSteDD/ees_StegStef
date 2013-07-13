@@ -36,7 +36,7 @@ public class Task {
 	 * Löscht den aktuellen Schritt
 	 */
 	public void removeStep(){
-		Steps.remove(0);
+		Steps.remove(0);		
 	}
 	/**
 	 * Gibt zurück ob der Auftrag noch Schritte zu Verfügung hat
@@ -53,7 +53,10 @@ public class Task {
 	 * @return 1..4 true, false
 	 */
 	public boolean hasTrys(){
-		return Steps.get(0).getTrys() < 4 ;
+		if(!Steps.isEmpty())
+			return Steps.get(0).getTrys() < 4 ;
+		
+		return false;
 	}
 	
 	/**
@@ -64,6 +67,6 @@ public class Task {
 		if (Steps.size() > 0)
 			return Steps.get(0).getNumber();
 		
-		return 99;
+		return 0;
 	}
 }

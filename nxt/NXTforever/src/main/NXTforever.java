@@ -4,6 +4,7 @@ import behavior.Initialisierung;
 import lejos.nxt.Button;
 import lejos.nxt.ButtonListener;
 import lejos.nxt.LCD;
+import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Arbitrator;
 import lejos.robotics.subsumption.Behavior;
 
@@ -30,11 +31,7 @@ public class NXTforever {
 				
 			}
 		});
-		
 		mStatus = new Status();
-		
-		LCD.drawString("Los gehts", 1, 2);
-		
 		Arbitrator arby = new Arbitrator(mStatus.getAllBeBehavior());
 		mStatus.setBehaviorStatus(mStatus.Initialisierung);
 	    arby.start();

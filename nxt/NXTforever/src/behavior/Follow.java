@@ -13,8 +13,7 @@ public class Follow implements Behavior {
 
 	// Globale Klassen
 	private Status mStatus;
-	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot
-			.getInstance();
+	private MyDifferentialPilot mDifferentialPilot = MyDifferentialPilot.getInstance();
 	private MyBTconnection mBTconnection = MyBTconnection.getInstance();
 
 	// Behavior
@@ -116,10 +115,8 @@ public class Follow implements Behavior {
 							else
 							{
 								mStatus.setPosition(Position.mark5.ordinal());
-								//State wechseln, Parkstate
-								curve=0;
-							//	maxcureve=3;
 								mStatus.setBehaviorStatus(mStatus.PullInParking);
+								curve=0;
 							}
 							break;
 						}
@@ -129,19 +126,34 @@ public class Follow implements Behavior {
 					else if(mStatus.getPosition() == Position.parkingSpaceTSection.ordinal()) {
 						mDifferentialPilot.steer();
 						mStatus.setPosition(Position.longLane.ordinal());
-						//alle Warte wieder auf anfang setzen
-				//		maxcureve=2;
 						curve=0;
-					}
-						
-						
-					
+					}	
 					
 				}	
-//
-//				//Kommunikation
-//				if(mBTconnection.checkConnection())
-//					readConnection();	
+
+				//Kommunikation
+				if(mBTconnection.checkConnection())
+					readConnection();	
+				
+				//Auftrag Beenden, dann Melden
+				byte[] out = null;
+				
+				if(!mStatus.getTask().hasSteps())
+					out = new byte[] {'F'} ;
+				
+				else if(!mStatus.getTask().hasTrys())
+					out = new byte[] {'f'} ;
+				
+				
+				try {
+				if(out!=null)	
+					mBTconnection.sendConnection(out);
+				}
+				catch (Exception e) {
+					LCD.clear();
+					LCD.drawString("Fehler Send", 0, 0);
+					LCD.drawString(e.getMessage(), 0, 1);
+				}
 				
 				try {
 					Thread.yield();

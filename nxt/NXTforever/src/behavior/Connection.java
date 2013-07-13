@@ -1,6 +1,7 @@
 package behavior;
 
 import support.MyBTconnection;
+import support.Position;
 import lejos.nxt.Button;
 import lejos.nxt.LCD;
 import lejos.robotics.subsumption.Behavior;

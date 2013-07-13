@@ -85,12 +85,11 @@ public class AskParameter implements Behavior {
 				LCD.drawInt(8, 0, 4);
 				if(temp.get(0) == 113)
 				{
-					if(temp.get(2) >= mStep.getQuality() )
+					if(temp.get(1) ==  mStep.getType() && temp.get(2) >= mStep.getQuality() )
 						ParameterOK = true;
-				}
-				else {
-					mStep.setTrys();
-					ParameterOK= false;
+					else
+						mStep.setTrys();
+					
 				}
 			
 		LCD.drawInt(9, 0, 4);
