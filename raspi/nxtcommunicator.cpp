@@ -249,7 +249,7 @@ void NxtCommunicator::runTaskFinished(bool success)
         msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
     }
 
-    msgBox.show();
+    msgBox.open();
 }
 
 void NxtCommunicator::readStateData()
