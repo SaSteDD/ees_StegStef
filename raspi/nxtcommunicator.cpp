@@ -157,7 +157,7 @@ void NxtCommunicator::mainCommunicationLoop()
              */
             if(sendNxtPauseChar)
             {
-                sendNxtPauseChar=!sendChar(stopPauseChar);
+                sendNxtPauseChar=!sendChar('a', "Pause/Weiter");
             }
 
             if(writeTask)
@@ -172,13 +172,13 @@ void NxtCommunicator::mainCommunicationLoop()
             char b=0;
             if(readChar(&b))
             {
-                if(b==stateChar.first){
+                if(b=='s'){
                     readStateData();
-                } else if(b==qualityChar.first) {
+                } else if(b=='q') {
                     sendStationData();
-                } else if(b==taskEndErrorChar.first) {
+                } else if(b=='f') {
                     runTaskFinished(false);
-                } else if(b==taskEndSuccessChar.first) {
+                } else if(b=='F') {
                     runTaskFinished(true);
                 } else {
                     emit nxtLogMessage(chToHexString(b) + " (Fehler. Zeichen kann an dieser Stelle im Programmablauf nicht ausgewertet werden)");
@@ -201,9 +201,9 @@ void NxtCommunicator::sendStationData()
     char num;
     if(readChar( &num)) //char read?
     {
-        emit nxtLogMessage(QString(qualityChar.first) + chToHexString(num) + " (" + qualityChar.second  + ")");
+        emit nxtLogMessage(QString("q" + chToHexString(num) + trUtf8(" ( Qualitätsanfrage)")));
             char stationQualityData[3];
-            stationQualityData[0]=qualityChar.first;
+            stationQualityData[0]='q';
 
             switch (static_cast<int>(num)) {// we expect 1-4
             case 1:
@@ -242,10 +242,10 @@ void NxtCommunicator::runTaskFinished(bool success)
 
     emit taskFinished(success);
     if(success){
-        emit nxtLogMessage(taskEndSuccessChar.first + "(" + taskEndSuccessChar.second + ")");
+        emit nxtLogMessage("F (Auftrag erfolgreich bearbeitet)");
         msgBox.setText( "Der Auftrag wurde erfolgreich bearbeitet.");
     } else {
-        emit nxtLogMessage(taskEndErrorChar.first + "(" + taskEndErrorChar.second + ")");
+        emit nxtLogMessage("f (Auftragsbearbeitung fehlgeschlagen)");
         msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
     }
 
@@ -287,11 +287,11 @@ void NxtCommunicator::readStateData()
 
 }
 
-bool NxtCommunicator::sendChar(QPair<char, QString> ch)
+bool NxtCommunicator::sendChar(char ch , QString str)
 {
-    int res=btCom::btWriteBytes(&ch.first,1);
+    int res=btCom::btWriteBytes(&ch,1);
     if(res == 1) {
-        emit raspiLogMessage(QString(ch.first)  + " (" + ch.second + ")");
+        emit raspiLogMessage(ch + " (" + str + ")");
         sendNxtPauseChar=false;
         return true;
     } else if( res < 0) {
@@ -314,7 +314,7 @@ void NxtCommunicator::writeTaskData()
 
         char taskData[6+3*task.steps.size()];
 
-        taskData[0]=taskChar.first;
+        taskData[0]='t';
         taskData[1]=static_cast<u_int8_t>(task.taskNumber);
         taskData[2]=stepNum.byte0;
         taskData[3]=stepNum.byte1;
@@ -360,10 +360,3 @@ void NxtCommunicator::sendNxtPauseResume()
         sendNxtPauseChar=true;
     }
 }
-
-const QPair<char, QString> NxtCommunicator::stopPauseChar('a', "Pause/Weiter");
-const QPair<char, QString> NxtCommunicator::qualityChar('q', trUtf8("Qualitätsanfrage"));
-const QPair<char, QString> NxtCommunicator::stateChar('s',"Nxt-Status");
-const QPair<char, QString> NxtCommunicator::taskChar('t', "Auftragsdaten");
-const QPair<char, QString> NxtCommunicator::taskEndSuccessChar('F', "Auftrag erfolgreich bearbeitet");
-const QPair<char, QString> NxtCommunicator::taskEndErrorChar('f', "Auftragsbearbeitung fehlgeschlagen");

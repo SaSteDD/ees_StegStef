@@ -141,7 +141,7 @@ private:
     /*
      *returns true on success
      */
-    bool sendChar(QPair<char, QString>);
+    bool sendChar(char ch , QString str);
 
     /*
      *Read State Data NXT sends
@@ -189,16 +189,6 @@ private:
      *if one of these commands exists, it will be used to execute rfcomm
      */
     const static QStringList graphicalSudoCommands;
-
-    /*
-     *constants for chars in bt messages, and fitting explanations to for the log messages
-     */
-    static const QPair<char, QString>  stopPauseChar;
-    static const QPair<char, QString> qualityChar;
-    static const QPair<char, QString> stateChar;
-    static const QPair<char, QString> taskChar;
-    static const QPair<char, QString> taskEndSuccessChar;
-    static const QPair<char, QString> taskEndErrorChar;
 
     Types::Task task;//the Task to be sent
     Types::StationSetup stationSetup;//the current stationsetup
