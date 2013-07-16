@@ -70,7 +70,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&nxtCom,SIGNAL(raspiLogMessage(QString)),ui->log,SLOT(addRaspiMessage(QString)));
     connect(&nxtCom,SIGNAL(nxtLogMessage(QString)),ui->log,SLOT(addNxtMessage(QString)));
 
-    connect(&nxtCom,SIGNAL(taskFinished(bool)),this,SLOT(taskFinished()));
+    connect(&nxtCom,SIGNAL(taskFinished(bool)),this,SLOT(taskFinished(bool)));
     connect(&nxtCom,SIGNAL(connectionStateChanged(bool)),ui->sendTaskButton,SLOT(setEnabled(bool)));
     connect(&nxtCom,SIGNAL(connectionStateChanged(bool)),ui->trackViewGroupBox,SLOT(setEnabled(bool)));
 
