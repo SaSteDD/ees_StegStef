@@ -22,15 +22,19 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="Use Case Diagram1.svg"
-   style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog">
+   style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog"
+   inkscape:export-filename="/home/sascha/Dokumente/Studium/SS13/es/ees_StegStef/doku/beide/Use Case Diagram1.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150">
   <metadata
-     id="metadata1060">
+     id="metadata1040">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -45,15 +49,15 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
      inkscape:window-height="713"
-     id="namedview1058"
+     id="namedview1038"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.46697389"
-     inkscape:cx="711.01879"
-     inkscape:cy="493.92238"
+     inkscape:zoom="0.23348694"
+     inkscape:cx="628.92041"
+     inkscape:cy="380"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
@@ -316,7 +320,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path102"
-           d="m -7,-7 70,0 0,60 -70,0 0,-60 z"
+           d="m -7,-7 198,0 0,88 -198,0 0,-88 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -324,7 +328,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path105"
-           d="m 1112,462 70,0 0,60 -70,0 0,-60 z"
+           d="M 0,0 180,0 180,70 0,70 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -332,7 +336,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path108"
-           d="m -7,-7 198,0 0,88 -198,0 0,-88 z"
+           d="m -50,-14 150,0 0,42 -150,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -340,7 +344,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path111"
-           d="M 0,0 180,0 180,70 0,70 0,0 z"
+           d="m -98,-14 294,0 0,42 -294,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -348,7 +352,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path114"
-           d="M -7,-7 123,-7 123,93 -7,93 -7,-7 z"
+           d="m -74,-14 222,0 0,42 -222,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -356,7 +360,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path117"
-           d="m 1052,342 130,0 0,100 -130,0 0,-100 z"
+           d="m -58,-14 174,0 0,42 -174,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -364,7 +368,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path120"
-           d="m -50,-14 150,0 0,42 -150,0 0,-42 z"
+           d="M 0,0 163,0 163,221 0,221 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -372,7 +376,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path123"
-           d="m -98,-14 294,0 0,42 -294,0 0,-42 z"
+           d="M 0,0 312,0 312,99 0,99 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -380,7 +384,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path126"
-           d="m -74,-14 222,0 0,42 -222,0 0,-42 z"
+           d="M 0,0 320,0 320,104 0,104 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -388,7 +392,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path129"
-           d="m -58,-14 174,0 0,42 -174,0 0,-42 z"
+           d="M 0,0 212,0 212,189 0,189 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -396,7 +400,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path132"
-           d="M 0,0 163,0 163,221 0,221 0,0 z"
+           d="M 0,0 537,0 537,95 0,95 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -404,7 +408,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path135"
-           d="M 0,0 312,0 312,99 0,99 0,0 z"
+           d="M 0,0 389,0 389,129 0,129 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -412,7 +416,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path138"
-           d="M 0,0 320,0 320,104 0,104 0,0 z"
+           d="M 0,0 129,0 129,349 0,349 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -420,7 +424,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path141"
-           d="M 0,0 212,0 212,189 0,189 0,0 z"
+           d="M 0,0 95,0 95,203 0,203 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -428,7 +432,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path144"
-           d="M 0,0 537,0 537,95 0,95 0,0 z"
+           d="M 0,0 119,0 119,223 0,223 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -436,7 +440,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path147"
-           d="M 0,0 389,0 389,129 0,129 0,0 z"
+           d="M 0,0 279,0 279,218 0,218 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -444,7 +448,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path150"
-           d="M 0,0 129,0 129,349 0,349 0,0 z"
+           d="M 0,0 129,0 129,146 0,146 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -452,7 +456,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path153"
-           d="M 0,0 95,0 95,203 0,203 0,0 z"
+           d="M 0,0 244,0 244,128 0,128 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -460,7 +464,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path156"
-           d="M 0,0 119,0 119,223 0,223 0,0 z"
+           d="M 0,0 460,0 460,120 0,120 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -468,7 +472,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path159"
-           d="M 0,0 279,0 279,218 0,218 0,0 z"
+           d="M 0,0 58,0 58,230 0,230 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -476,7 +480,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path162"
-           d="M 0,0 129,0 129,146 0,146 0,0 z"
+           d="M 0,0 174,0 174,162 0,162 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -484,7 +488,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path165"
-           d="M 0,0 244,0 244,128 0,128 0,0 z"
+           d="M 0,0 494,0 494,129 0,129 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -492,7 +496,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path168"
-           d="M 0,0 460,0 460,120 0,120 0,0 z"
+           d="M 0,0 244,0 244,95 0,95 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -500,7 +504,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path171"
-           d="M 0,0 58,0 58,230 0,230 0,0 z"
+           d="M 0,0 454,0 454,118 0,118 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -508,7 +512,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path174"
-           d="M 0,0 174,0 174,162 0,162 0,0 z"
+           d="M 0,0 104,0 104,348 0,348 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -516,7 +520,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path177"
-           d="M 0,0 494,0 494,129 0,129 0,0 z"
+           d="M 0,0 545,0 545,115 0,115 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -524,7 +528,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path180"
-           d="M 0,0 244,0 244,95 0,95 0,0 z"
+           d="M 0,0 328,0 328,258 0,258 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -532,7 +536,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path183"
-           d="M 0,0 454,0 454,118 0,118 0,0 z"
+           d="M 0,0 495,0 495,202 0,202 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -540,7 +544,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path186"
-           d="M 0,0 104,0 104,348 0,348 0,0 z"
+           d="M 0,0 95,0 95,137 0,137 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -548,7 +552,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path189"
-           d="M 0,0 545,0 545,115 0,115 0,0 z"
+           d="M 0,0 167,0 167,323 0,323 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -556,7 +560,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path192"
-           d="M 0,0 328,0 328,258 0,258 0,0 z"
+           d="M 0,0 175,0 175,165 0,165 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -564,7 +568,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path195"
-           d="M 0,0 495,0 495,202 0,202 0,0 z"
+           d="M 0,0 701,0 701,211 0,211 0,0 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -572,7 +576,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path198"
-           d="M 0,0 95,0 95,137 0,137 0,0 z"
+           d="m -95,-13 285,0 0,39 -285,0 0,-39 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -580,7 +584,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path201"
-           d="M 0,0 167,0 167,323 0,323 0,0 z"
+           d="m -97,-13 291,0 0,39 -291,0 0,-39 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -588,7 +592,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path204"
-           d="M 0,0 175,0 175,165 0,165 0,0 z"
+           d="m -97,-14 291,0 0,42 -291,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -596,7 +600,7 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path207"
-           d="M 0,0 701,0 701,211 0,211 0,0 z"
+           d="m -96,-13 288,0 0,39 -288,0 0,-39 z"
            inkscape:connector-curvature="0" />
       </clipPath>
       <clipPath
@@ -604,38 +608,6 @@
          clipPathUnits="userSpaceOnUse">
         <path
            id="path210"
-           d="m -95,-13 285,0 0,39 -285,0 0,-39 z"
-           inkscape:connector-curvature="0" />
-      </clipPath>
-      <clipPath
-         id="clipPath69"
-         clipPathUnits="userSpaceOnUse">
-        <path
-           id="path213"
-           d="m -97,-13 291,0 0,39 -291,0 0,-39 z"
-           inkscape:connector-curvature="0" />
-      </clipPath>
-      <clipPath
-         id="clipPath70"
-         clipPathUnits="userSpaceOnUse">
-        <path
-           id="path216"
-           d="m -97,-14 291,0 0,42 -291,0 0,-42 z"
-           inkscape:connector-curvature="0" />
-      </clipPath>
-      <clipPath
-         id="clipPath71"
-         clipPathUnits="userSpaceOnUse">
-        <path
-           id="path219"
-           d="m -96,-13 288,0 0,39 -288,0 0,-39 z"
-           inkscape:connector-curvature="0" />
-      </clipPath>
-      <clipPath
-         id="clipPath72"
-         clipPathUnits="userSpaceOnUse">
-        <path
-           id="path222"
            d="m -96,-14 288,0 0,42 -288,0 0,-42 z"
            inkscape:connector-curvature="0" />
       </clipPath>
@@ -643,7 +615,7 @@
   </defs>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g238"
+     id="g226"
      text-rendering="geometricPrecision"
      transform="translate(1221.9204,530.5)"
      font-size="11">
@@ -654,7 +626,7 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle240"
+       id="circle228"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
@@ -662,7 +634,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g242"
+     id="g230"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(1221.9204,530.5)"
@@ -674,14 +646,14 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle244"
+       id="circle232"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
        r="7.5" />
     <line
        style="fill:none"
-       id="line246"
+       id="line234"
        y1="15"
        x2="15"
        clip-path="url(#clipPath1)"
@@ -689,7 +661,7 @@
        y2="40" />
     <line
        style="fill:none"
-       id="line248"
+       id="line236"
        y1="24"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -697,7 +669,7 @@
        y2="24" />
     <line
        style="fill:none"
-       id="line250"
+       id="line238"
        y1="40"
        x2="0"
        clip-path="url(#clipPath1)"
@@ -705,7 +677,7 @@
        y2="60" />
     <line
        style="fill:none"
-       id="line252"
+       id="line240"
        y1="40"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -714,13 +686,13 @@
   </g>
   <g
      style="font-size:11px;fill:#b7d7d7;fill-opacity:1;stroke:#b7d7d7;stroke-opacity:1;font-family:sans-serif"
-     id="g254"
+     id="g242"
      text-rendering="geometricPrecision"
      transform="translate(81.92041,90.5)"
      font-size="11">
     <rect
        style="stroke:none"
-       id="rect256"
+       id="rect244"
        clip-path="url(#clipPath2)"
        y="0"
        height="20"
@@ -728,7 +700,7 @@
        x="0" />
     <rect
        style="stroke:none"
-       id="rect258"
+       id="rect246"
        clip-path="url(#clipPath2)"
        y="20"
        height="629"
@@ -737,7 +709,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g260"
+     id="g248"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(81.92041,90.5)"
@@ -745,19 +717,19 @@
     <path
        style="fill:none"
        inkscape:connector-curvature="0"
-       id="path262"
+       id="path250"
        clip-path="url(#clipPath2)"
        d="m 0,20 1109,0 0,629 L 0,649 0,0 l 221,0 0,20" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g264"
+     id="g252"
      text-rendering="geometricPrecision"
      transform="translate(81.92041,110.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text266"
+       id="text254"
        clip-path="url(#clipPath3)"
        y="11"
        xml:space="preserve"
@@ -765,7 +737,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g268"
+     id="g256"
      text-rendering="geometricPrecision"
      transform="translate(1111.9204,0.5)"
      font-size="11">
@@ -776,7 +748,7 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle270"
+       id="circle258"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
@@ -784,13 +756,64 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g272"
+     id="g260"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(1111.9204,0.5)"
      font-size="11">
     <circle
        style="fill:none"
+       sodipodi:ry="7.5"
+       sodipodi:rx="7.5"
+       sodipodi:cy="7.5"
+       sodipodi:cx="14.5"
+       d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
+       id="circle262"
+       cy="7.5"
+       cx="14.5"
+       clip-path="url(#clipPath1)"
+       r="7.5" />
+    <line
+       style="fill:none"
+       id="line264"
+       y1="15"
+       x2="15"
+       clip-path="url(#clipPath1)"
+       x1="15"
+       y2="40" />
+    <line
+       style="fill:none"
+       id="line266"
+       y1="24"
+       x2="30"
+       clip-path="url(#clipPath1)"
+       x1="0"
+       y2="24" />
+    <line
+       style="fill:none"
+       id="line268"
+       y1="40"
+       x2="0"
+       clip-path="url(#clipPath1)"
+       x1="15"
+       y2="60" />
+    <line
+       style="fill:none"
+       id="line270"
+       y1="40"
+       x2="30"
+       clip-path="url(#clipPath1)"
+       x1="15"
+       y2="60" />
+  </g>
+  <g
+     style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
+     id="g272"
+     text-rendering="geometricPrecision"
+     transform="translate(11.92041,610.5)"
+     font-size="11">
+    <circle
+       style="stroke:none"
        sodipodi:ry="7.5"
        sodipodi:rx="7.5"
        sodipodi:cy="7.5"
@@ -801,61 +824,10 @@
        cx="14.5"
        clip-path="url(#clipPath1)"
        r="7.5" />
-    <line
-       style="fill:none"
-       id="line276"
-       y1="15"
-       x2="15"
-       clip-path="url(#clipPath1)"
-       x1="15"
-       y2="40" />
-    <line
-       style="fill:none"
-       id="line278"
-       y1="24"
-       x2="30"
-       clip-path="url(#clipPath1)"
-       x1="0"
-       y2="24" />
-    <line
-       style="fill:none"
-       id="line280"
-       y1="40"
-       x2="0"
-       clip-path="url(#clipPath1)"
-       x1="15"
-       y2="60" />
-    <line
-       style="fill:none"
-       id="line282"
-       y1="40"
-       x2="30"
-       clip-path="url(#clipPath1)"
-       x1="15"
-       y2="60" />
-  </g>
-  <g
-     style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g284"
-     text-rendering="geometricPrecision"
-     transform="translate(11.92041,610.5)"
-     font-size="11">
-    <circle
-       style="stroke:none"
-       sodipodi:ry="7.5"
-       sodipodi:rx="7.5"
-       sodipodi:cy="7.5"
-       sodipodi:cx="14.5"
-       d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle286"
-       cy="7.5"
-       cx="14.5"
-       clip-path="url(#clipPath1)"
-       r="7.5" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g288"
+     id="g276"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(11.92041,610.5)"
@@ -867,14 +839,14 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle290"
+       id="circle278"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
        r="7.5" />
     <line
        style="fill:none"
-       id="line292"
+       id="line280"
        y1="15"
        x2="15"
        clip-path="url(#clipPath1)"
@@ -882,7 +854,7 @@
        y2="40" />
     <line
        style="fill:none"
-       id="line294"
+       id="line282"
        y1="24"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -890,7 +862,7 @@
        y2="24" />
     <line
        style="fill:none"
-       id="line296"
+       id="line284"
        y1="40"
        x2="0"
        clip-path="url(#clipPath1)"
@@ -898,7 +870,7 @@
        y2="60" />
     <line
        style="fill:none"
-       id="line298"
+       id="line286"
        y1="40"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -907,7 +879,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g300"
+     id="g288"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,340.5)"
      font-size="11">
@@ -918,7 +890,7 @@
        sodipodi:cy="40"
        sodipodi:cx="60"
        d="M 120,40 C 120,62.09139 93.137085,80 60,80 26.862915,80 0,62.09139 0,40 0,17.90861 26.862915,0 60,0 c 33.137085,0 60,17.90861 60,40 z"
-       id="ellipse302"
+       id="ellipse290"
        cy="40"
        cx="60"
        clip-path="url(#clipPath4)"
@@ -927,7 +899,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g304"
+     id="g292"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,340.5)"
@@ -939,7 +911,7 @@
        sodipodi:cy="40"
        sodipodi:cx="60"
        d="M 120,40 C 120,62.09139 93.137085,80 60,80 26.862915,80 0,62.09139 0,40 0,17.90861 26.862915,0 60,0 c 33.137085,0 60,17.90861 60,40 z"
-       id="ellipse306"
+       id="ellipse294"
        cy="40"
        cx="60"
        clip-path="url(#clipPath4)"
@@ -948,20 +920,20 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g308"
+     id="g296"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,340.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text310"
+       id="text298"
        clip-path="url(#clipPath5)"
        y="37"
        xml:space="preserve"
        x="10">Sationsparameter</text>
     <text
        style="stroke:none"
-       id="text312"
+       id="text300"
        clip-path="url(#clipPath5)"
        y="51"
        xml:space="preserve"
@@ -969,7 +941,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g314"
+     id="g302"
      text-rendering="geometricPrecision"
      transform="translate(371.92041,410.5)"
      font-size="11">
@@ -980,7 +952,7 @@
        sodipodi:cy="55"
        sodipodi:cx="95"
        d="m 190,55 c 0,30.375661 -42.53295,55 -95,55 C 42.532949,110 0,85.375661 0,55 0,24.624339 42.532949,0 95,0 c 52.46705,0 95,24.624339 95,55 z"
-       id="ellipse316"
+       id="ellipse304"
        cy="55"
        cx="95"
        clip-path="url(#clipPath6)"
@@ -989,7 +961,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g318"
+     id="g306"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(371.92041,410.5)"
@@ -1001,7 +973,7 @@
        sodipodi:cy="55"
        sodipodi:cx="95"
        d="m 190,55 c 0,30.375661 -42.53295,55 -95,55 C 42.532949,110 0,85.375661 0,55 0,24.624339 42.532949,0 95,0 c 52.46705,0 95,24.624339 95,55 z"
-       id="ellipse320"
+       id="ellipse308"
        cy="55"
        cx="95"
        clip-path="url(#clipPath6)"
@@ -1010,27 +982,27 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g322"
+     id="g310"
      text-rendering="geometricPrecision"
      transform="translate(371.92041,410.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text324"
+       id="text312"
        clip-path="url(#clipPath7)"
        y="45"
        xml:space="preserve"
        x="7">Status der Auftragsbearbeitung</text>
     <text
        style="stroke:none"
-       id="text326"
+       id="text314"
        clip-path="url(#clipPath7)"
        y="59"
        xml:space="preserve"
        x="6">senden und grafisch aufbereitet</text>
     <text
        style="stroke:none"
-       id="text328"
+       id="text316"
        clip-path="url(#clipPath7)"
        y="73"
        xml:space="preserve"
@@ -1038,7 +1010,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g330"
+     id="g318"
      text-rendering="geometricPrecision"
      transform="translate(801.92041,600.5)"
      font-size="11">
@@ -1049,7 +1021,7 @@
        sodipodi:cy="55"
        sodipodi:cx="75"
        d="m 150,55 c 0,30.375661 -33.57864,55 -75,55 C 33.578644,110 0,85.375661 0,55 0,24.624339 33.578644,0 75,0 c 41.42136,0 75,24.624339 75,55 z"
-       id="ellipse332"
+       id="ellipse320"
        cy="55"
        cx="75"
        clip-path="url(#clipPath8)"
@@ -1058,7 +1030,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g334"
+     id="g322"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(801.92041,600.5)"
@@ -1070,7 +1042,7 @@
        sodipodi:cy="55"
        sodipodi:cx="75"
        d="m 150,55 c 0,30.375661 -33.57864,55 -75,55 C 33.578644,110 0,85.375661 0,55 0,24.624339 33.578644,0 75,0 c 41.42136,0 75,24.624339 75,55 z"
-       id="ellipse336"
+       id="ellipse324"
        cy="55"
        cx="75"
        clip-path="url(#clipPath8)"
@@ -1079,27 +1051,27 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g338"
+     id="g326"
      text-rendering="geometricPrecision"
      transform="translate(801.92041,600.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text340"
+       id="text328"
        clip-path="url(#clipPath9)"
        y="45"
        xml:space="preserve"
        x="18">Auftrag Bearbeitung</text>
     <text
        style="stroke:none"
-       id="text342"
+       id="text330"
        clip-path="url(#clipPath9)"
        y="59"
        xml:space="preserve"
        x="12">anhalten/weiter laufen</text>
     <text
        style="stroke:none"
-       id="text344"
+       id="text332"
        clip-path="url(#clipPath9)"
        y="73"
        xml:space="preserve"
@@ -1107,7 +1079,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g346"
+     id="g334"
      text-rendering="geometricPrecision"
      transform="translate(461.92041,580.5)"
      font-size="11">
@@ -1118,7 +1090,7 @@
        sodipodi:cy="30"
        sodipodi:cx="90"
        d="M 180,30 C 180,46.568542 139.70563,60 90,60 40.294373,60 0,46.568542 0,30 0,13.431458 40.294373,0 90,0 c 49.70563,0 90,13.431458 90,30 z"
-       id="ellipse348"
+       id="ellipse336"
        cy="30"
        cx="90"
        clip-path="url(#clipPath10)"
@@ -1127,7 +1099,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g350"
+     id="g338"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(461.92041,580.5)"
@@ -1139,7 +1111,7 @@
        sodipodi:cy="30"
        sodipodi:cx="90"
        d="M 180,30 C 180,46.568542 139.70563,60 90,60 40.294373,60 0,46.568542 0,30 0,13.431458 40.294373,0 90,0 c 49.70563,0 90,13.431458 90,30 z"
-       id="ellipse352"
+       id="ellipse340"
        cy="30"
        cx="90"
        clip-path="url(#clipPath10)"
@@ -1148,20 +1120,20 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g354"
+     id="g342"
      text-rendering="geometricPrecision"
      transform="translate(461.92041,580.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text356"
+       id="text344"
        clip-path="url(#clipPath11)"
        y="27"
        xml:space="preserve"
        x="5">Kommunikation ausführen und</text>
     <text
        style="stroke:none"
-       id="text358"
+       id="text346"
        clip-path="url(#clipPath11)"
        y="41"
        xml:space="preserve"
@@ -1169,7 +1141,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g360"
+     id="g348"
      text-rendering="geometricPrecision"
      transform="translate(811.92041,430.5)"
      font-size="11">
@@ -1180,7 +1152,7 @@
        sodipodi:cy="20"
        sodipodi:cx="75"
        d="M 150,20 C 150,31.045695 116.42136,40 75,40 33.578644,40 0,31.045695 0,20 0,8.954305 33.578644,0 75,0 c 41.42136,0 75,8.954305 75,20 z"
-       id="ellipse362"
+       id="ellipse350"
        cy="20"
        cx="75"
        clip-path="url(#clipPath12)"
@@ -1189,7 +1161,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g364"
+     id="g352"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(811.92041,430.5)"
@@ -1201,7 +1173,7 @@
        sodipodi:cy="20"
        sodipodi:cx="75"
        d="M 150,20 C 150,31.045695 116.42136,40 75,40 33.578644,40 0,31.045695 0,20 0,8.954305 33.578644,0 75,0 c 41.42136,0 75,8.954305 75,20 z"
-       id="ellipse366"
+       id="ellipse354"
        cy="20"
        cx="75"
        clip-path="url(#clipPath12)"
@@ -1210,13 +1182,13 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g368"
+     id="g356"
      text-rendering="geometricPrecision"
      transform="translate(811.92041,430.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text370"
+       id="text358"
        clip-path="url(#clipPath13)"
        y="24"
        xml:space="preserve"
@@ -1224,7 +1196,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g372"
+     id="g360"
      text-rendering="geometricPrecision"
      transform="translate(321.92041,130.5)"
      font-size="11">
@@ -1235,7 +1207,7 @@
        sodipodi:cy="30"
        sodipodi:cx="130"
        d="M 260,30 C 260,46.568542 201.79702,60 130,60 58.202983,60 0,46.568542 0,30 0,13.431458 58.202983,0 130,0 201.79702,0 260,13.431458 260,30 z"
-       id="ellipse374"
+       id="ellipse362"
        cy="30"
        cx="130"
        clip-path="url(#clipPath14)"
@@ -1244,7 +1216,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g376"
+     id="g364"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(321.92041,130.5)"
@@ -1256,7 +1228,7 @@
        sodipodi:cy="30"
        sodipodi:cx="130"
        d="M 260,30 C 260,46.568542 201.79702,60 130,60 58.202983,60 0,46.568542 0,30 0,13.431458 58.202983,0 130,0 201.79702,0 260,13.431458 260,30 z"
-       id="ellipse378"
+       id="ellipse366"
        cy="30"
        cx="130"
        clip-path="url(#clipPath14)"
@@ -1265,13 +1237,13 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g380"
+     id="g368"
      text-rendering="geometricPrecision"
      transform="translate(321.92041,130.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text382"
+       id="text370"
        clip-path="url(#clipPath15)"
        y="34"
        xml:space="preserve"
@@ -1279,7 +1251,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g384"
+     id="g372"
      text-rendering="geometricPrecision"
      transform="translate(661.92041,280.5)"
      font-size="11">
@@ -1290,7 +1262,7 @@
        sodipodi:cy="35"
        sodipodi:cx="95"
        d="M 190,35 C 190,54.329966 147.46705,70 95,70 42.532949,70 0,54.329966 0,35 0,15.670034 42.532949,0 95,0 c 52.46705,0 95,15.670034 95,35 z"
-       id="ellipse386"
+       id="ellipse374"
        cy="35"
        cx="95"
        clip-path="url(#clipPath16)"
@@ -1299,7 +1271,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g388"
+     id="g376"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(661.92041,280.5)"
@@ -1311,7 +1283,7 @@
        sodipodi:cy="35"
        sodipodi:cx="95"
        d="M 190,35 C 190,54.329966 147.46705,70 95,70 42.532949,70 0,54.329966 0,35 0,15.670034 42.532949,0 95,0 c 52.46705,0 95,15.670034 95,35 z"
-       id="ellipse390"
+       id="ellipse378"
        cy="35"
        cx="95"
        clip-path="url(#clipPath16)"
@@ -1320,20 +1292,20 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g392"
+     id="g380"
      text-rendering="geometricPrecision"
      transform="translate(661.92041,280.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text394"
+       id="text382"
        clip-path="url(#clipPath17)"
        y="32"
        xml:space="preserve"
        x="36">Befahren der Straße;</text>
     <text
        style="stroke:none"
-       id="text396"
+       id="text384"
        clip-path="url(#clipPath17)"
        y="46"
        xml:space="preserve"
@@ -1341,7 +1313,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g398"
+     id="g386"
      text-rendering="geometricPrecision"
      transform="translate(961.92041,180.5)"
      font-size="11">
@@ -1352,7 +1324,7 @@
        sodipodi:cy="35"
        sodipodi:cx="60"
        d="M 120,35 C 120,54.329966 93.137085,70 60,70 26.862915,70 0,54.329966 0,35 0,15.670034 26.862915,0 60,0 c 33.137085,0 60,15.670034 60,35 z"
-       id="ellipse400"
+       id="ellipse388"
        cy="35"
        cx="60"
        clip-path="url(#clipPath18)"
@@ -1361,7 +1333,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g402"
+     id="g390"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(961.92041,180.5)"
@@ -1373,7 +1345,7 @@
        sodipodi:cy="35"
        sodipodi:cx="60"
        d="M 120,35 C 120,54.329966 93.137085,70 60,70 26.862915,70 0,54.329966 0,35 0,15.670034 26.862915,0 60,0 c 33.137085,0 60,15.670034 60,35 z"
-       id="ellipse404"
+       id="ellipse392"
        cy="35"
        cx="60"
        clip-path="url(#clipPath18)"
@@ -1382,13 +1354,13 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g406"
+     id="g394"
      text-rendering="geometricPrecision"
      transform="translate(961.92041,180.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text408"
+       id="text396"
        clip-path="url(#clipPath19)"
        y="39"
        xml:space="preserve"
@@ -1396,7 +1368,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g410"
+     id="g398"
      text-rendering="geometricPrecision"
      transform="translate(971.92041,0.5)"
      font-size="11">
@@ -1407,7 +1379,7 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle412"
+       id="circle400"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
@@ -1415,7 +1387,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g414"
+     id="g402"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(971.92041,0.5)"
@@ -1427,14 +1399,14 @@
        sodipodi:cy="7.5"
        sodipodi:cx="14.5"
        d="M 22,7.5 C 22,11.642136 18.642136,15 14.5,15 10.357864,15 7,11.642136 7,7.5 7,3.3578644 10.357864,0 14.5,0 18.642136,0 22,3.3578644 22,7.5 z"
-       id="circle416"
+       id="circle404"
        cy="7.5"
        cx="14.5"
        clip-path="url(#clipPath1)"
        r="7.5" />
     <line
        style="fill:none"
-       id="line418"
+       id="line406"
        y1="15"
        x2="15"
        clip-path="url(#clipPath1)"
@@ -1442,7 +1414,7 @@
        y2="40" />
     <line
        style="fill:none"
-       id="line420"
+       id="line408"
        y1="24"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -1450,7 +1422,7 @@
        y2="24" />
     <line
        style="fill:none"
-       id="line422"
+       id="line410"
        y1="40"
        x2="0"
        clip-path="url(#clipPath1)"
@@ -1458,7 +1430,7 @@
        y2="60" />
     <line
        style="fill:none"
-       id="line424"
+       id="line412"
        y1="40"
        x2="30"
        clip-path="url(#clipPath1)"
@@ -1467,50 +1439,50 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g426"
+     id="g414"
      text-rendering="geometricPrecision"
      transform="translate(631.92041,380.5)"
      font-size="11">
     <polygon
        style="stroke:none"
-       id="polygon428"
+       id="polygon416"
        clip-path="url(#clipPath20)"
        points="119,15 119,39 0,39 0,0 104,0 119,15 104,15 104,0 " />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g430"
+     id="g418"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(631.92041,380.5)"
      font-size="11">
     <polygon
        style="fill:none"
-       id="polygon432"
+       id="polygon420"
        clip-path="url(#clipPath20)"
        points="119,15 119,39 0,39 0,0 104,0 119,15 104,15 104,0 " />
   </g>
   <g
      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g434"
+     id="g422"
      text-rendering="geometricPrecision"
      transform="translate(631.92041,380.5)">
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path436"
+       id="path424"
        clip-path="url(#clipPath21)"
        d="m 9.0312,9.5854 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 5,8.9292 5,9.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 Q 5.3438,7.5854 5.8281,7.3198 6.3125,7.0542 6.9375,7.0542 q 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 7.1563,0.375 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 2.75,1.1718 0,-3.6406 0.9844,0 0,3.6094 q 0,0.8437 0.3359,1.2734 0.336,0.4297 0.9922,0.4297 0.8125,0 1.2734,-0.5078 0.461,-0.5078 0.461,-1.3984 l 0,-3.4063 0.9844,0 0,6.0156 -0.9844,0 0,-0.9218 q -0.3594,0.5468 -0.836,0.8125 -0.4765,0.2656 -1.1015,0.2656 -1.0313,0 -1.5703,-0.6484 -0.5391,-0.6485 -0.5391,-1.8829 z m 12.25,-0.875 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z M 35.5156,8.1167 Q 35.3594,8.0229 35.1641,7.9761 34.9688,7.9292 34.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 33,9.0229 33,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z" />
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path438"
+       id="path426"
        clip-path="url(#clipPath21)"
        d="m 8.8906,19.4604 0,1.0469 Q 8.2656,20.2104 7.7188,20.0698 7.1719,19.9292 6.6562,19.9292 q -0.875,0 -1.3593,0.3437 -0.4844,0.3438 -0.4844,0.9688 0,0.5312 0.3203,0.8047 0.3203,0.2734 1.211,0.4453 L 7,22.6167 q 1.2188,0.2344 1.7969,0.8203 0.5781,0.5859 0.5781,1.5547 0,1.1719 -0.7812,1.7734 -0.7813,0.6016 -2.2969,0.6016 -0.5625,0 -1.211,-0.1328 Q 4.4375,27.1011 3.75,26.8511 l 0,-1.1094 q 0.6719,0.375 1.3047,0.5625 0.6328,0.1875 1.2422,0.1875 0.9375,0 1.4375,-0.3672 0.5,-0.3672 0.5,-1.0391 0,-0.5937 -0.3594,-0.9296 -0.3594,-0.336 -1.1875,-0.5079 l -0.6563,-0.125 q -1.2187,-0.2343 -1.7656,-0.75 -0.5468,-0.5156 -0.5468,-1.4375 0,-1.0625 0.75,-1.6796 0.75,-0.6172 2.0781,-0.6172 0.5625,0 1.1484,0.1093 0.5859,0.1094 1.1953,0.3125 z m 4.125,0.0313 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 6.5,2.625 q -0.1562,-0.0938 -0.3515,-0.1406 -0.1953,-0.0469 -0.4297,-0.0469 -0.8438,0 -1.2891,0.5469 Q 17,23.0229 17,24.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z m 6.6719,1.8437 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 7.1719,-2.2344 0,0.9219 q -0.4063,-0.2344 -0.8282,-0.3516 -0.4218,-0.1172 -0.8593,-0.1172 -0.9531,0 -1.4844,0.6094 -0.5313,0.6094 -0.5313,1.7187 0,1.0938 0.5313,1.7032 0.5313,0.6093 1.4844,0.6093 0.4375,0 0.8593,-0.1093 0.4219,-0.1094 0.8282,-0.3438 l 0,0.9063 q -0.4063,0.2031 -0.8516,0.2968 -0.4453,0.0938 -0.9453,0.0938 -1.3594,0 -2.1563,-0.8516 -0.7968,-0.8515 -0.7968,-2.3047 0,-1.4687 0.8047,-2.3125 0.8047,-0.8437 2.2109,-0.8437 0.4688,0 0.8984,0.0937 0.4297,0.0938 0.836,0.2813 z M 34,18.8511 l 1,0 0,4.9375 2.9375,-2.5938 1.2656,0 -3.1875,2.8125 3.3282,3.2031 -1.2969,0 L 35,24.2729 l 0,2.9375 -1,0 0,-8.3593 z m 11.1875,5.1093 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 7.8437,-0.0782 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 48,22.9292 48,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 4.7344,0.5938 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z m 6.625,0.4375 q 0,-1.0937 -0.4532,-1.7109 -0.4531,-0.6172 -1.2343,-0.6172 -0.7813,0 -1.2266,0.6172 Q 62,23.1167 62,24.2104 q 0,1.0938 0.4453,1.711 0.4453,0.6172 1.2266,0.6172 0.7812,0 1.2343,-0.6172 0.4532,-0.6172 0.4532,-1.711 z M 62,22.1011 q 0.2969,-0.5313 0.7734,-0.7891 0.4766,-0.2578 1.1485,-0.2578 1.0937,0 1.7734,0.8672 0.6797,0.8672 0.6797,2.289 0,1.4219 -0.6797,2.2891 -0.6797,0.8672 -1.7734,0.8672 -0.6719,0 -1.1485,-0.2578 Q 62.2969,26.8511 62,26.3042 l 0,0.9062 -1,0 0,-8.3593 1,0 0,3.25 z m 9.875,-0.7344 0,0.9375 Q 71.4531,22.0854 71,21.9839 q -0.4531,-0.1016 -0.9375,-0.1016 -0.7344,0 -1.1016,0.2266 -0.3671,0.2265 -0.3671,0.664 0,0.3438 0.2656,0.5391 0.2656,0.1953 1.0625,0.3828 l 0.3281,0.0781 q 1.0625,0.2188 1.5,0.6329 0.4375,0.414 0.4375,1.1484 0,0.8281 -0.6563,1.3203 -0.6562,0.4922 -1.8281,0.4922 -0.4843,0 -1.0078,-0.0938 -0.5234,-0.0937 -1.1015,-0.2812 l 0,-1.0156 q 0.5468,0.2812 1.0781,0.4218 0.5312,0.1407 1.0625,0.1407 0.6875,0 1.0625,-0.2422 0.375,-0.2422 0.375,-0.6641 0,-0.4062 -0.2657,-0.625 -0.2656,-0.2187 -1.1874,-0.4062 L 69.375,24.5073 q -0.9219,-0.1875 -1.3281,-0.5859 -0.4063,-0.3985 -0.4063,-1.1016 0,-0.8437 0.6016,-1.3047 0.6016,-0.4609 1.7109,-0.4609 0.5469,0 1.0313,0.0781 0.4844,0.0781 0.8906,0.2344 z m 7.4844,0.0625 0,0.9219 q -0.4063,-0.2344 -0.8282,-0.3516 -0.4218,-0.1172 -0.8593,-0.1172 -0.9531,0 -1.4844,0.6094 -0.5313,0.6094 -0.5313,1.7187 0,1.0938 0.5313,1.7032 0.5313,0.6093 1.4844,0.6093 0.4375,0 0.8593,-0.1093 0.4219,-0.1094 0.8282,-0.3438 l 0,0.9063 q -0.4063,0.2031 -0.8516,0.2968 -0.4453,0.0938 -0.9453,0.0938 -1.3594,0 -2.1563,-0.8516 -0.7968,-0.8515 -0.7968,-2.3047 0,-1.4687 0.8047,-2.3125 0.8047,-0.8437 2.2109,-0.8437 0.4688,0 0.8984,0.0937 0.4297,0.0938 0.836,0.2813 z m 6.6718,2.1562 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 82,22.9292 82,23.8042 l 0,3.4062 -1,0 0,-8.3593 1,0 0,3.2812 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 7,0 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 89,22.9292 89,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 2,-2.3906 1,0 0,6.0156 -1,0 0,-6.0156 z m 0,-2.3437 1,0 0,1.25 -1,0 0,-1.25 z m 3.9844,0.6406 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 4,0 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z" />
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g440"
+     id="g428"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,430.5)"
      font-size="11">
@@ -1521,7 +1493,7 @@
        sodipodi:cy="20"
        sodipodi:cx="55"
        d="M 110,20 C 110,31.045695 85.375661,40 55,40 24.624339,40 0,31.045695 0,20 0,8.954305 24.624339,0 55,0 c 30.375661,0 55,8.954305 55,20 z"
-       id="ellipse442"
+       id="ellipse430"
        cy="20"
        cx="55"
        clip-path="url(#clipPath22)"
@@ -1530,7 +1502,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g444"
+     id="g432"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,430.5)"
@@ -1542,7 +1514,7 @@
        sodipodi:cy="20"
        sodipodi:cx="55"
        d="M 110,20 C 110,31.045695 85.375661,40 55,40 24.624339,40 0,31.045695 0,20 0,8.954305 24.624339,0 55,0 c 30.375661,0 55,8.954305 55,20 z"
-       id="ellipse446"
+       id="ellipse434"
        cy="20"
        cx="55"
        clip-path="url(#clipPath22)"
@@ -1551,13 +1523,13 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g448"
+     id="g436"
      text-rendering="geometricPrecision"
      transform="translate(1041.9204,430.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text450"
+       id="text438"
        clip-path="url(#clipPath23)"
        y="24"
        xml:space="preserve"
@@ -1565,7 +1537,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g452"
+     id="g440"
      text-rendering="geometricPrecision"
      transform="translate(871.92041,490.5)"
      font-size="11">
@@ -1576,7 +1548,7 @@
        sodipodi:cy="40"
        sodipodi:cx="100"
        d="M 200,40 C 200,62.09139 155.22847,80 100,80 44.771525,80 0,62.09139 0,40 0,17.90861 44.771525,0 100,0 155.22847,0 200,17.90861 200,40 z"
-       id="ellipse454"
+       id="ellipse442"
        cy="40"
        cx="100"
        clip-path="url(#clipPath24)"
@@ -1585,7 +1557,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g456"
+     id="g444"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(871.92041,490.5)"
@@ -1597,7 +1569,7 @@
        sodipodi:cy="40"
        sodipodi:cx="100"
        d="M 200,40 C 200,62.09139 155.22847,80 100,80 44.771525,80 0,62.09139 0,40 0,17.90861 44.771525,0 100,0 155.22847,0 200,17.90861 200,40 z"
-       id="ellipse458"
+       id="ellipse446"
        cy="40"
        cx="100"
        clip-path="url(#clipPath24)"
@@ -1606,20 +1578,20 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g460"
+     id="g448"
      text-rendering="geometricPrecision"
      transform="translate(871.92041,490.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text462"
+       id="text450"
        clip-path="url(#clipPath25)"
        y="37"
        xml:space="preserve"
        x="22">Auftrag senden und starten;</text>
     <text
        style="stroke:none"
-       id="text464"
+       id="text452"
        clip-path="url(#clipPath25)"
        y="51"
        xml:space="preserve"
@@ -1627,7 +1599,7 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g466"
+     id="g454"
      text-rendering="geometricPrecision"
      transform="translate(111.92041,380.5)"
      font-size="11">
@@ -1638,7 +1610,7 @@
        sodipodi:cy="30"
        sodipodi:cx="75"
        d="M 150,30 C 150,46.568542 116.42136,60 75,60 33.578644,60 0,46.568542 0,30 0,13.431458 33.578644,0 75,0 c 41.42136,0 75,13.431458 75,30 z"
-       id="ellipse468"
+       id="ellipse456"
        cy="30"
        cx="75"
        clip-path="url(#clipPath26)"
@@ -1647,7 +1619,7 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g470"
+     id="g458"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(111.92041,380.5)"
@@ -1659,7 +1631,7 @@
        sodipodi:cy="30"
        sodipodi:cx="75"
        d="M 150,30 C 150,46.568542 116.42136,60 75,60 33.578644,60 0,46.568542 0,30 0,13.431458 33.578644,0 75,0 c 41.42136,0 75,13.431458 75,30 z"
-       id="ellipse472"
+       id="ellipse460"
        cy="30"
        cx="75"
        clip-path="url(#clipPath26)"
@@ -1668,20 +1640,20 @@
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g474"
+     id="g462"
      text-rendering="geometricPrecision"
      transform="translate(111.92041,380.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text476"
+       id="text464"
        clip-path="url(#clipPath27)"
        y="27"
        xml:space="preserve"
        x="23">Stationsparameter</text>
     <text
        style="stroke:none"
-       id="text478"
+       id="text466"
        clip-path="url(#clipPath27)"
        y="41"
        xml:space="preserve"
@@ -1689,113 +1661,99 @@
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g480"
+     id="g468"
      text-rendering="geometricPrecision"
      transform="translate(311.92041,260.5)"
      font-size="11">
     <polygon
        style="stroke:none"
-       id="polygon482"
+       id="polygon470"
        clip-path="url(#clipPath28)"
        points="129,15 129,59 0,59 0,0 114,0 129,15 114,15 114,0 " />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g484"
+     id="g472"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(311.92041,260.5)"
      font-size="11">
     <polygon
        style="fill:none"
-       id="polygon486"
+       id="polygon474"
        clip-path="url(#clipPath28)"
        points="129,15 129,59 0,59 0,0 114,0 129,15 114,15 114,0 " />
   </g>
   <g
      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g488"
+     id="g476"
      text-rendering="geometricPrecision"
      transform="translate(311.92041,260.5)">
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path490"
+       id="path478"
        clip-path="url(#clipPath29)"
        d="m 4.0781,5.1948 1.625,0 2.0469,5.4531 2.0469,-5.4531 1.625,0 0,8.0156 -1.0625,0 0,-7.0468 -2.0625,5.5 -1.0938,0 -2.0781,-5.5 0,7.0468 -1.0469,0 0,-8.0156 z m 11.6875,4.9844 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z M 23.5156,8.1167 Q 23.3594,8.0229 23.1641,7.9761 22.9688,7.9292 22.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 21,9.0229 21,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z M 25,4.8511 l 1,0 0,4.9375 2.9375,-2.5938 1.2656,0 -3.1875,2.8125 3.3282,3.2031 -1.2969,0 L 26,10.2729 l 0,2.9375 -1,0 0,-8.3593 z m 6.0312,2.3437 1,0 0,6.0156 -1,0 0,-6.0156 z m 0,-2.3437 1,0 0,1.25 -1,0 0,-1.25 z m 8.1563,5.1093 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z M 44.5156,8.1167 Q 44.3594,8.0229 44.1641,7.9761 43.9688,7.9292 43.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 42,9.0229 42,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z m 1.4219,2.7187 0,-3.6406 0.9844,0 0,3.6094 q 0,0.8437 0.3359,1.2734 0.336,0.4297 0.9922,0.4297 0.8125,0 1.2734,-0.5078 0.461,-0.5078 0.461,-1.3984 l 0,-3.4063 0.9844,0 0,6.0156 -0.9844,0 0,-0.9218 q -0.3594,0.5468 -0.836,0.8125 -0.4765,0.2656 -1.1015,0.2656 -1.0313,0 -1.5703,-0.6484 -0.5391,-0.6485 -0.5391,-1.8829 z m 12.0937,-1.25 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 54,8.9292 54,9.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z M 64,10.1323 q 0,-1.0781 -0.4453,-1.664 -0.4453,-0.586 -1.2422,-0.586 -0.7969,0 -1.2422,0.586 -0.4453,0.5859 -0.4453,1.664 0,1.0625 0.4453,1.6563 0.4453,0.5937 1.2422,0.5937 0.7969,0 1.2422,-0.5937 Q 64,11.1948 64,10.1323 z m 0.9844,2.3281 q 0,1.5469 -0.6797,2.2891 -0.6797,0.7422 -2.0859,0.7422 -0.5313,0 -0.9922,-0.0781 -0.461,-0.0782 -0.8985,-0.2344 l 0,-0.9531 q 0.4375,0.2343 0.8594,0.3437 0.4219,0.1094 0.875,0.1094 0.9687,0 1.4531,-0.5078 Q 64,13.6636 64,12.6479 l 0,-0.5 q -0.3125,0.5313 -0.7891,0.7969 -0.4765,0.2656 -1.1484,0.2656 -1.1094,0 -1.7813,-0.8437 -0.6718,-0.8438 -0.6718,-2.2344 0,-1.3906 0.6718,-2.2344 0.6719,-0.8437 1.7813,-0.8437 0.6719,0 1.1484,0.2578 Q 63.6875,7.5698 64,8.1011 l 0,-0.9063 0.9844,0 0,5.2656 z m 9.0937,-7.6093 0,0.8281 -0.9375,0 q -0.5312,0 -0.7422,0.2109 -0.2109,0.211 -0.2109,0.7735 l 0,0.5312 1.625,0 0,0.7656 -1.625,0 0,5.25 -0.9844,0 0,-5.25 -0.9531,0 0,-0.7656 0.9531,0 0,-0.4219 q 0,-1 0.461,-1.4609 0.4609,-0.4609 1.4765,-0.4609 l 0.9375,0 z m 0.8594,5.9843 0,-3.6406 0.9844,0 0,3.6094 q 0,0.8437 0.3359,1.2734 0.336,0.4297 0.9922,0.4297 0.8125,0 1.2734,-0.5078 0.461,-0.5078 0.461,-1.3984 l 0,-3.4063 0.9844,0 0,6.0156 -0.9844,0 0,-0.9218 q -0.3594,0.5468 -0.836,0.8125 -0.4765,0.2656 -1.1015,0.2656 -1.0313,0 -1.5703,-0.6484 -0.5391,-0.6485 -0.5391,-1.8829 z m 3.0469,-5.9687 1.0937,0 0,1.0937 -1.0937,0 0,-1.0937 z m -2.1563,0 1.0938,0 0,1.0937 -1.0938,0 0,-1.0937 z m 9.6875,3.25 Q 85.3594,8.0229 85.1641,7.9761 84.9688,7.9292 84.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 83,9.0229 83,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z" />
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path492"
+       id="path480"
        clip-path="url(#clipPath29)"
        d="m 8.8906,19.4604 0,1.0469 Q 8.2656,20.2104 7.7188,20.0698 7.1719,19.9292 6.6562,19.9292 q -0.875,0 -1.3593,0.3437 -0.4844,0.3438 -0.4844,0.9688 0,0.5312 0.3203,0.8047 0.3203,0.2734 1.211,0.4453 L 7,22.6167 q 1.2188,0.2344 1.7969,0.8203 0.5781,0.5859 0.5781,1.5547 0,1.1719 -0.7812,1.7734 -0.7813,0.6016 -2.2969,0.6016 -0.5625,0 -1.211,-0.1328 Q 4.4375,27.1011 3.75,26.8511 l 0,-1.1094 q 0.6719,0.375 1.3047,0.5625 0.6328,0.1875 1.2422,0.1875 0.9375,0 1.4375,-0.3672 0.5,-0.3672 0.5,-1.0391 0,-0.5937 -0.3594,-0.9296 -0.3594,-0.336 -1.1875,-0.5079 l -0.6563,-0.125 q -1.2187,-0.2343 -1.7656,-0.75 -0.5468,-0.5156 -0.5468,-1.4375 0,-1.0625 0.75,-1.6796 0.75,-0.6172 2.0781,-0.6172 0.5625,0 1.1484,0.1093 0.5859,0.1094 1.1953,0.3125 z m 4.125,0.0313 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 5.75,4.6875 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z m 3.2812,-4.2812 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 3.0156,1.7031 1,0 0,6.0156 -1,0 0,-6.0156 z m 0,-2.3437 1,0 0,1.25 -1,0 0,-1.25 z m 5.3438,3.0312 q -0.7969,0 -1.2578,0.625 -0.461,0.625 -0.461,1.7031 0,1.0782 0.4532,1.6954 0.4531,0.6171 1.2656,0.6171 0.7812,0 1.2422,-0.6171 0.4609,-0.6172 0.4609,-1.6954 0,-1.0781 -0.4609,-1.7031 -0.461,-0.625 -1.2422,-0.625 z m 0,-0.8281 q 1.2812,0 2.0156,0.8359 0.7344,0.836 0.7344,2.3203 0,1.4688 -0.7344,2.3125 -0.7344,0.8438 -2.0156,0.8438 -1.2969,0 -2.0312,-0.8438 -0.7344,-0.8437 -0.7344,-2.3125 0,-1.4843 0.7344,-2.3203 0.7343,-0.8359 2.0312,-0.8359 z m 9.6562,2.5312 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 38,22.9292 38,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z M 52,24.1323 q 0,-1.0781 -0.4453,-1.664 -0.4453,-0.586 -1.2422,-0.586 -0.7969,0 -1.2422,0.586 -0.4453,0.5859 -0.4453,1.664 0,1.0625 0.4453,1.6563 0.4453,0.5937 1.2422,0.5937 0.7969,0 1.2422,-0.5937 Q 52,25.1948 52,24.1323 z m 0.9844,2.3281 q 0,1.5469 -0.6797,2.2891 -0.6797,0.7422 -2.0859,0.7422 -0.5313,0 -0.9922,-0.0781 -0.461,-0.0782 -0.8985,-0.2344 l 0,-0.9531 q 0.4375,0.2343 0.8594,0.3437 0.4219,0.1094 0.875,0.1094 0.9687,0 1.4531,-0.5078 Q 52,27.6636 52,26.6479 l 0,-0.5 q -0.3125,0.5313 -0.7891,0.7969 -0.4765,0.2656 -1.1484,0.2656 -1.1094,0 -1.7813,-0.8437 -0.6718,-0.8438 -0.6718,-2.2344 0,-1.3906 0.6718,-2.2344 0.6719,-0.8437 1.7813,-0.8437 0.6719,0 1.1484,0.2578 0.4766,0.2578 0.7891,0.7891 l 0,-0.9063 0.9844,0 0,5.2656 z m 7.2031,-2.5 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 5.8906,-4.8125 0,0.8281 -0.9375,0 q -0.5312,0 -0.7422,0.2109 -0.2109,0.211 -0.2109,0.7735 l 0,0.5312 1.625,0 0,0.7656 -1.625,0 0,5.25 -0.9844,0 0,-5.25 -0.9531,0 0,-0.7656 0.9531,0 0,-0.4219 q 0,-1 0.461,-1.4609 0.4609,-0.4609 1.4765,-0.4609 l 0.9375,0 z m 0.8594,5.9843 0,-3.6406 0.9844,0 0,3.6094 q 0,0.8437 0.3359,1.2734 0.336,0.4297 0.9922,0.4297 0.8125,0 1.2734,-0.5078 0.461,-0.5078 0.461,-1.3984 l 0,-3.4063 0.9844,0 0,6.0156 -0.9844,0 0,-0.9218 q -0.3594,0.5468 -0.836,0.8125 -0.4765,0.2656 -1.1015,0.2656 -1.0313,0 -1.5703,-0.6484 -0.5391,-0.6485 -0.5391,-1.8829 z m 12.0937,-1.25 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 74,22.9292 74,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z M 84,22.1011 l 0,-3.25 0.9844,0 0,8.3593 -0.9844,0 0,-0.9062 q -0.3125,0.5469 -0.7891,0.8047 -0.4765,0.2578 -1.1484,0.2578 -1.0781,0 -1.7656,-0.8672 -0.6875,-0.8672 -0.6875,-2.2891 0,-1.4218 0.6875,-2.289 0.6875,-0.8672 1.7656,-0.8672 0.6719,0 1.1484,0.2578 0.4766,0.2578 0.7891,0.7891 z m -3.375,2.1093 q 0,1.0938 0.4531,1.711 0.4531,0.6172 1.2344,0.6172 0.7813,0 1.2344,-0.6172 Q 84,25.3042 84,24.2104 q 0,-1.0937 -0.4531,-1.7109 -0.4531,-0.6172 -1.2344,-0.6172 -0.7813,0 -1.2344,0.6172 -0.4531,0.6172 -0.4531,1.7109 z m 11.5625,-0.25 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 7.8437,-0.0782 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 95,22.9292 95,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z" />
   </g>
   <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g494"
+     id="g482"
      text-rendering="geometricPrecision"
      transform="translate(91.92041,230.5)"
      font-size="11">
     <polygon
        style="stroke:none"
-       id="polygon496"
+       id="polygon484"
        clip-path="url(#clipPath30)"
        points="99,15 99,45 0,45 0,0 84,0 99,15 84,15 84,0 " />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g498"
+     id="g486"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(91.92041,230.5)"
      font-size="11">
     <polygon
        style="fill:none"
-       id="polygon500"
+       id="polygon488"
        clip-path="url(#clipPath30)"
        points="99,15 99,45 0,45 0,0 84,0 99,15 84,15 84,0 " />
   </g>
   <g
      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g502"
+     id="g490"
      text-rendering="geometricPrecision"
      transform="translate(91.92041,230.5)">
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path504"
+       id="path492"
        clip-path="url(#clipPath31)"
        d="m 5.1719,6.0854 0,3.0157 1.3593,0 q 0.75,0 1.1641,-0.3985 Q 8.1094,8.3042 8.1094,7.5854 8.1094,6.8667 7.6953,6.4761 7.2812,6.0854 6.5312,6.0854 l -1.3593,0 z m -1.0938,-0.8906 2.4531,0 q 1.3438,0 2.0313,0.6094 Q 9.25,6.4136 9.25,7.5854 9.25,8.7729 8.5625,9.3823 7.875,9.9917 6.5312,9.9917 l -1.3593,0 0,3.2187 -1.0938,0 0,-8.0156 z m 9.6875,4.9844 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z M 21.5156,8.1167 Q 21.3594,8.0229 21.1641,7.9761 20.9688,7.9292 20.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 19,9.0229 19,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z m 4.25,2.0625 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z m 6.9844,-1.4218 q 0.375,-0.6719 0.8906,-0.9844 0.5156,-0.3125 1.2187,-0.3125 0.9375,0 1.4453,0.6562 0.5078,0.6563 0.5078,1.875 l 0,3.625 -1,0 0,-3.5937 q 0,-0.875 -0.3046,-1.2891 -0.3047,-0.414 -0.9297,-0.414 -0.7657,0 -1.211,0.5078 -0.4453,0.5078 -0.4453,1.3828 l 0,3.4062 -1,0 0,-3.5937 q 0,-0.875 -0.3047,-1.2891 -0.3047,-0.414 -0.9453,-0.414 -0.75,0 -1.1953,0.5078 Q 31,8.9292 31,9.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3281,-0.5625 0.8047,-0.8203 0.4765,-0.2578 1.1172,-0.2578 0.6562,0 1.1172,0.3281 0.4609,0.3281 0.6797,0.9688 z m 11.4687,1.6093 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 3.8281,-4.1719 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 8.1719,4.4687 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z M 62.5156,8.1167 Q 62.3594,8.0229 62.1641,7.9761 61.9688,7.9292 61.7344,7.9292 q -0.8438,0 -1.2891,0.5469 Q 60,9.0229 60,10.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z" />
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path506"
+       id="path494"
        clip-path="url(#clipPath31)"
        d="m 5,26.3042 0,3.1875 -1,0 0,-8.2969 1,0 0,0.9063 Q 5.2969,21.5698 5.7734,21.312 6.25,21.0542 6.9219,21.0542 q 1.0937,0 1.7734,0.8672 0.6797,0.8672 0.6797,2.289 0,1.4219 -0.6797,2.2891 -0.6797,0.8672 -1.7734,0.8672 -0.6719,0 -1.1485,-0.2578 Q 5.2969,26.8511 5,26.3042 z m 3.3594,-2.0938 q 0,-1.0937 -0.4532,-1.7109 -0.4531,-0.6172 -1.2343,-0.6172 -0.7813,0 -1.2266,0.6172 Q 5,23.1167 5,24.2104 q 0,1.0938 0.4453,1.711 0.4453,0.6172 1.2266,0.6172 0.7812,0 1.2343,-0.6172 0.4532,-0.6172 0.4532,-1.711 z m 5.4062,-0.0312 q -1.1875,0 -1.6484,0.2812 -0.461,0.2813 -0.461,0.9375 0,0.5157 0.3438,0.8282 0.3438,0.3125 0.9375,0.3125 0.8281,0 1.3203,-0.586 0.4922,-0.5859 0.4922,-1.539 l 0,-0.2344 -0.9844,0 z m 1.9688,-0.4063 0,3.4375 -0.9844,0 0,-0.9062 q -0.3281,0.5469 -0.8359,0.8047 -0.5079,0.2578 -1.2422,0.2578 -0.9219,0 -1.4688,-0.5156 -0.5469,-0.5157 -0.5469,-1.3907 0,-1.0156 0.6797,-1.5312 0.6797,-0.5156 2.0391,-0.5156 l 1.375,0 0,-0.0938 q 0,-0.6875 -0.4453,-1.0625 -0.4453,-0.375 -1.2578,-0.375 -0.5157,0 -1.0078,0.125 -0.4922,0.125 -0.9453,0.375 l 0,-0.9062 q 0.5468,-0.2188 1.0624,-0.3203 0.5157,-0.1016 0.9844,-0.1016 1.3125,0 1.9532,0.6719 0.6406,0.6718 0.6406,2.0468 z m 6.1406,-2.4062 0,0.9375 Q 21.4531,22.0854 21,21.9839 q -0.4531,-0.1016 -0.9375,-0.1016 -0.7344,0 -1.1016,0.2266 -0.3671,0.2265 -0.3671,0.664 0,0.3438 0.2656,0.5391 0.2656,0.1953 1.0625,0.3828 l 0.3281,0.0781 q 1.0625,0.2188 1.5,0.6329 0.4375,0.414 0.4375,1.1484 0,0.8281 -0.6563,1.3203 -0.6562,0.4922 -1.8281,0.4922 -0.4843,0 -1.0078,-0.0938 -0.5234,-0.0937 -1.1015,-0.2812 l 0,-1.0156 q 0.5468,0.2812 1.0781,0.4218 0.5312,0.1407 1.0625,0.1407 0.6875,0 1.0625,-0.2422 0.375,-0.2422 0.375,-0.6641 0,-0.4062 -0.2657,-0.625 -0.2656,-0.2187 -1.1874,-0.4062 L 19.375,24.5073 q -0.9219,-0.1875 -1.3281,-0.5859 -0.4063,-0.3985 -0.4063,-1.1016 0,-0.8437 0.6016,-1.3047 0.6016,-0.4609 1.7109,-0.4609 0.5469,0 1.0313,0.0781 0.4844,0.0781 0.8906,0.2344 z m 7,0 0,0.9375 Q 28.4531,22.0854 28,21.9839 q -0.4531,-0.1016 -0.9375,-0.1016 -0.7344,0 -1.1016,0.2266 -0.3671,0.2265 -0.3671,0.664 0,0.3438 0.2656,0.5391 0.2656,0.1953 1.0625,0.3828 l 0.3281,0.0781 q 1.0625,0.2188 1.5,0.6329 0.4375,0.414 0.4375,1.1484 0,0.8281 -0.6563,1.3203 -0.6562,0.4922 -1.8281,0.4922 -0.4843,0 -1.0078,-0.0938 -0.5234,-0.0937 -1.1015,-0.2812 l 0,-1.0156 q 0.5468,0.2812 1.0781,0.4218 0.5312,0.1407 1.0625,0.1407 0.6875,0 1.0625,-0.2422 0.375,-0.2422 0.375,-0.6641 0,-0.4062 -0.2657,-0.625 -0.2656,-0.2187 -1.1874,-0.4062 L 26.375,24.5073 q -0.9219,-0.1875 -1.3281,-0.5859 -0.4063,-0.3985 -0.4063,-1.1016 0,-0.8437 0.6016,-1.3047 0.6016,-0.4609 1.7109,-0.4609 0.5469,0 1.0313,0.0781 0.4844,0.0781 0.8906,0.2344 z m 8.3125,2.5937 0,0.4844 -4.5469,0 q 0.0625,1.0156 0.6094,1.5469 0.5469,0.5312 1.5312,0.5312 0.5782,0 1.1094,-0.1406 0.5313,-0.1406 1.0625,-0.4062 l 0,0.9218 q -0.5312,0.2344 -1.0937,0.3516 -0.5625,0.1172 -1.125,0.1172 -1.4532,0 -2.2891,-0.8359 -0.8359,-0.836 -0.8359,-2.2735 0,-1.4687 0.7968,-2.3359 0.7969,-0.8672 2.1563,-0.8672 1.2031,0 1.9141,0.7812 0.7109,0.7813 0.7109,2.125 z m -1,-0.2968 q 0,-0.8125 -0.4453,-1.2969 -0.4453,-0.4844 -1.1797,-0.4844 -0.8281,0 -1.3203,0.4688 -0.4922,0.4687 -0.5703,1.3125 l 3.5156,0 z m 7.8437,-0.0782 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 40,22.9292 40,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 5.5782,-2.3906 4.6875,0 0,0.9063 -3.7188,4.3125 3.7188,0 0,0.7968 -4.8281,0 0,-0.9062 3.7187,-4.3125 -3.5781,0 0,-0.7969 z m 5.3281,3.6406 0,-3.6406 0.9844,0 0,3.6094 q 0,0.8437 0.3359,1.2734 0.336,0.4297 0.9922,0.4297 0.8125,0 1.2734,-0.5078 0.461,-0.5078 0.461,-1.3984 l 0,-3.4063 0.9844,0 0,6.0156 -0.9844,0 0,-0.9218 q -0.3594,0.5468 -0.836,0.8125 -0.4765,0.2656 -1.1015,0.2656 -1.0313,0 -1.5703,-0.6484 -0.5391,-0.6485 -0.5391,-1.8829 z m 11.7813,-2.4843 q 0.375,-0.6719 0.8906,-0.9844 0.5156,-0.3125 1.2187,-0.3125 0.9375,0 1.4453,0.6562 0.5078,0.6563 0.5078,1.875 l 0,3.625 -1,0 0,-3.5937 q 0,-0.875 -0.3046,-1.2891 -0.3047,-0.414 -0.9297,-0.414 -0.7657,0 -1.211,0.5078 -0.4453,0.5078 -0.4453,1.3828 l 0,3.4062 -1,0 0,-3.5937 q 0,-0.875 -0.3047,-1.2891 -0.3047,-0.414 -0.9453,-0.414 -0.75,0 -1.1953,0.5078 Q 63,22.9292 63,23.8042 l 0,3.4062 -1,0 0,-6.0156 1,0 0,0.9375 q 0.3281,-0.5625 0.8047,-0.8203 0.4765,-0.2578 1.1172,-0.2578 0.6562,0 1.1172,0.3281 0.4609,0.3281 0.6797,0.9688 z" />
     <path
        style="stroke:none"
        inkscape:connector-curvature="0"
-       id="path508"
+       id="path496"
        clip-path="url(#clipPath31)"
        d="m 8.8906,33.4604 0,1.0469 Q 8.2656,34.2104 7.7188,34.0698 7.1719,33.9292 6.6562,33.9292 q -0.875,0 -1.3593,0.3437 -0.4844,0.3438 -0.4844,0.9688 0,0.5312 0.3203,0.8047 0.3203,0.2734 1.211,0.4453 L 7,36.6167 q 1.2188,0.2344 1.7969,0.8203 0.5781,0.5859 0.5781,1.5547 0,1.1719 -0.7812,1.7734 -0.7813,0.6016 -2.2969,0.6016 -0.5625,0 -1.211,-0.1328 Q 4.4375,41.1011 3.75,40.8511 l 0,-1.1094 q 0.6719,0.375 1.3047,0.5625 0.6328,0.1875 1.2422,0.1875 0.9375,0 1.4375,-0.3672 0.5,-0.3672 0.5,-1.0391 0,-0.5937 -0.3594,-0.9296 -0.3594,-0.336 -1.1875,-0.5079 l -0.6563,-0.125 q -1.2187,-0.2343 -1.7656,-0.75 -0.5468,-0.5156 -0.5468,-1.4375 0,-1.0625 0.75,-1.6796 0.75,-0.6172 2.0781,-0.6172 0.5625,0 1.1484,0.1093 0.5859,0.1094 1.1953,0.3125 z m 7.4688,1.9688 0,0.9219 q -0.4063,-0.2344 -0.8282,-0.3516 -0.4218,-0.1172 -0.8593,-0.1172 -0.9531,0 -1.4844,0.6094 -0.5313,0.6094 -0.5313,1.7187 0,1.0938 0.5313,1.7032 0.5313,0.6093 1.4844,0.6093 0.4375,0 0.8593,-0.1093 0.4219,-0.1094 0.8282,-0.3438 l 0,0.9063 q -0.4063,0.2031 -0.8516,0.2968 -0.4453,0.0938 -0.9453,0.0938 -1.3594,0 -2.1563,-0.8516 -0.7968,-0.8515 -0.7968,-2.3047 0,-1.4687 0.8047,-2.3125 0.8047,-0.8437 2.2109,-0.8437 0.4688,0 0.8984,0.0937 0.4297,0.0938 0.836,0.2813 z m 6.6718,2.1562 0,3.625 -0.9843,0 0,-3.5937 q 0,-0.8594 -0.3281,-1.2813 -0.3282,-0.4218 -1,-0.4218 -0.7969,0 -1.2579,0.5078 Q 19,36.9292 19,37.8042 l 0,3.4062 -1,0 0,-8.3593 1,0 0,3.2812 q 0.3438,-0.5469 0.8281,-0.8125 0.4844,-0.2656 1.1094,-0.2656 1.0313,0 1.5625,0.6406 0.5312,0.6406 0.5312,1.8906 z m 5.4844,-1.4687 q -0.1562,-0.0938 -0.3515,-0.1406 -0.1953,-0.0469 -0.4297,-0.0469 -0.8438,0 -1.2891,0.5469 Q 26,37.0229 26,38.0386 l 0,3.1718 -1,0 0,-6.0156 1,0 0,0.9375 q 0.2969,-0.5469 0.7969,-0.8125 0.5,-0.2656 1.2187,-0.2656 0.1094,0 0.2266,0.0078 0.1172,0.0078 0.2734,0.0391 l 0,1.0156 z m 1.5156,-0.9219 1,0 0,6.0156 -1,0 0,-6.0156 z m 0,-2.3437 1,0 0,1.25 -1,0 0,-1.25 z m 3.9844,0.6406 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z m 4,0 0,1.7031 2.0313,0 0,0.7656 -2.0313,0 0,3.2657 q 0,0.7343 0.2032,0.9453 0.2031,0.2109 0.8124,0.2109 l 1.0157,0 0,0.8281 -1.0157,0 q -1.1406,0 -1.5781,-0.4296 -0.4375,-0.4297 -0.4375,-1.5547 l 0,-3.2657 -0.7187,0 0,-0.7656 0.7187,0 0,-1.7031 1,0 z" />
   </g>
   <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g510"
-     stroke-miterlimit="0"
-     text-rendering="geometricPrecision"
-     transform="translate(-28.07959,-29.5)"
-     font-size="11">
-    <path
-       style="fill:none"
-       inkscape:connector-curvature="0"
-       id="path512"
-       clip-path="url(#clipPath33)"
-       d="m 1130,480 c 12.2942,6.1471 20.2904,10.2904 30,20" />
-  </g>
-  <g
      style="font-size:11px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:sans-serif"
-     id="g514"
+     id="g498"
      text-rendering="geometricPrecision"
      transform="translate(481.92041,650.5)"
      font-size="11">
@@ -1806,16 +1764,16 @@
        sodipodi:cy="35"
        sodipodi:cx="90"
        d="M 180,35 C 180,54.329966 139.70563,70 90,70 40.294373,70 0,54.329966 0,35 0,15.670034 40.294373,0 90,0 c 49.70563,0 90,15.670034 90,35 z"
-       id="ellipse516"
+       id="ellipse500"
        cy="35"
        cx="90"
-       clip-path="url(#clipPath34)"
+       clip-path="url(#clipPath32)"
        ry="35"
        rx="90" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g518"
+     id="g502"
      stroke-miterlimit="0"
      text-rendering="geometricPrecision"
      transform="translate(481.92041,650.5)"
@@ -1827,957 +1785,1013 @@
        sodipodi:cy="35"
        sodipodi:cx="90"
        d="M 180,35 C 180,54.329966 139.70563,70 90,70 40.294373,70 0,54.329966 0,35 0,15.670034 40.294373,0 90,0 c 49.70563,0 90,15.670034 90,35 z"
-       id="ellipse520"
+       id="ellipse504"
        cy="35"
        cx="90"
-       clip-path="url(#clipPath34)"
+       clip-path="url(#clipPath32)"
        ry="35"
        rx="90" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g522"
+     id="g506"
      text-rendering="geometricPrecision"
      transform="translate(481.92041,650.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text524"
-       clip-path="url(#clipPath35)"
+       id="text508"
+       clip-path="url(#clipPath33)"
        y="25"
        xml:space="preserve"
        x="29">Bluetooth Verbindung</text>
     <text
        style="stroke:none"
-       id="text526"
-       clip-path="url(#clipPath35)"
+       id="text510"
+       clip-path="url(#clipPath33)"
        y="39"
        xml:space="preserve"
        x="11">herstellen/beenden und den</text>
     <text
        style="stroke:none"
-       id="text528"
-       clip-path="url(#clipPath35)"
+       id="text512"
+       clip-path="url(#clipPath33)"
        y="53"
        xml:space="preserve"
        x="45">Status anzeigen</text>
   </g>
   <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:0;stroke-opacity:1;font-family:sans-serif"
-     id="g530"
-     stroke-miterlimit="0"
-     text-rendering="geometricPrecision"
-     transform="translate(-28.07959,-19.5)"
-     font-size="11">
-    <path
-       style="fill:none"
-       inkscape:connector-curvature="0"
-       id="path532"
-       clip-path="url(#clipPath37)"
-       d="m 1070,360 c 22.5,15 67.5,45 90,60" />
-  </g>
-  <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g534"
+     id="g514"
      text-rendering="geometricPrecision"
      transform="translate(1101.9204,60.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text536"
-       clip-path="url(#clipPath38)"
+       id="text516"
+       clip-path="url(#clipPath34)"
        y="11"
        xml:space="preserve"
        x="9">Motor</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g538"
+     id="g518"
      text-rendering="geometricPrecision"
      transform="translate(937.92041,60.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text540"
-       clip-path="url(#clipPath39)"
+       id="text520"
+       clip-path="url(#clipPath35)"
        y="11"
        xml:space="preserve"
        x="8">Lichtsensoren</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g542"
+     id="g522"
      text-rendering="geometricPrecision"
      transform="translate(-10.07959,670.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text544"
-       clip-path="url(#clipPath40)"
+       id="text524"
+       clip-path="url(#clipPath36)"
        y="11"
        xml:space="preserve"
        x="9">Bluetooth</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g546"
+     id="g526"
      text-rendering="geometricPrecision"
      transform="translate(1207.9204,590.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text548"
-       clip-path="url(#clipPath41)"
+       id="text528"
+       clip-path="url(#clipPath37)"
        y="11"
        xml:space="preserve"
        x="10">Nutzer</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g550"
+     id="g530"
      text-rendering="geometricPrecision"
      transform="translate(1106.9204,357.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line552"
+       id="line532"
        y1="172"
        x2="45"
-       clip-path="url(#clipPath42)"
+       clip-path="url(#clipPath38)"
        x1="114"
        y2="45" />
     <line
        style="fill:none"
-       id="line554"
+       id="line534"
        y1="45"
        x2="44"
-       clip-path="url(#clipPath42)"
+       clip-path="url(#clipPath38)"
        x1="45"
        y2="58" />
     <line
        style="fill:none"
-       id="line556"
+       id="line536"
        y1="45"
        x2="55"
-       clip-path="url(#clipPath42)"
+       clip-path="url(#clipPath38)"
        x1="45"
        y2="52" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g558"
+     id="g538"
      text-rendering="geometricPrecision"
      transform="translate(925.92041,572.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line560"
+       id="line540"
        y1="68"
        x2="282"
-       clip-path="url(#clipPath43)"
+       clip-path="url(#clipPath39)"
        x1="26"
        y2="26" />
     <line
        style="fill:none"
-       id="line562"
+       id="line542"
        y1="68"
        x2="37"
-       clip-path="url(#clipPath43)"
+       clip-path="url(#clipPath39)"
        x1="26"
        y2="72" />
     <line
        style="fill:none"
-       id="line564"
+       id="line544"
        y1="68"
        x2="36"
-       clip-path="url(#clipPath43)"
+       clip-path="url(#clipPath39)"
        x1="26"
        y2="60" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g566"
+     id="g546"
      text-rendering="geometricPrecision"
      transform="translate(588.92041,552.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line568"
+       id="line548"
        y1="50"
        x2="50"
-       clip-path="url(#clipPath44)"
+       clip-path="url(#clipPath40)"
        x1="267"
        y2="50" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line570"
+       id="line550"
        y2="56"
        y1="50"
        x2="62"
        x1="50"
-       clip-path="url(#clipPath44)" />
+       clip-path="url(#clipPath40)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line572"
+       id="line552"
        y2="44"
        y1="50"
        x2="62"
        x1="50"
-       clip-path="url(#clipPath44)" />
+       clip-path="url(#clipPath40)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g574"
+     id="g554"
      text-rendering="geometricPrecision"
      transform="translate(387.92041,458.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line576"
+       id="line556"
        y1="63"
        x2="145"
-       clip-path="url(#clipPath45)"
+       clip-path="url(#clipPath41)"
        x1="63"
        y2="123" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line578"
+       id="line558"
        y2="111"
        y1="123"
        x2="139"
        x1="145"
-       clip-path="url(#clipPath45)" />
+       clip-path="url(#clipPath41)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line580"
+       id="line560"
        y2="121"
        y1="123"
        x2="132"
        x1="145"
-       clip-path="url(#clipPath45)" />
+       clip-path="url(#clipPath41)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g582"
+     id="g562"
      text-rendering="geometricPrecision"
      transform="translate(-3.0795898,585.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line584"
+       id="line564"
        y1="45"
        x2="45"
-       clip-path="url(#clipPath46)"
+       clip-path="url(#clipPath42)"
        x1="487"
        y2="45" />
     <line
        style="fill:none"
-       id="line586"
+       id="line566"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath46)"
+       clip-path="url(#clipPath42)"
        x1="45"
        y2="51" />
     <line
        style="fill:none"
-       id="line588"
+       id="line568"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath46)"
+       clip-path="url(#clipPath42)"
        x1="45"
        y2="39" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g590"
+     id="g570"
      text-rendering="geometricPrecision"
      transform="translate(499.92041,398.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line592"
+       id="line572"
        y1="63"
        x2="63"
-       clip-path="url(#clipPath47)"
+       clip-path="url(#clipPath43)"
        x1="323"
        y2="63" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line594"
+       id="line574"
        y2="69"
        y1="63"
        x2="75"
        x1="63"
-       clip-path="url(#clipPath47)" />
+       clip-path="url(#clipPath43)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line596"
+       id="line576"
        y2="57"
        y1="63"
        x2="75"
        x1="63"
-       clip-path="url(#clipPath47)" />
+       clip-path="url(#clipPath43)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g598"
+     id="g578"
      text-rendering="geometricPrecision"
      transform="translate(389.92041,128.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line600"
+       id="line580"
        y1="63"
        x2="63"
-       clip-path="url(#clipPath48)"
+       clip-path="url(#clipPath44)"
        x1="63"
        y2="283" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line602"
+       id="line582"
        y2="271"
        y1="283"
        x2="69"
        x1="63"
-       clip-path="url(#clipPath48)" />
+       clip-path="url(#clipPath44)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line604"
+       id="line584"
        y2="271"
        y1="283"
        x2="57"
        x1="63"
-       clip-path="url(#clipPath48)" />
+       clip-path="url(#clipPath44)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g606"
+     id="g586"
      text-rendering="geometricPrecision"
      transform="translate(956.92041,28.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line608"
+       id="line588"
        y1="45"
        x2="45"
-       clip-path="url(#clipPath49)"
+       clip-path="url(#clipPath45)"
        x1="45"
        y2="154" />
     <line
        style="fill:none"
-       id="line610"
+       id="line590"
        y1="45"
        x2="39"
-       clip-path="url(#clipPath49)"
+       clip-path="url(#clipPath45)"
        x1="45"
        y2="57" />
     <line
        style="fill:none"
-       id="line612"
+       id="line592"
        y1="45"
        x2="51"
-       clip-path="url(#clipPath49)"
+       clip-path="url(#clipPath45)"
        x1="45"
        y2="57" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g614"
+     id="g594"
      text-rendering="geometricPrecision"
      transform="translate(1032.9204,28.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line616"
+       id="line596"
        y1="45"
        x2="45"
-       clip-path="url(#clipPath50)"
+       clip-path="url(#clipPath46)"
        x1="69"
        y2="174" />
     <line
        style="fill:none"
-       id="line618"
+       id="line598"
        y1="45"
        x2="61"
-       clip-path="url(#clipPath50)"
+       clip-path="url(#clipPath46)"
        x1="69"
        y2="55" />
     <line
        style="fill:none"
-       id="line620"
+       id="line600"
        y1="45"
        x2="73"
-       clip-path="url(#clipPath50)"
+       clip-path="url(#clipPath46)"
        x1="69"
        y2="56" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g622"
+     id="g602"
      text-rendering="geometricPrecision"
      transform="translate(471.92041,275.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line624"
+       id="line604"
        y1="151"
        x2="213"
-       clip-path="url(#clipPath51)"
+       clip-path="url(#clipPath47)"
        x1="63"
        y2="63" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line626"
+       id="line606"
        y2="63"
        y1="63"
        x2="200"
        x1="213"
-       clip-path="url(#clipPath51)" />
+       clip-path="url(#clipPath47)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line628"
+       id="line608"
        y2="74"
        y1="63"
        x2="206"
        x1="213"
-       clip-path="url(#clipPath51)" />
+       clip-path="url(#clipPath47)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g630"
+     id="g610"
      text-rendering="geometricPrecision"
      transform="translate(576.92041,300.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line632"
+       id="line612"
        y1="80"
        x2="63"
-       clip-path="url(#clipPath52)"
+       clip-path="url(#clipPath48)"
        x1="63"
        y2="63" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g634"
+     id="g614"
      text-rendering="geometricPrecision"
      transform="translate(782.92041,204.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line636"
+       id="line616"
        y1="85"
        x2="202"
-       clip-path="url(#clipPath53)"
+       clip-path="url(#clipPath49)"
        x1="39"
        y2="39" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line638"
+       id="line618"
        y2="36"
        y1="39"
        x2="189"
        x1="202"
-       clip-path="url(#clipPath53)" />
+       clip-path="url(#clipPath49)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line640"
+       id="line620"
        y2="47"
        y1="39"
        x2="192"
        x1="202"
-       clip-path="url(#clipPath53)" />
+       clip-path="url(#clipPath49)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g642"
+     id="g622"
      text-rendering="geometricPrecision"
      transform="translate(542.92041,121.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line644"
+       id="line624"
        y1="39"
        x2="419"
-       clip-path="url(#clipPath54)"
+       clip-path="url(#clipPath50)"
        x1="39"
        y2="79" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line646"
+       id="line626"
        y2="72"
        y1="79"
        x2="408"
        x1="419"
-       clip-path="url(#clipPath54)" />
+       clip-path="url(#clipPath50)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line648"
+       id="line628"
        y2="84"
        y1="79"
        x2="407"
        x1="419"
-       clip-path="url(#clipPath54)" />
+       clip-path="url(#clipPath50)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g650"
+     id="g630"
      text-rendering="geometricPrecision"
      transform="translate(943.92041,233.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line652"
+       id="line632"
        y1="211"
        x2="38"
-       clip-path="url(#clipPath55)"
+       clip-path="url(#clipPath51)"
        x1="16"
        y2="17" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line654"
+       id="line634"
        y2="27"
        y1="17"
        x2="31"
        x1="38"
-       clip-path="url(#clipPath55)" />
+       clip-path="url(#clipPath51)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line656"
+       id="line636"
        y2="28"
        y1="17"
        x2="43"
        x1="38"
-       clip-path="url(#clipPath55)" />
+       clip-path="url(#clipPath51)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g658"
+     id="g638"
      text-rendering="geometricPrecision"
      transform="translate(1096.9204,416.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line660"
+       id="line640"
        y1="113"
        x2="45"
-       clip-path="url(#clipPath56)"
+       clip-path="url(#clipPath52)"
        x1="125"
        y2="45" />
     <line
        style="fill:none"
-       id="line662"
+       id="line642"
        y1="45"
        x2="50"
-       clip-path="url(#clipPath56)"
+       clip-path="url(#clipPath52)"
        x1="45"
        y2="57" />
     <line
        style="fill:none"
-       id="line664"
+       id="line644"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath56)"
+       clip-path="url(#clipPath52)"
        x1="45"
        y2="47" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g666"
+     id="g646"
      text-rendering="geometricPrecision"
      transform="translate(477.92041,438.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line668"
+       id="line648"
        y1="63"
        x2="63"
-       clip-path="url(#clipPath57)"
+       clip-path="url(#clipPath53)"
        x1="428"
        y2="63" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line670"
+       id="line650"
        y2="69"
        y1="63"
        x2="75"
        x1="63"
-       clip-path="url(#clipPath57)" />
+       clip-path="url(#clipPath53)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line672"
+       id="line652"
        y2="57"
        y1="63"
        x2="75"
        x1="63"
-       clip-path="url(#clipPath57)" />
+       clip-path="url(#clipPath53)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g674"
+     id="g654"
      text-rendering="geometricPrecision"
      transform="translate(1026.9204,485.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line676"
+       id="line656"
        y1="45"
        x2="45"
-       clip-path="url(#clipPath58)"
+       clip-path="url(#clipPath54)"
        x1="195"
        y2="45" />
     <line
        style="fill:none"
-       id="line678"
+       id="line658"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath58)"
+       clip-path="url(#clipPath54)"
        x1="45"
        y2="51" />
     <line
        style="fill:none"
-       id="line680"
+       id="line660"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath58)"
+       clip-path="url(#clipPath54)"
        x1="45"
        y2="39" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g682"
+     id="g662"
      text-rendering="geometricPrecision"
      transform="translate(536.92041,518.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line684"
+       id="line664"
        y1="50"
        x2="50"
-       clip-path="url(#clipPath59)"
+       clip-path="url(#clipPath55)"
        x1="401"
        y2="64" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line686"
+       id="line666"
        y2="70"
        y1="64"
        x2="62"
        x1="50"
-       clip-path="url(#clipPath59)" />
+       clip-path="url(#clipPath55)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line688"
+       id="line668"
        y2="58"
        y1="64"
        x2="62"
        x1="50"
-       clip-path="url(#clipPath59)" />
+       clip-path="url(#clipPath55)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g690"
+     id="g670"
      text-rendering="geometricPrecision"
      transform="translate(961.92041,200.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line692"
+       id="line672"
        y1="293"
        x2="50"
-       clip-path="url(#clipPath60)"
+       clip-path="url(#clipPath56)"
        x1="50"
        y2="50" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line694"
+       id="line674"
        y2="62"
        y1="50"
        x2="44"
        x1="50"
-       clip-path="url(#clipPath60)" />
+       clip-path="url(#clipPath56)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line696"
+       id="line676"
        y2="62"
        y1="50"
        x2="56"
        x1="50"
-       clip-path="url(#clipPath60)" />
+       clip-path="url(#clipPath56)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g698"
+     id="g678"
      text-rendering="geometricPrecision"
      transform="translate(-3.0795898,605.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line700"
+       id="line680"
        y1="65"
        x2="45"
-       clip-path="url(#clipPath61)"
+       clip-path="url(#clipPath57)"
        x1="495"
        y2="45" />
     <line
        style="fill:none"
-       id="line702"
+       id="line682"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath61)"
+       clip-path="url(#clipPath57)"
        x1="45"
        y2="51" />
     <line
        style="fill:none"
-       id="line704"
+       id="line684"
        y1="45"
        x2="57"
-       clip-path="url(#clipPath61)"
+       clip-path="url(#clipPath57)"
        x1="45"
        y2="39" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g706"
+     id="g686"
      text-rendering="geometricPrecision"
      transform="translate(200.92041,384.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line708"
+       id="line688"
        y1="45"
        x2="278"
-       clip-path="url(#clipPath62)"
+       clip-path="url(#clipPath58)"
        x1="45"
        y2="208" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line710"
+       id="line690"
        y2="196"
        y1="208"
        x2="271"
        x1="278"
-       clip-path="url(#clipPath62)" />
+       clip-path="url(#clipPath58)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line712"
+       id="line692"
        y2="206"
        y1="208"
        x2="264"
        x1="278"
-       clip-path="url(#clipPath62)" />
+       clip-path="url(#clipPath58)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g714"
+     id="g694"
      text-rendering="geometricPrecision"
      transform="translate(216.92041,255.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line716"
+       id="line696"
        y1="153"
        x2="445"
-       clip-path="url(#clipPath63)"
+       clip-path="url(#clipPath59)"
        x1="45"
        y2="45" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line718"
+       id="line698"
        y2="42"
        y1="45"
        x2="432"
        x1="445"
-       clip-path="url(#clipPath63)" />
+       clip-path="url(#clipPath59)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line720"
+       id="line700"
        y2="53"
        y1="45"
        x2="435"
        x1="445"
-       clip-path="url(#clipPath63)" />
+       clip-path="url(#clipPath59)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g722"
+     id="g702"
      text-rendering="geometricPrecision"
      transform="translate(383.92041,275.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line724"
+       id="line704"
        y1="45"
        x2="45"
-       clip-path="url(#clipPath64)"
+       clip-path="url(#clipPath60)"
        x1="45"
        y2="87" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g726"
+     id="g706"
      text-rendering="geometricPrecision"
      transform="translate(210.92041,125.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line728"
+       id="line708"
        y1="274"
        x2="117"
-       clip-path="url(#clipPath65)"
+       clip-path="url(#clipPath61)"
        x1="45"
        y2="45" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line730"
+       id="line710"
        y2="54"
        y1="45"
        x2="108"
        x1="117"
-       clip-path="url(#clipPath65)" />
+       clip-path="url(#clipPath61)" />
     <line
        style="fill:none;stroke-dasharray:none"
-       id="line732"
+       id="line712"
        y2="57"
        y1="45"
        x2="119"
        x1="117"
-       clip-path="url(#clipPath65)" />
+       clip-path="url(#clipPath61)" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:4;font-family:sans-serif"
-     id="g734"
+     id="g714"
      text-rendering="geometricPrecision"
      transform="translate(146.92041,231.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line736"
+       id="line716"
        y1="45"
        x2="125"
-       clip-path="url(#clipPath66)"
+       clip-path="url(#clipPath62)"
        x1="45"
        y2="115" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:sans-serif"
-     id="g738"
+     id="g718"
      text-rendering="geometricPrecision"
      transform="translate(555.92041,558.5)"
      font-size="11">
     <line
        style="fill:none"
-       id="line740"
+       id="line720"
        y1="160"
        x2="426"
-       clip-path="url(#clipPath67)"
+       clip-path="url(#clipPath63)"
        x1="45"
        y2="162" />
     <line
        style="fill:none"
-       id="line742"
+       id="line722"
        y1="162"
        x2="652"
-       clip-path="url(#clipPath67)"
+       clip-path="url(#clipPath63)"
        x1="426"
        y2="45" />
     <line
        style="fill:none"
-       id="line744"
+       id="line724"
        y1="160"
        x2="57"
-       clip-path="url(#clipPath67)"
+       clip-path="url(#clipPath63)"
        x1="45"
        y2="166" />
     <line
        style="fill:none"
-       id="line746"
+       id="line726"
        y1="160"
        x2="57"
-       clip-path="url(#clipPath67)"
+       clip-path="url(#clipPath63)"
        x1="45"
        y2="154" />
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g748"
+     id="g728"
      text-rendering="geometricPrecision"
      transform="translate(201.92041,300.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text750"
-       clip-path="url(#clipPath68)"
+       id="text730"
+       clip-path="url(#clipPath64)"
        y="11"
        xml:space="preserve"
        x="9">&lt;&lt;Extend&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g752"
+     id="g732"
      text-rendering="geometricPrecision"
      transform="translate(321.92041,350.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text754"
-       clip-path="url(#clipPath68)"
+       id="text734"
+       clip-path="url(#clipPath64)"
        y="11"
        xml:space="preserve"
        x="9">&lt;&lt;Extend&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g756"
+     id="g736"
      text-rendering="geometricPrecision"
      transform="translate(281.92041,520.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text758"
-       clip-path="url(#clipPath69)"
+       id="text738"
+       clip-path="url(#clipPath65)"
        y="11"
        xml:space="preserve"
        x="10">&lt;&lt;Include&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g760"
+     id="g740"
      text-rendering="geometricPrecision"
      transform="translate(1001.9204,300.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text762"
-       clip-path="url(#clipPath70)"
+       id="text742"
+       clip-path="url(#clipPath66)"
        y="11"
        xml:space="preserve"
        x="10">&lt;&lt;Include&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g764"
+     id="g744"
      text-rendering="geometricPrecision"
      transform="translate(711.92041,560.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text766"
-       clip-path="url(#clipPath70)"
+       id="text746"
+       clip-path="url(#clipPath66)"
        y="11"
        xml:space="preserve"
        x="10">&lt;&lt;Include&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g768"
+     id="g748"
      text-rendering="geometricPrecision"
      transform="translate(731.92041,480.5)"
      font-size="11">
     <text
        style="stroke:none"
+       id="text750"
+       clip-path="url(#clipPath35)"
+       y="11"
+       xml:space="preserve"
+       x="10">&lt;&lt;Include&gt;&gt;</text>
+  </g>
+  <g
+     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
+     id="g752"
+     text-rendering="geometricPrecision"
+     transform="translate(891.92041,320.5)"
+     font-size="11">
+    <text
+       style="stroke:none"
+       id="text754"
+       clip-path="url(#clipPath67)"
+       y="11"
+       xml:space="preserve"
+       x="9">&lt;&lt;Include&gt;&gt;</text>
+  </g>
+  <g
+     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
+     id="g756"
+     text-rendering="geometricPrecision"
+     transform="translate(722.92041,164.5)"
+     font-size="11">
+    <text
+       style="stroke:none"
+       id="text758"
+       clip-path="url(#clipPath67)"
+       y="11"
+       xml:space="preserve"
+       x="9">&lt;&lt;Include&gt;&gt;</text>
+  </g>
+  <g
+     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
+     id="g760"
+     text-rendering="geometricPrecision"
+     transform="translate(854.92041,244.5)"
+     font-size="11">
+    <text
+       style="stroke:none"
+       id="text762"
+       clip-path="url(#clipPath67)"
+       y="11"
+       xml:space="preserve"
+       x="9">&lt;&lt;Include&gt;&gt;</text>
+  </g>
+  <g
+     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
+     id="g764"
+     text-rendering="geometricPrecision"
+     transform="translate(551.92041,360.5)"
+     font-size="11">
+    <text
+       style="stroke:none"
+       id="text766"
+       clip-path="url(#clipPath64)"
+       y="11"
+       xml:space="preserve"
+       x="9">&lt;&lt;Extend&gt;&gt;</text>
+  </g>
+  <g
+     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
+     id="g768"
+     text-rendering="geometricPrecision"
+     transform="translate(451.92041,240.5)"
+     font-size="11">
+    <text
+       style="stroke:none"
        id="text770"
-       clip-path="url(#clipPath39)"
+       clip-path="url(#clipPath35)"
        y="11"
        xml:space="preserve"
        x="10">&lt;&lt;Include&gt;&gt;</text>
@@ -2786,26 +2800,26 @@
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
      id="g772"
      text-rendering="geometricPrecision"
-     transform="translate(891.92041,320.5)"
+     transform="translate(651.92041,440.5)"
      font-size="11">
     <text
        style="stroke:none"
        id="text774"
-       clip-path="url(#clipPath71)"
+       clip-path="url(#clipPath35)"
        y="11"
        xml:space="preserve"
-       x="9">&lt;&lt;Include&gt;&gt;</text>
+       x="10">&lt;&lt;Include&gt;&gt;</text>
   </g>
   <g
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
      id="g776"
      text-rendering="geometricPrecision"
-     transform="translate(722.92041,164.5)"
+     transform="translate(481.92041,540.5)"
      font-size="11">
     <text
        style="stroke:none"
        id="text778"
-       clip-path="url(#clipPath71)"
+       clip-path="url(#clipPath68)"
        y="11"
        xml:space="preserve"
        x="9">&lt;&lt;Include&gt;&gt;</text>
@@ -2814,82 +2828,12 @@
      style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
      id="g780"
      text-rendering="geometricPrecision"
-     transform="translate(854.92041,244.5)"
-     font-size="11">
-    <text
-       style="stroke:none"
-       id="text782"
-       clip-path="url(#clipPath71)"
-       y="11"
-       xml:space="preserve"
-       x="9">&lt;&lt;Include&gt;&gt;</text>
-  </g>
-  <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g784"
-     text-rendering="geometricPrecision"
-     transform="translate(551.92041,360.5)"
-     font-size="11">
-    <text
-       style="stroke:none"
-       id="text786"
-       clip-path="url(#clipPath68)"
-       y="11"
-       xml:space="preserve"
-       x="9">&lt;&lt;Extend&gt;&gt;</text>
-  </g>
-  <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g788"
-     text-rendering="geometricPrecision"
-     transform="translate(451.92041,240.5)"
-     font-size="11">
-    <text
-       style="stroke:none"
-       id="text790"
-       clip-path="url(#clipPath39)"
-       y="11"
-       xml:space="preserve"
-       x="10">&lt;&lt;Include&gt;&gt;</text>
-  </g>
-  <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g792"
-     text-rendering="geometricPrecision"
-     transform="translate(651.92041,440.5)"
-     font-size="11">
-    <text
-       style="stroke:none"
-       id="text794"
-       clip-path="url(#clipPath39)"
-       y="11"
-       xml:space="preserve"
-       x="10">&lt;&lt;Include&gt;&gt;</text>
-  </g>
-  <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g796"
-     text-rendering="geometricPrecision"
-     transform="translate(481.92041,540.5)"
-     font-size="11">
-    <text
-       style="stroke:none"
-       id="text798"
-       clip-path="url(#clipPath72)"
-       y="11"
-       xml:space="preserve"
-       x="9">&lt;&lt;Include&gt;&gt;</text>
-  </g>
-  <g
-     style="font-size:11px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:sans-serif"
-     id="g800"
-     text-rendering="geometricPrecision"
      transform="translate(718.92041,615.5)"
      font-size="11">
     <text
        style="stroke:none"
-       id="text802"
-       clip-path="url(#clipPath70)"
+       id="text782"
+       clip-path="url(#clipPath66)"
        y="11"
        xml:space="preserve"
        x="10">&lt;&lt;Include&gt;&gt;</text>
