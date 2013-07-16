@@ -77,9 +77,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     /*
-     *Only activate NXTStopButton after RFCOMM-connection is established
+     *Connect NXTStopButton with Communicator SLOT
      */
-    connect(&nxtCom,SIGNAL(connectionStateChanged(bool)),ui->nxtStopButton,SLOT(setEnabled(bool)));
     connect(ui->nxtStopButton,SIGNAL(clicked()),&nxtCom,SLOT(sendNxtPauseResume()));
 
     /*
@@ -147,6 +146,9 @@ void MainWindow::startTask()
     ui->sendTaskButton->setDisabled(true);
     ui->stationSetupGroupBox->setEnabled(false);
     ui->taskSetupButton->setEnabled(false);
+    ui->nxtStopButton->setChecked(false);
+    ui->nxtStopButton->setEnabled(true);
+
 
     StationSetup stations;
     stations.station1.quality=ui->station1Quality->value();
@@ -169,6 +171,7 @@ void MainWindow::taskFinished()
     ui->sendTaskButton->setEnabled(true);
     ui->stationSetupGroupBox->setEnabled(true);
     ui->taskSetupButton->setEnabled(true);
+    ui->nxtStopButton->setDisabled(true);
 }
 
 void MainWindow::closeBtConnection()
