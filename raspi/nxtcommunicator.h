@@ -192,5 +192,12 @@ private:
 
     Types::Task task;//the Task to be sent
     Types::StationSetup stationSetup;//the current stationsetup
+
+    /*
+     *The MessageBox we open, after the task has finished expects a SLOT.
+     *So here it is ;)
+     */
+private slots:
+    void dummySlot();
 };
 #endif // NXTCOMMUNICATOR_H

@@ -236,6 +236,11 @@ void NxtCommunicator::sendStationData()
     }
 }
 
+void NxtCommunicator::dummySlot()
+{
+
+}
+
 void NxtCommunicator::runTaskFinished(bool success)
 {
     QMessageBox msgBox;
@@ -249,7 +254,7 @@ void NxtCommunicator::runTaskFinished(bool success)
         msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
     }
 
-    msgBox.open();
+    msgBox.open(this,SLOT(dummySlot()));
 }
 
 void NxtCommunicator::readStateData()
