@@ -18,7 +18,6 @@ TaskStateWidget::TaskStateWidget(QWidget *parent) :
     layout->addWidget(trackView);
 
     stepLabel->setStyleSheet("font: 16pt \"Arial Black\";");
-    qDebug() << stepLabel->text();
 }
 
 void TaskStateWidget::setTaskState(Types::NxtState state)
@@ -41,7 +40,7 @@ void TaskStateWidget::changeEvent(QEvent *e)
         } else if(stepNum>=1){
             stepLabel->setText(QString("Schritt: %1").arg(stepNum));
         } else {
-            stepLabel->setText("...");
+            stepLabel->setText("-");
         }
     }
 }
