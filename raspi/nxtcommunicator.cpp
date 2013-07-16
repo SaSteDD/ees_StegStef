@@ -177,9 +177,11 @@ void NxtCommunicator::mainCommunicationLoop()
                 } else if(b=='q') {
                     sendStationData();
                 } else if(b=='f') {
-                    runTaskFinished(false);
+                    emit taskFinished(false);
+                    emit nxtLogMessage("f (Auftragsbearbeitung fehlgeschlagen)");
                 } else if(b=='F') {
-                    runTaskFinished(true);
+                    emit taskFinished(true);
+                    emit nxtLogMessage("F (Auftrag erfolgreich bearbeitet)");
                 } else {
                     emit nxtLogMessage(chToHexString(b) + " (Fehler. Zeichen kann an dieser Stelle im Programmablauf nicht ausgewertet werden)");
                 }
@@ -234,27 +236,6 @@ void NxtCommunicator::sendStationData()
                 emit raspiLogMessage(trUtf8("Qualitätsparameter gesendet: ") + QString(stationQualityData[0]) + chToHexString(stationQualityData[1]) + chToHexString(stationQualityData[2])  );
             }
     }
-}
-
-void NxtCommunicator::dummySlot()
-{
-
-}
-
-void NxtCommunicator::runTaskFinished(bool success)
-{
-    QMessageBox msgBox;
-
-    emit taskFinished(success);
-    if(success){
-        emit nxtLogMessage("F (Auftrag erfolgreich bearbeitet)");
-        msgBox.setText( "Der Auftrag wurde erfolgreich bearbeitet.");
-    } else {
-        emit nxtLogMessage("f (Auftragsbearbeitung fehlgeschlagen)");
-        msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
-    }
-
-    msgBox.open(this,SLOT(dummySlot()));
 }
 
 void NxtCommunicator::readStateData()

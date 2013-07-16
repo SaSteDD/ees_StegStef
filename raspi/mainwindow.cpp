@@ -13,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow),
     nxtCom(this),
     taskDialog(new TaskDialog(this)),
-    statusBarConnectionStateLabel(new QLabel())
+    statusBarConnectionStateLabel(new QLabel()),
+    msgBox(this)
 {
     ui->setupUi(this);
     ui->trackViewGroupBox->setDisabled(true);
@@ -166,12 +167,20 @@ void MainWindow::startTask()
     nxtCom.sendTaskData(task,stations);
 }
 
-void MainWindow::taskFinished()
+void MainWindow::taskFinished(bool success)
 {
     ui->sendTaskButton->setEnabled(true);
     ui->stationSetupGroupBox->setEnabled(true);
     ui->taskSetupButton->setEnabled(true);
     ui->nxtStopButton->setDisabled(true);
+
+    if(success){
+
+        msgBox.setText( "Der Auftrag wurde erfolgreich bearbeitet.");
+    } else {
+        msgBox.setText( "Die Auftragsbearbeitung ist fehlgeschlagen.");
+    }
+    msgBox.open();
 }
 
 void MainWindow::closeBtConnection()

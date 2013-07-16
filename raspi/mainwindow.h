@@ -3,6 +3,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QLabel>
+#include <QMessageBox>
 #include "types.h"
 #include "nxtcommunicator.h"
 #include "btwahldialog.h"
@@ -44,7 +45,7 @@ private slots:
     /*
      *Slot to notify the UI the task was finished
      */
-    void taskFinished();
+    void taskFinished(bool success);
 
     /*
      *Send Task to NXT
@@ -64,6 +65,7 @@ private:
     BtDeviceDialog* btDialog; //since we want to keep the Bluetooth dialog's state after it is closed, we don't delete it after it is closed
     TaskDialog* taskDialog; //see above
     QLabel* statusBarConnectionStateLabel; //the bluottoh icon in the application's statusbar
+    QMessageBox msgBox;// MessageBox for showing the Task success /error Message
 };
 
 #endif // MAINWINDOW_H

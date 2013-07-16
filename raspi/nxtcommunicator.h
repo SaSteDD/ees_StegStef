@@ -146,7 +146,7 @@ private:
     /*
      *Read State Data NXT sends
      *Format for NXT-Message:
-     *      [StateChar]  [state (0-15)] [  StepNr   ]
+     *      [StateChar('s')]  [state (0-15)] [  StepNr   ]
      *Nr:        1              2          3 4 5 6
      */
     void readStateData();
@@ -192,12 +192,5 @@ private:
 
     Types::Task task;//the Task to be sent
     Types::StationSetup stationSetup;//the current stationsetup
-
-    /*
-     *The MessageBox we open, after the task has finished expects a SLOT.
-     *So here it is ;)
-     */
-private slots:
-    void dummySlot();
 };
 #endif // NXTCOMMUNICATOR_H
