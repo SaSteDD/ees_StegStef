@@ -1,14 +1,11 @@
 package main;
 
-import behavior.Initialisierung;
 import lejos.nxt.Button;
 import lejos.nxt.ButtonListener;
 import lejos.nxt.LCD;
-import lejos.nxt.Sound;
 import lejos.robotics.subsumption.Arbitrator;
-import lejos.robotics.subsumption.Behavior;
 
-public class NXTforever {
+public class NXT {
 	
 	private static Status mStatus;
 	
