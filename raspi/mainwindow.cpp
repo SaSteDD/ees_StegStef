@@ -192,6 +192,7 @@ void MainWindow::closeBtConnection()
     ui->actionVerbindung_aufbauen->setEnabled(true);
 
     ui->nxtStopButton->setChecked(false);
+    ui->nxtStopButton->setDisabled(true);
     ui->stationSetupGroupBox->setEnabled(true);
     ui->taskSetupButton->setEnabled(true);
 }
