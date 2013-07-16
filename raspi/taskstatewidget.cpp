@@ -22,10 +22,10 @@ TaskStateWidget::TaskStateWidget(QWidget *parent) :
 
 void TaskStateWidget::setTaskState(Types::NxtState state)
 {
+    stepNum=state.stepNum.num;
     trackView->setTrackPosition(state.section);
     if(stepNum > 0) stepLabel->setText(QString("Schritt: %1").arg(state.stepNum.num));
     else stepLabel->setText("-");
-    stepNum=state.stepNum.num;
 }
 
 void TaskStateWidget::changeEvent(QEvent *e)
